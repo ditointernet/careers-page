@@ -1,0 +1,26 @@
+name: CD (Production)
+on:
+  push:
+    branches:
+      - main
+jobs:
+  deploy_preview:
+    name: 'Deploy to Production'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Setup node 16 environment
+        uses: actions/setup-node@v2
+        with:
+          cache: 'yarn'
+          node-version: 16
+
+      - name: Install npm dependencies
+        run: yarn
+
+      - name: Deploy to Production
+        run: yarn firebase deploy --only hosting --token=$FIREBASE_TOKEN
+        env:
+          FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
