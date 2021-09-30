@@ -1,6 +1,6 @@
 import type { AppProps } from "next/app";
 import { createGlobalStyle } from "styled-components";
-import { GRID, TYPOGRAPHY } from "@ditointernet/uai-foundation";
+import { COLORS, GRID, TYPOGRAPHY } from "@ditointernet/uai-foundation";
 
 const GlobalStyle = createGlobalStyle`
   html,
@@ -44,6 +44,12 @@ const GlobalStyle = createGlobalStyle`
     font-size: ${TYPOGRAPHY.FONT_SIZE.LARGE};
     line-height: ${TYPOGRAPHY.LINE_HEIGHT.LARGE};
   }
+
+  .c-white { color: ${COLORS.WHITE} }
+  .c-navy-dark { color: ${COLORS.NAVY_DARK} }
+  .c-green-main { color: ${COLORS.GREEN_MAIN} }
+  .c-gray-1 { color: ${COLORS.GRAY_1} }
+  .c-gray-4 { color: ${COLORS.GRAY_4} }
 `;
 
 function MyApp({ Component, pageProps }: AppProps) {
