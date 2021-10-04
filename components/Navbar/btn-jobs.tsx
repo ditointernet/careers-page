@@ -57,7 +57,6 @@ const BtnJobs: React.FC = (props) => {
     }
 
     return (
-        
         <Btn
             id="btn-jobs"
             onMouseDown={mouseDown}

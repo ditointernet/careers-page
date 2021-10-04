@@ -2,9 +2,7 @@ import React, { useState, useEffect } from 'react'
 import styled from 'styled-components'
 
 const Burger = styled.div`
-    &{
-        display: inline-block;
-    }
+    display: inline-block;
 
     & .line{
         width: 26px;
