@@ -6,12 +6,7 @@ export { default as Navbar } from "./Navbar";
 export { default as Scale } from "./Scale";
 export { default as Team } from "./Team";
 export { default as Testimonials } from "./Testimonials";
-
-export const Tech = () => (
-  <section id="nossas-tecnologias">
-    <h2>Tech</h2>
-  </section>
-);
+export { default as Tech } from "./Tech";
 export const Values = dynamic(() => import("./Values"), {
   ssr: false,
 });
