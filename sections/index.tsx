@@ -4,6 +4,7 @@ export { default as Navbar } from "./Navbar";
 
 export const Objective = () => <h2>Objective</h2>;
 // export { default as Scale } from "./Scale";
+
 export const Tech = () => (
   <section id="nossas-tecnologias">
     <h2>Tech</h2>
