@@ -1,9 +1,8 @@
-import type { AppProps } from "next/app";
-import Head from "next/head";
-import { createGlobalStyle } from "styled-components";
-import { COLORS, GRID, TYPOGRAPHY } from "@ditointernet/uai-foundation";
+import type { AppProps } from 'next/app';
+import { createGlobalStyle } from 'styled-components';
+import { COLORS, GRID, TYPOGRAPHY } from '@ditointernet/uai-foundation';
 
-import "react-responsive-carousel/lib/styles/carousel.min.css";
+import 'react-responsive-carousel/lib/styles/carousel.min.css';
 
 const GlobalStyle = createGlobalStyle`
   html,
@@ -12,12 +11,15 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
     scroll-behavior: smooth;
     overflow-x: hidden;
+  }
+
+  html, body, button {
     font-family: "Poppins", -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
       Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   }
 
   a { color: inherit; text-decoration: none }
-  * { box-sizing: border-box }
+  * { box-sizing: border-box; margin: 0; padding: 0 }
 
   .w-400 { font-weight: 400 }
   .w-500 { font-weight: ${TYPOGRAPHY.WEIGHTS.MEDIUM} }
