@@ -8,7 +8,7 @@ const Team = () => (
     <ImageWrapper>
       <img src={teamImage.src} alt="our-team" />
       <Circle top="-5vw" left="70%" />
-      <Circle top="-5vw" left="62%" size="4vw" color={COLORS.NAVY_MAIN} />
+      <Circle top="-5vw" left="62%" size="3vw" color={COLORS.NAVY_MAIN} />
       <Circle bottom="-5vw" right="70%" />
       <Retangle />
     </ImageWrapper>
