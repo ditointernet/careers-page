@@ -1,17 +1,27 @@
-import styled from 'styled-components'
+import styled from "styled-components";
 import { COLORS, GRID } from "@ditointernet/uai-foundation";
 
 const ButtonPrimary = styled.a`
-    color: ${COLORS.WHITE};
-    cursor: pointer;
-    outline: none;
-    padding: ${GRID(1.5)} ${GRID(3)};
-    min-width: ${GRID(23.875)};
-    font-size: ${GRID(2)};
-    font-weight: 500;
-    line-height: ${GRID(3)};
-    border-radius: ${GRID(7)};
-    background-color: ${COLORS.GREEN_MAIN};
+  padding: 0;
+  background-color: ${COLORS.GREEN_MAIN};
+  outline: none;
+  border: 0;
+  border-radius: ${GRID(7)};
+  color: ${COLORS.WHITE};
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  font-size: ${GRID(2)};
+  font-weight: 500;
+  min-width: ${GRID(23.75)};
+  min-height: ${GRID(6)};
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &:active {
+    background-color: rgb(0 189 106 / 80%);
+  }
 `;
 
-export default ButtonPrimary
+export default ButtonPrimary;
