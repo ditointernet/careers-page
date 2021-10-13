@@ -1,3 +1,5 @@
+import dynamic from "next/dynamic";
+
 export { default as Navbar } from "./Navbar";
 export const Hero = () => (
   <section id="sobre-a-dito" style={{ height: "100vh", background: "black" }}>
@@ -11,8 +13,10 @@ export const Tech = () => (
     <h2>Tech</h2>
   </section>
 );
+export const Values = dynamic(() => import("./Values"), {
+  ssr: false,
+});
 export { default as Team } from "./Team";
-export const Values = () => <h2>Values</h2>;
 export const Testimonials = () => <h2>Testimonials</h2>;
 export const Areas = () => <h2>Areas</h2>;
 export const Reasons = () => <h2>Reasons</h2>;
