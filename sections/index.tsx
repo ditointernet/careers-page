@@ -1,9 +1,11 @@
 import dynamic from "next/dynamic";
 
+export { default as About } from "./About";
+export { default as Hero } from "./Hero";
 export { default as Navbar } from "./Navbar";
-
-export const Objective = () => <h2>Objective</h2>;
-// export { default as Scale } from "./Scale";
+export { default as Scale } from "./Scale";
+export { default as Team } from "./Team";
+export { default as Testimonials } from "./Testimonials";
 
 export const Tech = () => (
   <section id="nossas-tecnologias">
@@ -13,12 +15,6 @@ export const Tech = () => (
 export const Values = dynamic(() => import("./Values"), {
   ssr: false,
 });
-
-export { default as Team } from "./Team";
-export { default as Testimonials } from "./Testimonials";
-export { default as Hero } from "./Hero";
-export { default as Scale } from "./Scale";
-
 export const Areas = () => <h2>Areas</h2>;
 export const Reasons = () => <h2>Reasons</h2>;
 export const Initiatives = () => <h2>Initiatives</h2>;

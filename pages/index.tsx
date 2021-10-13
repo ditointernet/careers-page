@@ -5,8 +5,8 @@ const Home: NextPage = () => (
   <main>
     <Sections.Navbar />
     <Sections.Hero />
-    <Sections.Objective />
-    {/* <Sections.Scale /> */}
+    <Sections.About />
+    <Sections.Scale />
     <Sections.Tech />
     <Sections.Team />
     <Sections.Values />
