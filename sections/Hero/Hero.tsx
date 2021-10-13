@@ -27,7 +27,7 @@ const Hero: NextPage = () => (
   </Container>
 );
 
-const Container = styled.div`
+const Container = styled.section`
   background-image: url("/images/about-page-background-image.png");
   background-position: left top;
   background-repeat: no-repeat;
@@ -36,6 +36,10 @@ const Container = styled.div`
   padding: 0px 3.2vw;
   position: relative;
   width: 100vw;
+
+  @media (max-width: 768px) {
+    background-size: 100% 100%;
+  }
 `;
 
 const Logo = styled.img`
