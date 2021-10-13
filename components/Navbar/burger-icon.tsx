@@ -30,6 +30,10 @@ const Burger = styled.div`
     &.active .line:nth-child(3){
         transform: translateY(-7px) rotate(-45deg);
     }
+
+    @media only screen and (min-width: 1440px) {
+        display: none;
+    }
 `;
 
 interface IProps {

@@ -2,7 +2,7 @@ import { useState, useEffect, MouseEvent } from 'react';
 import styled from 'styled-components'
 
 const Btn = styled.button`
-    padding: 12px 24px;
+    padding: 0;
     background-color: rgb(0 189 106);
     outline: none;
     border: 0;
@@ -13,6 +13,8 @@ const Btn = styled.button`
     position: relative;
     cursor: pointer;
     overflow: hidden;
+    min-width: 190px;
+    min-height: 48px;
 
     & .circle {
         height: 25px;
@@ -41,13 +43,16 @@ const Btn = styled.button`
         animation: grow 1s ease-out forwards;
     }
 
+    @media only screen and (min-width: 1440px) {
+        margin: 0 20px;
+    }
 `;
 
 const BtnJobs: React.FC = (props) => {
     const [mouseHold, setMouseHold] = useState(false)
     const [_document, set_document] = useState(null)
 
-    
+
     const mouseDown = (event: MouseEvent<HTMLButtonElement>) => {
         setMouseHold(true)
         const btn = document.getElementById("btn-jobs")
