@@ -9,7 +9,9 @@ const Menu = ({ open }: IProps) => {
     const [hash, setHash] = useState<string>('#sobre-a-dito')
 
     useEffect(() => {
-        setHash(window.location.hash)
+        if (window.location.hash) {
+            setHash(window.location.hash)
+        }
         window.addEventListener("hashchange", () => setHash(location.hash))
     }, [])
 
