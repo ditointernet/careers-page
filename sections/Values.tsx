@@ -32,8 +32,8 @@ const Values = () => {
         <Ztext
           depth={isMobile() ? "2rem" : "4rem"}
           direction="forwards"
-          event={isMobile() ? "none" : "pointer"}
-          eventRotation="5deg"
+          event="none"
+          eventRotation="0"
           eventDirection="reverse"
           fade={false}
           layers={isMobile() ? 10 : 20}
@@ -76,6 +76,7 @@ const Section = styled.section`
   min-height: ${GRID(128)};
 
   @media (max-width: 768px) {
+    padding: ${GRID(4.5)} 0;
     min-height: ${GRID(96)};
   }
 `;
@@ -112,28 +113,32 @@ const SubTitle = styled.p`
 `;
 
 const Fera = styled.div<{ hover: number }>`
-  margin: 0 auto;
+  margin: ${GRID(2)} auto 0 auto;
   padding: 0;
   font-size: ${GRID(32)};
-  font-style: italic;
   font-weight: bold;
-  transform: perspective(0, 0, 20px);
+
+  > div {
+    transform: skew(-14deg);
+  }
 
   @media (max-width: 768px) {
     font-size: ${GRID(13)};
-    margin: 0 auto;
+    margin: ${GRID(3)} auto ${GRID(2)} auto;
 
-    span:not(:first-child) > span {
+    div > span > span:not(:first-child) > span {
       color: #026d50;
     }
 
-    span:first-child > span {
-      color: rgba(11, 255, 188, 0.8);
+    div > span > span:first-child {
+      background: -webkit-linear-gradient(270deg, #b7ffed 0%, #0bffb8 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
   }
 
   @media (min-width: 768px) {
-    span:not(:first-child) > span {
+    div > span > span:not(:first-child) > span {
       color: #373737;
       transition: all 0.3s ease;
       opacity: 0.3;
@@ -145,17 +150,19 @@ const Fera = styled.div<{ hover: number }>`
       }
     }
 
-    span:first-child > span {
+    div > span > span:first-child {
       opacity: 0.9;
       color: rgba(196, 196, 196, 0.4);
       text-shadow: 0 0 0 rgba(11, 255, 184, 0);
       transition: all 0.3s ease;
       cursor: pointer;
 
-      &:nth-child(${(props) => props.hover + 1}) {
+      span:nth-child(${(props) => props.hover + 1}) {
         opacity: 1;
-        color: #0bffb8;
-        text-shadow: 0 0 ${GRID(1.6)} rgba(11, 255, 184, 1);
+        background: -webkit-linear-gradient(270deg, #b7ffed 0%, #0bffb8 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        text-shadow: 0 0 ${GRID(1.6)} rgba(11, 255, 184, 0.8);
         transition: all 0.3s ease;
       }
     }
@@ -164,21 +171,20 @@ const Fera = styled.div<{ hover: number }>`
 
 const Line = styled.p<{ hover: boolean }>`
   font-size: ${GRID(3.5)};
-  cursor: pointer;
   padding: ${GRID(2)} 0;
-  animation: all 0.5s ease-in-out;
-  text-shadow: 0 ${GRID(2)} ${GRID(2)} rgba(0, 0, 0, 0);
-  opacity: ${(props) => (props.hover ? 1 : 0.5)};
-  transform: scale(${(props) => (props.hover ? 1.05 : 1)});
   transition: all 0.5s ease-in-out;
+  cursor: pointer;
 
   @media (max-width: 768px) {
     opacity: 1;
-    padding: ${GRID(1)};
+    font-size: ${GRID(2)};
+    padding: ${GRID(1.5)} ${GRID(2)};
   }
 
-  @media (max-width: 768px) {
-    font-size: ${GRID(2.5)};
+  @media (min-width: 768px) {
+    opacity: ${(props) => (props.hover ? 1 : 0.5)};
+    transform: scale(${(props) => (props.hover ? 1.05 : 1)});
+    padding: ${GRID(1)};
   }
 
   b {
