@@ -1,6 +1,6 @@
 export { default as Navbar } from "./Navbar";
 export const Hero = () => (
-    <section id="sobre-a-dito">
+    <section id="sobre-a-dito" style={{ height: '100vh', background: 'black' }}>
         <h2>Hero</h2>
     </section>
 );

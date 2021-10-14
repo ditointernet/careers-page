@@ -2,12 +2,12 @@ import React from 'react'
 import styled from 'styled-components'
 import { COLORS, GRID } from "@ditointernet/uai-foundation";
 
-interface IProps {
+type Props = {
     active: boolean
     onClick: () => void
 }
 
-const BurgerIcon = ({ active, onClick }: IProps) => (
+const BurgerIcon = ({ active, onClick }: Props) => (
     <Burger
         onClick={onClick}
         className={`${active && "active"}`}
