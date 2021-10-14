@@ -52,6 +52,7 @@ const Section = styled.h2`
 const Title = styled.h2`
   display: flex;
   align-items: center;
+  text-align: center;
   color: ${COLORS.NAVY_DARK};
   font-size: ${GRID(4.5)};
   margin-bottom: ${GRID(12.5)};
