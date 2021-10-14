@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import styled from 'styled-components'
+import { COLORS, GRID } from "@ditointernet/uai-foundation";
 
 interface IProps {
     open: boolean
@@ -59,19 +60,19 @@ const Menu = ({ open }: IProps) => {
 }
 
 const MenuWrapper = styled.div`
-    box-shadow: 0px 2px 8px 0px rgb(0 0 0 / 15%);
+    box-shadow: ${GRID(0)} ${GRID(0.25)} ${GRID(1)} ${GRID(0)} rgb(0 0 0 / 15%);
     position: absolute;
-    top: 85px;
-    background-color: #fff;
-    width: calc(100% - 32px);
-    border-radius: 16px;
-    max-height: 0px;
+    top: ${GRID(10.625)};
+    background-color: ${COLORS.WHITE};
+    width: calc(100% - ${GRID(4)});
+    border-radius: ${GRID(2)};
+    max-height: ${GRID(0)};
     overflow: hidden;
     
     transition: max-height 0.2s linear;
     
     &.open {
-        max-height: 312px;
+        max-height: ${GRID(39)};
     }
 
     @media only screen and (min-width: 1366px) {
@@ -80,7 +81,7 @@ const MenuWrapper = styled.div`
         background-color: transparent;
         border-radius: 0;
         top: 0;
-        max-height: 312px;
+        max-height: ${GRID(39)};
         width: 100%;
     }
 `;
@@ -88,7 +89,7 @@ const MenuWrapper = styled.div`
 const List = styled.ul`
     width: 100%;
     list-style: none;
-    padding: 12px 0;
+    padding: ${GRID(1.5)} 0;
     margin: 0;
 
     a:last-child {
@@ -100,7 +101,7 @@ const List = styled.ul`
     @media only screen and (min-width: 1366px) {
         display: flex;
         justify-content: end;
-        padding: 0;
+        padding: ${GRID(0)};
 
         a:last-child {
             display: none;
@@ -110,14 +111,14 @@ const List = styled.ul`
 
 
 const Item = styled.li`
-    color: #223154;
-    font-size: 16px;
+    color: ${COLORS.NAVY_DARK};
+    font-size: ${GRID(2)};
     font-weight: 500;
-    line-height: 24px;
-    padding: 12px 24px;
+    line-height: ${GRID(3)};
+    padding: ${GRID(1.5)} ${GRID(3)};
 
     &.active {
-        color: #00BD6A;
+        color: ${COLORS.GREEN_MAIN};
 
         &::after {
             width: 80%;
@@ -125,49 +126,49 @@ const Item = styled.li`
     }
 
     &:active {
-        background: #00BD6A;
-        color: #fff;
+        background: ${COLORS.GREEN_MAIN};
+        color: ${COLORS.WHITE};
 
         &.active {
-            color: #fff;
-            background-color: #00BD6A;
+            color: ${COLORS.WHITE};
+            background-color: ${COLORS.GREEN_MAIN};
         }
     }
 
     @media only screen and (min-width: 1366px) {
         padding: 0;
-        margin: 0 20px;
+        margin: 0 ${GRID(2.5)};
         position: relative;
         display: inline-block;
 
         &::after {
             content: "";
             position: absolute;
-            top: 22px;
-            height: 2px;
+            top: ${GRID(2.75)};
+            height: ${GRID(0.25)};
             width: 0%;
             right: 0;
-            background-color: #00BD6A;
+            background-color: ${COLORS.GREEN_MAIN};
             transition: 0.5s ease all .1s;
         }
 
         &:hover {
             background: transparent;
-            color: #223154;
+            color: ${COLORS.NAVY_DARK};
 
             &.active {
-                color: #00BD6A;
+                color: ${COLORS.GREEN_MAIN};
                 background: transparent;
 
                 &::after {
-                    background-color: #00BD6A;
+                    background-color: ${COLORS.GREEN_MAIN};
                 }
             }
 
             &::after {
                 width: 80%;
                 transition: 0.3s ease all;
-                background-color: #223154;
+                background-color: ${COLORS.NAVY_DARK};
             }
         }
     }

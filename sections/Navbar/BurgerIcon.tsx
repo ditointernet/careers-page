@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import { COLORS, GRID } from "@ditointernet/uai-foundation";
 
 interface IProps {
     active: boolean
@@ -21,12 +22,12 @@ const Burger = styled.div`
     display: inline-block;
 
     & .line{
-        width: 26px;
-        height: 3px;
-        background-color: #223154;
+        width: ${GRID(3.25)};
+        height: ${GRID(0.375)};
+        background-color: ${COLORS.NAVY_DARK};
         display: block;
-        margin: 4px 1px;
-        border-radius: 5px;
+        margin: ${GRID(0.5)} ${GRID(0.125)};
+        border-radius: ${GRID(0.625)};
         transition: all 0.3s ease-in-out;
     }
     

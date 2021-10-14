@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from "react"
 import styled from 'styled-components'
+import { COLORS, GRID } from "@ditointernet/uai-foundation";
 
 import Menu from "./Menu";
 import BurgerIcon from "./BurgerIcon"
 import ButtonPrimary from "@/components/ButtonPrimary";
 
 const Navbar = () => {
-    const [statusBurgerIcon, changeBurgerIcon] = useState(false)
+    const [isOpenMenu, toggleMenu] = useState(false)
 
     useEffect(() => {
         let lastScroll = 0;
@@ -37,6 +38,7 @@ const Navbar = () => {
             }
 
             lastScroll = currentScroll;
+            toggleMenu(false)
         });
     })
 
@@ -49,24 +51,24 @@ const Navbar = () => {
                 </svg>
                 Voltar para o site
             </ButtonBackPage>
-            <BurgerIcon onClick={() => changeBurgerIcon(!statusBurgerIcon)} active={statusBurgerIcon} />
-            <Menu open={statusBurgerIcon} />
+            <BurgerIcon onClick={() => toggleMenu(!isOpenMenu)} active={isOpenMenu} />
+            <Menu open={isOpenMenu} />
             <ButtonPrimary href="#vagas">Ver nossas vagas</ButtonPrimary>
         </Header>
     )
 }
 
 const Header = styled.header`
-    background-color: #fff;
-    height: 80px;
+    background-color: ${COLORS.WHITE};
+    height: ${GRID(8)};
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 16px;
+    padding: 0 ${GRID(2)};
     position: fixed;
     width: 100%;
-    top: 0;
-    left: 0;
+    top: ${GRID(0)};
+    left: ${GRID(0)};
     z-index: 2;
     transition: transform 0.4s;
 
@@ -79,17 +81,17 @@ const Header = styled.header`
     }
 
     @media only screen and (min-width: 1366px) {
-        padding: 0 20px;
+        padding: 0 ${GRID(2.5)};
     }
 `;
 
 const ButtonBackPage = styled.a`
     display: none;
-    color: #223154;
-    width: 214px;
-    margin: 0;
+    color: ${COLORS.NAVY_DARK};
+    min-width: ${GRID(21.75)};
+    margin: ${GRID(0)};
     font-weight: 600;
-    font-size: 16px;
+    font-size: ${GRID(2)};
 
     @media only screen and (min-width: 1366px) {
         display: flex;
