@@ -2,10 +2,10 @@ import styled from 'styled-components'
 import { COLORS, GRID } from "@ditointernet/uai-foundation";
 
 const ButtonPrimary = styled.a`
-    padding: ${GRID(0)};;
+    padding: ${GRID(0)};
     background-color: ${COLORS.GREEN_MAIN};
     outline: none;
-    border: ${GRID(0)};;
+    border: ${GRID(0)};
     border-radius: ${GRID(7)};
     color: ${COLORS.WHITE};
     position: relative;
@@ -14,7 +14,7 @@ const ButtonPrimary = styled.a`
     font-size: ${GRID(2)};
     font-weight: 500;
     display: flex;
-    min-width: ${GRID(23.75)};;
+    min-width: ${GRID(23.75)};
     min-height: ${GRID(6)};
     display: flex;
     align-items: center;

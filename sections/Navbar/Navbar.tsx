@@ -18,7 +18,7 @@ const Navbar = () => {
             const currentScroll = window.pageYOffset;
             const navbar = document.getElementById("navbar")
 
-            if (currentScroll <= 0) {
+            if (currentScroll < window.innerHeight) {
                 navbar?.classList.remove(scrollUp);
                 return;
             }
@@ -53,7 +53,7 @@ const Navbar = () => {
             </ButtonBackPage>
             <BurgerIcon onClick={() => toggleMenu(!isOpenMenu)} active={isOpenMenu} />
             <Menu open={isOpenMenu} />
-            <ButtonPrimary href="#vagas">Ver nossas vagas</ButtonPrimary>
+            <ButtonPrimary style={{ marginLeft: '20px' }} href="#vagas">Ver nossas vagas</ButtonPrimary>
         </Header>
     )
 }
