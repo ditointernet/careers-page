@@ -5,16 +5,16 @@ import { GRID } from "@ditointernet/uai-foundation";
 import { ParallaxProvider, Parallax } from "react-scroll-parallax";
 
 const arrayBrands = [
-  <img src="/images/acer.jpg" alt="Acer" />,
-  <img src="/images/lego.jpg" alt="Lego" />,
-  <img src="/images/animale.jpg" alt="Animale" />,
-  <img src="/images/cea.jpg" alt="C&A" />,
-  <img src="/images/polishop.jpg" alt="Polishop" />,
-  <img src="/images/tef.jpg" alt="Track & Field" />,
-  <img src="/images/ingresso.jpg" alt="Ingresso.com" />,
-  <img src="/images/chillibeans.jpg" alt="Chilli Beans" />,
-  <img src="/images/imaginarium.jpg" alt="Imaginarium" />,
-  <img src="/images/farm.jpg" alt="Farm" />,
+  <img src="/images/acer.jpg" alt="Acer" key="acter" />,
+  <img src="/images/lego.jpg" alt="Lego" key="lego" />,
+  <img src="/images/animale.jpg" alt="Animale" key="animale" />,
+  <img src="/images/cea.jpg" alt="C&A" key="cea" />,
+  <img src="/images/polishop.jpg" alt="Polishop" key="polishop" />,
+  <img src="/images/tef.jpg" alt="Track & Field" key="trackandfield" />,
+  <img src="/images/ingresso.jpg" alt="Ingresso.com" key="ingresso" />,
+  <img src="/images/chillibeans.jpg" alt="Chilli Beans" key="chillibeans" />,
+  <img src="/images/imaginarium.jpg" alt="Imaginarium" key="imaginaruim" />,
+  <img src="/images/farm.jpg" alt="Farm" key="farm" />,
 ];
 
 const Brands = () => {
