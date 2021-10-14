@@ -1,4 +1,5 @@
 import type { AppProps } from "next/app";
+import Head from "next/head";
 import { createGlobalStyle } from "styled-components";
 import { COLORS, GRID, TYPOGRAPHY } from "@ditointernet/uai-foundation";
 
@@ -7,6 +8,8 @@ const GlobalStyle = createGlobalStyle`
   body {
     padding: 0;
     margin: 0;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
     font-family: "Poppins", -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
       Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   }
@@ -55,6 +58,15 @@ const GlobalStyle = createGlobalStyle`
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
+      <Head>
+        <title>Carreiras | Dito</title>
+        <meta
+          name="description"
+          content="Nossa paixão por tecnologia está revolucionando o varejo. Vem com a gente!"
+        />
+        <link rel="icon" href="/favicon.ico" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=0" />
+      </Head>
       <GlobalStyle />
       <Component {...pageProps} />
     </>

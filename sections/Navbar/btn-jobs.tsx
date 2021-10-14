@@ -1,5 +1,29 @@
-import { useState, useEffect, MouseEvent } from 'react';
+import { useState, MouseEvent } from 'react';
 import styled from 'styled-components'
+
+const BtnJobs: React.FC = (props) => {
+    const [mouseHold, setMouseHold] = useState(false)
+
+    const mouseDown = (event: MouseEvent<HTMLButtonElement>) => {
+        setMouseHold(true)
+        const btn = document.getElementById("btn-jobs")
+        var x = event.nativeEvent.offsetX - 10;
+        var y = event.nativeEvent.offsetY - 10;
+        btn?.insertAdjacentHTML('beforeend', '<div class="circle grow" style="left:' + x + 'px;top:' + y + 'px;"></div>')
+    }
+
+    return (
+        <Btn
+            id="btn-jobs"
+            onMouseDown={mouseDown}
+            onMouseUp={() => setMouseHold(false)}
+            className={`${mouseHold && "mouse-hold"}`}
+        >
+            <div id="circle" className="circle" />
+            {props.children}
+        </Btn>
+    )
+}
 
 const Btn = styled.button`
     padding: 0;
@@ -43,35 +67,9 @@ const Btn = styled.button`
         animation: grow 1s ease-out forwards;
     }
 
-    @media only screen and (min-width: 1440px) {
+    @media only screen and (min-width: 1366px) {
         margin: 0 20px;
     }
 `;
-
-const BtnJobs: React.FC = (props) => {
-    const [mouseHold, setMouseHold] = useState(false)
-    const [_document, set_document] = useState(null)
-
-
-    const mouseDown = (event: MouseEvent<HTMLButtonElement>) => {
-        setMouseHold(true)
-        const btn = document.getElementById("btn-jobs")
-        var x = event.nativeEvent.offsetX - 10;
-        var y = event.nativeEvent.offsetY - 10;
-        btn?.insertAdjacentHTML('beforeend', '<div class="circle grow" style="left:' + x + 'px;top:' + y + 'px;"></div>')
-    }
-
-    return (
-        <Btn
-            id="btn-jobs"
-            onMouseDown={mouseDown}
-            onMouseUp={() => setMouseHold(false)}
-            className={`${mouseHold && "mouse-hold"}`}
-        >
-            <div id="circle" className="circle" />
-            {props.children}
-        </Btn>
-    )
-}
 
 export default BtnJobs

@@ -1,5 +1,21 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import styled from 'styled-components'
+
+interface IProps {
+    active: boolean
+    onClick: () => void
+}
+
+const BurgerIcon = ({ active, onClick }: IProps) => (
+    <Burger
+        onClick={onClick}
+        className={`${active && "active"}`}
+    >
+        <span className="line"></span>
+        <span className="line"></span>
+        <span className="line"></span>
+    </Burger>
+)
 
 const Burger = styled.div`
     display: inline-block;
@@ -31,25 +47,9 @@ const Burger = styled.div`
         transform: translateY(-7px) rotate(-45deg);
     }
 
-    @media only screen and (min-width: 1440px) {
+    @media only screen and (min-width: 1366px) {
         display: none;
     }
 `;
-
-interface IProps {
-    active: boolean
-    onClick: () => void
-}
-
-const BurgerIcon = ({ active, onClick }: IProps) => (
-    <Burger
-        onClick={onClick}
-        className={`${active && "active"}`}
-    >
-        <span className="line"></span>
-        <span className="line"></span>
-        <span className="line"></span>
-    </Burger>
-)
 
 export default BurgerIcon
