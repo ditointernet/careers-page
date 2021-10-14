@@ -43,7 +43,12 @@ const Navbar = () => {
 
     return (
         <Header id="navbar">
-            <BackBtn href="#back">Voltar para o site</BackBtn>
+            <ButtonBackPage href="#back">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12.7102 6.29165C12.804 6.38454 12.8784 6.49504 12.9291 6.6168C12.9799 6.73856 13.006 6.86916 13.006 7.00106C13.006 7.13297 12.9799 7.26357 12.9291 7.38532C12.8784 7.50708 12.804 7.61759 12.7102 7.71048L9.41024 10.9978L17.0002 10.9978C17.2655 10.9978 17.5198 11.103 17.7074 11.2904C17.8949 11.4778 18.0002 11.7319 18.0002 11.9969C18.0002 12.2619 17.8949 12.5161 17.7074 12.7035C17.5198 12.8909 17.2655 12.9961 17.0002 12.9961L9.41024 12.9961L12.7102 16.2834C12.8985 16.4716 13.0043 16.7267 13.0043 16.9928C13.0043 17.2589 12.8985 17.5141 12.7102 17.7022C12.5219 17.8904 12.2665 17.9961 12.0002 17.9961C11.7339 17.9961 11.4785 17.8904 11.2902 17.7022L6.29025 12.7064C6.1992 12.6113 6.12784 12.4993 6.08024 12.3766C6.02734 12.257 6.00001 12.1277 6.00001 11.9969C6.00001 11.8662 6.02734 11.7369 6.08024 11.6173C6.12784 11.4946 6.1992 11.3826 6.29025 11.2875L11.2902 6.29165C11.3832 6.198 11.4938 6.12366 11.6157 6.07294C11.7375 6.02221 11.8682 5.99609 12.0002 5.99609C12.1323 5.99609 12.263 6.02221 12.3848 6.07294C12.5067 6.12366 12.6173 6.198 12.7102 6.29165Z" fill="#223154" />
+                </svg>
+                Voltar para o site
+            </ButtonBackPage>
             <BurgerIcon onClick={() => changeBurgerIcon(!statusBurgerIcon)} active={statusBurgerIcon} />
             <Menu open={statusBurgerIcon} />
             <ButtonPrimary href="#vagas">Ver nossas vagas</ButtonPrimary>
@@ -78,13 +83,17 @@ const Header = styled.header`
     }
 `;
 
-const BackBtn = styled.a`
+const ButtonBackPage = styled.a`
     display: none;
-    width: 200px;
-    margin: 0 20px;
+    color: #223154;
+    width: 214px;
+    margin: 0;
+    font-weight: 600;
+    font-size: 16px;
 
     @media only screen and (min-width: 1366px) {
-        display: inline-block;
+        display: flex;
+        justify-content: space-between;
     }
 `
 
