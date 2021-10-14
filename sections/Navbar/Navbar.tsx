@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react"
 import styled from 'styled-components'
 
-import Menu from "./menu";
-import ButtonJobs from "./btn-jobs";
-import BurgerIcon from "./burger-icon"
+import Menu from "./Menu";
+import BurgerIcon from "./BurgerIcon"
+import ButtonPrimary from "@/components/ButtonPrimary";
 
 const Navbar = () => {
     const [statusBurgerIcon, changeBurgerIcon] = useState(false)
@@ -46,7 +46,7 @@ const Navbar = () => {
             <BackBtn href="#back">Voltar para o site</BackBtn>
             <BurgerIcon onClick={() => changeBurgerIcon(!statusBurgerIcon)} active={statusBurgerIcon} />
             <Menu open={statusBurgerIcon} />
-            <ButtonJobs>Ver nossas vagas</ButtonJobs>
+            <ButtonPrimary href="#vagas">Ver nossas vagas</ButtonPrimary>
         </Header>
     )
 }
