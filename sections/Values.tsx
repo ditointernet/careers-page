@@ -30,7 +30,7 @@ const Values = () => {
       </SubTitle>
       <Fera hover={selectedLetter}>
         <Ztext
-          depth={isMobile() ? "2rem" : "4rem"}
+          depth={isMobile() ? "2rem" : "6rem"}
           direction="forwards"
           event="none"
           eventRotation="0"
@@ -115,11 +115,11 @@ const SubTitle = styled.p`
 const Fera = styled.div<{ hover: number }>`
   margin: ${GRID(2)} auto 0 auto;
   padding: 0;
-  font-size: ${GRID(32)};
+  font-size: ${GRID(36)};
   font-weight: bold;
 
   > div {
-    transform: skew(-14deg);
+    transform: skew(-5deg);
   }
 
   @media (max-width: 768px) {
@@ -152,7 +152,7 @@ const Fera = styled.div<{ hover: number }>`
 
     div > span > span:first-child {
       opacity: 0.9;
-      color: rgba(196, 196, 196, 0.4);
+      color: #b4b4b4;
       text-shadow: 0 0 0 rgba(11, 255, 184, 0);
       transition: all 0.3s ease;
       cursor: pointer;
@@ -171,7 +171,7 @@ const Fera = styled.div<{ hover: number }>`
 
 const Line = styled.p<{ hover: boolean }>`
   font-size: ${GRID(3.5)};
-  padding: ${GRID(2)} 0;
+  padding: 0 0 ${GRID(3)} 0;
   transition: all 0.5s ease-in-out;
   cursor: pointer;
 
@@ -182,7 +182,7 @@ const Line = styled.p<{ hover: boolean }>`
   }
 
   @media (min-width: 768px) {
-    opacity: ${(props) => (props.hover ? 1 : 0.5)};
+    opacity: ${(props) => (props.hover ? 1 : 0.8)};
     transform: scale(${(props) => (props.hover ? 1.05 : 1)});
     padding: ${GRID(1)};
   }

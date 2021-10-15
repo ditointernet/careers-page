@@ -21,13 +21,13 @@ const Particles = () => {
           shadow: {
             enable: true,
             color: "#00FFFF",
-            blur: 10,
+            blur: 15,
           },
           bounce: {
             horizontal: {
               random: {
                 enable: false,
-                minimumValue: 0.1,
+                minimumValue: 0.7,
               },
               value: 1,
             },
@@ -90,14 +90,14 @@ const Particles = () => {
             attract: {},
             decay: 0,
             distance: {},
-            direction: "none",
+            direction: "bottom",
             drift: 0,
             enable: true,
             gravity: {
               acceleration: 9.81,
               enable: true,
               inverse: false,
-              maxSpeed: 0.3,
+              maxSpeed: 0.2,
             },
             path: {
               clamp: false,
@@ -106,7 +106,7 @@ const Particles = () => {
             },
             random: true,
             size: false,
-            speed: 0.7,
+            speed: 0.2,
             straight: false,
             trail: {
               enable: false,
@@ -121,11 +121,11 @@ const Particles = () => {
           number: {
             density: {
               enable: true,
-              area: 800,
+              area: 1000,
               factor: 1000,
             },
             limit: 0,
-            value: 80,
+            value: 60,
           },
           opacity: {
             random: {
