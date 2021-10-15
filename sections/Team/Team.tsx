@@ -75,6 +75,8 @@ const Content = styled.div`
 
   p {
     color: ${COLORS.GRAY_4};
+    margin-top: 0;
+    margin-bottom: ${GRID(3)};
   }
 
   b {
@@ -88,6 +90,10 @@ const Content = styled.div`
   @media (max-width: 768px) {
     padding: ${GRID(2)};
     margin-bottom: ${GRID(2)};
+
+    h2 {
+      margin-bottom: ${GRID(3)};
+    }
   }
 `;
 
