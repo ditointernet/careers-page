@@ -13,7 +13,6 @@ const ButtonPrimary = styled.a`
     overflow: hidden;
     font-size: ${GRID(2)};
     font-weight: 500;
-    display: flex;
     min-width: ${GRID(23.75)};
     min-height: ${GRID(6)};
     display: flex;
