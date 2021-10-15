@@ -1,17 +1,52 @@
 import { COLORS, GRID } from "@ditointernet/uai-foundation";
 import styled from "styled-components";
+import { Carousel } from "react-responsive-carousel";
+import { ChevronLeft, ChevronRight } from "@ditointernet/uai-icons";
 
 import teamImage from "../../public/images/Team.svg";
 
 const Team = () => (
   <Section>
     <ImageWrapper>
-      <img src={teamImage.src} alt="Nosso time" />
-      <Circle top="-5vw" left="70%" />
-      <Circle top="-5vw" left="62%" size="3vw" color={COLORS.NAVY_MAIN} />
-      <Circle bottom="-5vw" right="70%" />
+      <CustomCarousel
+        showStatus={false}
+        showThumbs={false}
+        renderArrowPrev={(onClickHandler, hasPrev, label) =>
+          hasPrev && (
+            <ArrowButton type="button" onClick={onClickHandler} title={label}>
+              <ChevronLeft />
+            </ArrowButton>
+          )
+        }
+        renderArrowNext={(onClickHandler, hasNext, label) =>
+          hasNext && (
+            <ArrowButton
+              type="button"
+              onClick={onClickHandler}
+              title={label}
+              isNext
+            >
+              <ChevronRight />
+            </ArrowButton>
+          )
+        }
+        infiniteLoop
+        autoPlay
+      >
+        <img src={teamImage.src} alt="Nosso time" />
+        <img src={teamImage.src} alt="Nosso time" />
+      </CustomCarousel>
+      <Circle top={GRID(-9)} left="75%" />
+      <Circle
+        top={GRID(-9)}
+        left="66%"
+        size={GRID(5)}
+        color={COLORS.NAVY_MAIN}
+      />
+      <Circle bottom={GRID(-9)} right="75%" />
       <Retangle />
     </ImageWrapper>
+
     <Content>
       <h2>Nosso time é formado por FERAs. Falta você.</h2>
       <p>
@@ -33,31 +68,62 @@ const Team = () => (
 
 const Section = styled.section`
   display: flex;
+  margin: ${GRID(10)} 0;
 
   @media (max-width: 1060px) {
     align-items: center;
   }
 
   @media (max-width: 768px) {
+    margin: 0;
     flex-direction: column-reverse;
     align-items: flex-start;
   }
+`;
+
+const CustomCarousel = styled(Carousel)`
+  border-radius: 0px 0px 20% 0px;
+  box-shadow: 24px 0px 0px -8px rgba(230, 232, 237, 0.5);
 `;
 
 const ImageWrapper = styled.div`
   display: flex;
   position: relative;
   width: 100%;
+  max-width: ${GRID(92)};
 
   img {
     width: 100%;
     height: fit-content;
-    border-radius: 0px 0px 150px 0px;
-    box-shadow: 24px 0px 0px -8px rgba(230, 232, 237, 0.5);
+  }
+
+  ul.control-dots > li.selected {
+    width: ${GRID(1.5)};
+    height: ${GRID(1.5)};
   }
 
   @media (max-width: 768px) {
     width: 90%;
+  }
+`;
+
+const ArrowButton = styled.button<{ isNext?: boolean }>`
+  position: absolute;
+  background: transparent;
+  border: none;
+  z-index: 10;
+  top: calc(50% - 32px);
+  left: ${(props) => (props.isNext ? "initial" : "5%")};
+  right: ${(props) => (props.isNext ? "5%" : "initial")};
+  cursor: pointer;
+
+  svg {
+    width: ${GRID(8)};
+    height: ${GRID(8)};
+
+    path {
+      fill: ${COLORS.WHITE};
+    }
   }
 `;
 
@@ -110,6 +176,8 @@ const Circle = styled.div<CircleProps>`
   position: absolute;
   width: ${(props) => props.size || "10vw"};
   height: ${(props) => props.size || "10vw"};
+  max-width: ${(props) => (props.size ? GRID(5) : GRID(18))};
+  max-height: ${(props) => (props.size ? GRID(5) : GRID(18))};
   border: ${(props) => (props.size ? "7px" : GRID(1.25))} solid
     ${(props) => props.color || COLORS.GREEN_MAIN};
   border-radius: 50%;
@@ -127,12 +195,12 @@ const Circle = styled.div<CircleProps>`
 `;
 
 const Retangle = styled.div`
-  width: 15vw;
+  width: ${GRID(28)};
   height: ${GRID(1.5)};
   background: ${COLORS.NAVY_MAIN};
   position: absolute;
   bottom: ${GRID(-4)};
-  right: 43%;
+  left: 20%;
 
   @media (max-width: 768px) {
     width: ${GRID(16)};
