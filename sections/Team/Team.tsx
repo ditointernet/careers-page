@@ -6,7 +6,7 @@ import teamImage from "../../public/images/Team.svg";
 const Team = () => (
   <Section>
     <ImageWrapper>
-      <img src={teamImage.src} alt="our-team" />
+      <img src={teamImage.src} alt="Nosso time" />
       <Circle top="-5vw" left="70%" />
       <Circle top="-5vw" left="62%" size="3vw" color={COLORS.NAVY_MAIN} />
       <Circle bottom="-5vw" right="70%" />
@@ -20,8 +20,8 @@ const Team = () => (
         nossa equipe, elas estão no centro de tudo.
       </p>
       <p>
-        Por aqui, você vai encontrar vários desafios, além de{" "}
-        <b>muita parceria e espírito colaborativo</b>. Porque entendemos que,
+        Por aqui, você vai encontrar vários desafios, além de
+        <b> muita parceria e espírito colaborativo</b>. Porque entendemos que,
         crescendo juntos, podemos ir muito mais longe. Então, se ao longo da sua
         jornada, você perceber que acumulou aprendizados – e isso for motivo de
         muita alegria, é sinal de que você se encaixou perfeitamente à nossa
@@ -38,7 +38,7 @@ const Section = styled.section`
     align-items: center;
   }
 
-  @media (max-width: 740px) {
+  @media (max-width: 768px) {
     flex-direction: column-reverse;
     align-items: flex-start;
   }
@@ -56,7 +56,7 @@ const ImageWrapper = styled.div`
     box-shadow: 24px 0px 0px -8px rgba(230, 232, 237, 0.5);
   }
 
-  @media (max-width: 740px) {
+  @media (max-width: 768px) {
     width: 90%;
   }
 `;
@@ -85,7 +85,7 @@ const Content = styled.div`
     padding: ${GRID(2)} ${GRID(4)};
   }
 
-  @media (max-width: 740px) {
+  @media (max-width: 768px) {
     padding: ${GRID(2)};
     margin-bottom: ${GRID(2)};
   }
@@ -112,7 +112,7 @@ const Circle = styled.div<CircleProps>`
   right: ${(props) => props.right || "initial"};
   bottom: ${(props) => props.bottom || "initial"};
 
-  @media (max-width: 740px) {
+  @media (max-width: 768px) {
     width: ${(props) => (props.size ? GRID(3) : GRID(10))};
     height: ${(props) => (props.size ? GRID(3) : GRID(10))};
     top: ${(props) => (props.top ? GRID(-5) : "initial")};
@@ -128,7 +128,7 @@ const Retangle = styled.div`
   bottom: ${GRID(-4)};
   right: 43%;
 
-  @media (max-width: 740px) {
+  @media (max-width: 768px) {
     width: ${GRID(16)};
     height: 7px;
     bottom: ${GRID(-2)};
