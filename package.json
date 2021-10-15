@@ -25,6 +25,7 @@
     "swiper": "^7.0.9"
   },
   "devDependencies": {
+    "@svgr/webpack": "^5.5.0",
     "@types/react": "17.0.24",
     "@types/styled-components": "5.1.14",
     "eslint": "7.32.0",
