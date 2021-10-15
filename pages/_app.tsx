@@ -3,6 +3,8 @@ import Head from "next/head";
 import { createGlobalStyle } from "styled-components";
 import { COLORS, GRID, TYPOGRAPHY } from "@ditointernet/uai-foundation";
 
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+
 const GlobalStyle = createGlobalStyle`
   html,
   body {
