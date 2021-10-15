@@ -16,8 +16,8 @@ export const Values = dynamic(() => import("./Values"), {
   ssr: false,
 });
 export { default as Areas } from "./Areas";
-export const Reasons = () => <h2>Reasons</h2>;
 export { default as Initiatives } from "./Initiatives";
+export { default as Reasons } from "./Reasons";
 export { default as Benefits } from "./Benefits";
 export { default as Socials } from "./Socials";
 export { default as Jobs } from "./Jobs";

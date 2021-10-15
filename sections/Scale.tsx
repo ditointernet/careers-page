@@ -2,7 +2,7 @@ import dynamic from "next/dynamic";
 import styled from "styled-components";
 import { COLORS, GRID } from "@ditointernet/uai-foundation";
 
-const Brands = dynamic(() => import("../../components/Brands"), {
+const Brands = dynamic(() => import("../components/Brands"), {
   ssr: false,
 });
 
