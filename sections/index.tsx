@@ -16,12 +16,20 @@ export const Tech = () => (
 export const Values = dynamic(() => import("./Values"), {
   ssr: false,
 });
-export { default as Team } from "./Team";
+export const Team = () => (
+  <section id="nosso-time">
+    <h2>Team</h2>
+  </section>
+);
 export const Testimonials = () => <h2>Testimonials</h2>;
 export const Areas = () => <h2>Areas</h2>;
 export const Reasons = () => <h2>Reasons</h2>;
 export const Initiatives = () => <h2>Initiatives</h2>;
-export const Benefits = () => <h2>Benefits</h2>;
+export const Benefits = () => (
+  <section id="beneficios">
+    <h2>Benefits</h2>
+  </section>
+);
 export const Screening = () => <h2>Screening</h2>;
 export const Jobs = () => (
   <section id="nosso-processo-seletivo">
