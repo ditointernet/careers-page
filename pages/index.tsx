@@ -6,7 +6,7 @@ const Home: NextPage = () => (
     <Sections.Navbar />
     <Sections.Hero />
     <Sections.Objective />
-    <Sections.Scale />
+    {/* <Sections.Scale /> */}
     <Sections.Tech />
     <Sections.Team />
     <Sections.Values />
