@@ -82,13 +82,13 @@ const Menu = ({ open }: Props) => {
 }
 
 const MenuWrapper = styled.div`
-    box-shadow: ${GRID(0)} ${GRID(0.25)} ${GRID(1)} ${GRID(0)} rgb(0 0 0 / 15%);
+    box-shadow: 0 ${GRID(0.25)} ${GRID(1)} 0 rgb(0 0 0 / 15%);
     position: absolute;
     top: ${GRID(10.625)};
     background-color: ${COLORS.WHITE};
     width: calc(100% - ${GRID(4)});
     border-radius: ${GRID(2)};
-    max-height: ${GRID(0)};
+    max-height: 0;
     overflow: hidden;
     
     transition: max-height 0.2s linear;
@@ -123,7 +123,7 @@ const List = styled.ul`
     @media only screen and (min-width: 1366px) {
         display: flex;
         justify-content: end;
-        padding: ${GRID(0)};
+        padding: 0;
 
         a:last-child {
             display: none;

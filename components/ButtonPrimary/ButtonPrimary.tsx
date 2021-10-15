@@ -2,10 +2,10 @@ import styled from 'styled-components'
 import { COLORS, GRID } from "@ditointernet/uai-foundation";
 
 const ButtonPrimary = styled.a`
-    padding: ${GRID(0)};
+    padding: 0;
     background-color: ${COLORS.GREEN_MAIN};
     outline: none;
-    border: ${GRID(0)};
+    border: 0;
     border-radius: ${GRID(7)};
     color: ${COLORS.WHITE};
     position: relative;

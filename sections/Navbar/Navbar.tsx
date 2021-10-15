@@ -67,8 +67,8 @@ const Header = styled.header`
     padding: 0 ${GRID(2)};
     position: fixed;
     width: 100%;
-    top: ${GRID(0)};
-    left: ${GRID(0)};
+    top: 0;
+    left: 0;
     z-index: 2;
     transition: transform 0.4s;
 
@@ -89,7 +89,7 @@ const ButtonBackPage = styled.a`
     display: none;
     color: ${COLORS.NAVY_DARK};
     min-width: ${GRID(21.75)};
-    margin: ${GRID(0)};
+    margin: 0;
     font-weight: 600;
     font-size: ${GRID(2)};
 
