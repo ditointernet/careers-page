@@ -44,7 +44,7 @@ const Scale = () => (
   </Section>
 );
 
-const Section = styled.h2`
+const Section = styled.section`
   display: flex;
   flex-direction: column;
 `;

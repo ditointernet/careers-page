@@ -3,7 +3,8 @@ import styled from "styled-components";
 import { Carousel } from "react-responsive-carousel";
 import { ChevronLeft, ChevronRight } from "@ditointernet/uai-icons";
 
-import teamImage from "../../public/images/Team.svg";
+import teamImage from "../../public/images/team.svg";
+import dotsImage from "../../public/images/dots.svg";
 
 const Team = () => (
   <Section>
@@ -43,8 +44,10 @@ const Team = () => (
         size={GRID(5)}
         color={COLORS.NAVY_MAIN}
       />
-      <Circle bottom={GRID(-9)} right="75%" />
+      <Circle bottom={GRID(-7)} right="75%" />
       <Retangle />
+      <img src={dotsImage.src} className="dots-top" alt="dots" />
+      <img src={dotsImage.src} className="dots-bottom" alt="dots" />
     </ImageWrapper>
 
     <Content>
@@ -90,7 +93,7 @@ const ImageWrapper = styled.div`
   display: flex;
   position: relative;
   width: 100%;
-  max-width: ${GRID(92)};
+  max-width: ${GRID(91)};
 
   img {
     width: 100%;
@@ -102,8 +105,37 @@ const ImageWrapper = styled.div`
     height: ${GRID(1.5)};
   }
 
+  .dots-top,
+  .dots-bottom {
+    position: absolute;
+    width: ${GRID(13)};
+  }
+
+  .dots-top {
+    top: ${GRID(-3)};
+    left: 6%;
+  }
+
+  .dots-bottom {
+    bottom: ${GRID(-3)};
+    right: 6%;
+  }
+
   @media (max-width: 768px) {
     width: 90%;
+
+    .dots-top,
+    .dots-bottom {
+      width: ${GRID(7)};
+    }
+
+    .dots-top {
+      top: ${GRID(-2)};
+    }
+
+    .dots-bottom {
+      bottom: ${GRID(-2)};
+    }
   }
 `;
 
@@ -131,6 +163,7 @@ const Content = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
+  max-width: ${GRID(80.5)};
   padding: ${GRID(8)} ${GRID(10)};
 
   h2 {
@@ -178,7 +211,7 @@ const Circle = styled.div<CircleProps>`
   height: ${(props) => props.size || "10vw"};
   max-width: ${(props) => (props.size ? GRID(5) : GRID(18))};
   max-height: ${(props) => (props.size ? GRID(5) : GRID(18))};
-  border: ${(props) => (props.size ? "7px" : GRID(1.25))} solid
+  border: ${(props) => (props.size ? GRID(1) : GRID(1.25))} solid
     ${(props) => props.color || COLORS.GREEN_MAIN};
   border-radius: 50%;
   top: ${(props) => props.top || "initial"};
@@ -204,7 +237,7 @@ const Retangle = styled.div`
 
   @media (max-width: 768px) {
     width: ${GRID(16)};
-    height: 7px;
+    height: ${GRID(1)};
     bottom: ${GRID(-2)};
   }
 `;
