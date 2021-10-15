@@ -9,7 +9,7 @@ import dotsImage from "../../public/images/dots.svg";
 const Team = () => (
   <Section>
     <ImageWrapper>
-      <CustomCarousel
+      <Carousel
         showStatus={false}
         showThumbs={false}
         renderArrowPrev={(onClickHandler, hasPrev, label) =>
@@ -36,7 +36,7 @@ const Team = () => (
       >
         <img src={teamImage.src} alt="Nosso time" />
         <img src={teamImage.src} alt="Nosso time" />
-      </CustomCarousel>
+      </Carousel>
       <Circle top={GRID(-9)} left="75%" />
       <Circle
         top={GRID(-9)}
@@ -84,12 +84,9 @@ const Section = styled.section`
   }
 `;
 
-const CustomCarousel = styled(Carousel)`
+const ImageWrapper = styled.div`
   border-radius: 0px 0px 20% 0px;
   box-shadow: 24px 0px 0px -8px rgba(230, 232, 237, 0.5);
-`;
-
-const ImageWrapper = styled.div`
   display: flex;
   position: relative;
   width: 100%;
@@ -218,6 +215,7 @@ const Circle = styled.div<CircleProps>`
   left: ${(props) => props.left || "initial"};
   right: ${(props) => props.right || "initial"};
   bottom: ${(props) => props.bottom || "initial"};
+  z-index: 10;
 
   @media (max-width: 768px) {
     width: ${(props) => (props.size ? GRID(3) : GRID(10))};
@@ -234,6 +232,7 @@ const Retangle = styled.div`
   position: absolute;
   bottom: ${GRID(-4)};
   left: 20%;
+  z-index: 5;
 
   @media (max-width: 768px) {
     width: ${GRID(16)};
