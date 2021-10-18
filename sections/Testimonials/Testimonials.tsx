@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import ButtonSecondary from "@/components/ButtonSecondary";
 import { COLORS, GRID } from "@ditointernet/uai-foundation";
 import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, { Pagination, Navigation, EffectCards } from 'swiper';
@@ -53,6 +54,7 @@ const Testimonials = () => {
                 <Profession>{slide.profession}</Profession>
                 <Local>{slide.local}</Local>
                 <Testimonial>{slide.testimonial}</Testimonial>
+                <ButtonSecondary>Ver vagas de tecnologia</ButtonSecondary>
             </Wrapper>
         </SwiperSlide>
     ))
@@ -67,13 +69,13 @@ const Testimonials = () => {
                 {SwiperItens}
             </SwiperMobile>
             <SwiperDesktop
-                slidesPerView={1}
-                spaceBetween={50}
                 loop={true}
+                navigation={true}
+                spaceBetween={50}
+                slidesPerView={1}
                 pagination={{
                     "clickable": true
                 }}
-                navigation={true}
             >
                 {SwiperItens}
             </SwiperDesktop>
@@ -132,7 +134,6 @@ const SwiperDesktop = styled(Swiper)`
         display: block;
     }
 
-    
     .swiper-wrapper {
         width: 100%;
         height: 417px;
@@ -217,7 +218,7 @@ const Profession = styled(DescriptionDefault)`
     margin-bottom: 12px;
 
     @media only screen and (min-width: 1024px) {
-        margin-bottom: 12px;
+        margin-bottom: 4px;
     }
 `
 
@@ -230,6 +231,7 @@ const Local = styled(DescriptionDefault)`
 `
 
 const Testimonial = styled(DescriptionDefault)`
+    max-width: 330px;
     margin-bottom: 16px;
 
     @media only screen and (min-width: 1024px) {
