@@ -94,6 +94,11 @@ const Title = styled.h2`
     font-size: 22px;
     line-height: 33px;
     font-weight: 700;
+
+    @media only screen and (min-width: 1024px) {
+        font-size: 36px;
+        line-height: 54px;
+    }
 `;
 
 const SwiperMobile = styled(Swiper)`
