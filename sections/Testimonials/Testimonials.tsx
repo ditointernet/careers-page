@@ -88,11 +88,16 @@ const Section = styled.section`
     align-items: center;
     flex-direction: column;
     justify-content: center;
+    margin: ${GRID(7)} 0 ${GRID(12.75)};
+
+    @media only screen and (min-width: 1024px) {
+        margin: ${GRID(15)} 0 ${GRID(21.75)};
+    }
 `;
 
 const Title = styled.h2`
     color: ${COLORS.NAVY_DARK};
-    margin: ${GRID(6.875)} 0;
+    margin: 0 0 ${GRID(7)};
     font-size: ${GRID(2.75)};
     line-height: ${GRID(4.125)};
     font-weight: 700;
