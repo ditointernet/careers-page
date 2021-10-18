@@ -7,6 +7,7 @@ export const Hero = () => (
   </section>
 );
 export const Objective = () => <h2>Objective</h2>;
+// export { default as Scale } from "./Scale";
 export const Tech = () => (
   <section id="nossas-tecnologias">
     <h2>Tech</h2>
@@ -20,7 +21,6 @@ export const Team = () => (
     <h2>Team</h2>
   </section>
 );
-// export { default as Scale } from "./Scale";
 export { default as Testimonials } from "./Testimonials";
 export const Areas = () => <h2>Areas</h2>;
 export const Reasons = () => <h2>Reasons</h2>;
