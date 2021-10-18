@@ -92,20 +92,20 @@ const Section = styled.section`
 
 const Title = styled.h2`
     color: ${COLORS.NAVY_DARK};
-    margin: 55px 0;
-    font-size: 22px;
-    line-height: 33px;
+    margin: ${GRID(6.875)} 0;
+    font-size: ${GRID(2.75)};
+    line-height: ${GRID(4.125)};
     font-weight: 700;
 
     @media only screen and (min-width: 1024px) {
-        font-size: 36px;
-        line-height: 54px;
+        font-size: ${GRID(4.5)};
+        line-height: ${GRID(6.75)};
     }
 `;
 
 const SwiperMobile = styled(Swiper)`
-    width: 317px;
-    height: 441px;
+    width: ${GRID(39.625)};
+    height: ${GRID(55.125)};
 
     @media only screen and (min-width: 1024px) {
         display: none;
@@ -118,17 +118,17 @@ const SwiperMobile = styled(Swiper)`
             justify-content: space-between;
             flex-direction: column;
             background-color: ${COLORS.WHITE};
-            box-shadow: 0px 0px 85px rgba(0, 0, 0, 0.1);
-            border-radius: 16px;
+            box-shadow: 0px 0px ${GRID(10.625)} rgba(0, 0, 0, 0.1);
+            border-radius: ${GRID(2)};
         }
     }
 `
 
 const SwiperDesktop = styled(Swiper)`
-    width: calc(100% - 30px);
+    width: calc(100% - ${GRID(3.75)});
     display: none;
-    padding: 0px 50px 40px;
-    max-width: 1033px;
+    padding: 0px ${GRID(6.25)} ${GRID(5)};
+    max-width: ${GRID(129.125)};
 
     @media only screen and (min-width: 1024px) {
         display: block;
@@ -136,15 +136,15 @@ const SwiperDesktop = styled(Swiper)`
 
     .swiper-wrapper {
         width: 100%;
-        height: 417px;
+        height: ${GRID(52.125)};
         
         > .swiper-slide {
             display: flex;
-            border-radius: 24px;
+            border-radius: ${GRID(3)};
             background-color: ${COLORS.WHITE};
             
             &.swiper-slide-active {
-                box-shadow: 0px 0px 85px rgba(0, 0, 0, 0.1);
+                box-shadow: 0px 0px ${GRID(10.625)} rgba(0, 0, 0, 0.1);
             }
         }
     }
@@ -170,72 +170,72 @@ const SwiperDesktop = styled(Swiper)`
 
 const ImgContainer = styled.div`
     width: 100%;
-    height: 136px;
+    height: ${GRID(17)};
     background-size: cover;
 
     @media only screen and (min-width: 1024px) {
-        width: 378px;
+        width: ${GRID(47.25)};
         height: 100%;
     }
 `
 
 const Wrapper = styled.div`
     width: 100%;
-    height: calc(100% - 136px);
-    padding: 24px 20px;
+    height: calc(100% - ${GRID(17)});
+    padding: ${GRID(3)} ${GRID(2.5)};
 
     @media only screen and (min-width: 1024px) {
-        width: calc(100% - 378px);
+        width: calc(100% - ${GRID(47.25)});
         height: 100%;
-        padding: 56px 48px;
+        padding: ${GRID(7)} ${GRID(6)};
     }
 `
 
 const Name = styled.p`
     margin: 0;
     color: ${COLORS.NAVY_DARK};
-    font-size: 22px;
+    font-size: ${GRID(2.75)};
     font-weight: 700;
-    line-height: 33px;
-    margin-bottom: 16px;
+    line-height: ${GRID(4.125)};
+    margin-bottom: ${GRID(2)};
 
     @media only screen and (min-width: 1024px) {
-        font-size: 30px;
-        line-height: 45px;
-        margin-bottom: 12px;
+        font-size: ${GRID(3.75)};
+        line-height: ${GRID(5.625)};
+        margin-bottom: ${GRID(1.5)};
     }
 `
 
 const DescriptionDefault = styled.p`
     margin: 0;
     color: ${COLORS.GRAY_4};
-    font-size: 16px;
+    font-size: ${GRID(2)};
     font-weight: 500;
-    line-height: 24px;
+    line-height: ${GRID(3)};
 `
 
 const Profession = styled(DescriptionDefault)`
-    margin-bottom: 12px;
+    margin-bottom: ${GRID(1.5)};
 
     @media only screen and (min-width: 1024px) {
-        margin-bottom: 4px;
+        margin-bottom: ${GRID(0.5)};
     }
 `
 
 const Local = styled(DescriptionDefault)`
-    margin-bottom: 24px;
+    margin-bottom: ${GRID(3)};
 
     @media only screen and (min-width: 1024px) {
-        margin-bottom: 36px;
+        margin-bottom: ${GRID(4.5)};
     }
 `
 
 const Testimonial = styled(DescriptionDefault)`
-    max-width: 330px;
-    margin-bottom: 16px;
+    max-width: ${GRID(41.25)};
+    margin-bottom: ${GRID(2)};
 
     @media only screen and (min-width: 1024px) {
-        margin-bottom: 48px;
+        margin-bottom: ${GRID(6)};
     }
 `
 
