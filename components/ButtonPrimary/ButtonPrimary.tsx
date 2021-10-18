@@ -5,11 +5,11 @@ const ButtonPrimary = styled.a`
     color: ${COLORS.WHITE};
     cursor: pointer;
     outline: none;
-    padding: 12px 24px;
-    min-width: 191px;
+    padding: ${GRID(1.5)} ${GRID(3)};
+    min-width: ${GRID(23.875)};
     font-size: ${GRID(2)};
     font-weight: 500;
-    line-height: 24px;
+    line-height: ${GRID(3)};
     border-radius: ${GRID(7)};
     background-color: ${COLORS.GREEN_MAIN};
 `;
