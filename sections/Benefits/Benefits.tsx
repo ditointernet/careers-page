@@ -83,7 +83,7 @@ const Section = styled.section`
     padding: 40px 16px 320px;
     max-width: 1440px;
 
-    background-image: url('./images/benefits.png');
+    background-image: url('./images/benefits.svg');
     background-size: 330px;
     background-repeat: no-repeat;
     background-position-x: 20%;
@@ -129,27 +129,32 @@ const SwiperMobile = styled(Swiper)`
     }
 
     .swiper-button-prev {
-        left: unset;
-        right: 48px;
-        bottom: 0;
-        top: unset;
         width: 32px;
         height: 32px;
 
+        top: unset;
+        left: unset;
+        right: 48px;
+        bottom: 0;
+
         &::after {
-            content: url('./images/arrow-left.png');
+            content: url('./images/arrow-left.svg');
+            line-height: 32px;
         }
     }
 
     .swiper-button-next {
-        right: 0;
-        bottom: 0;
-        top: unset;
         width: 32px;
         height: 32px;
 
+        top: unset;
+        left: unset;
+        right: 0;
+        bottom: 0;
+
         &::after {
-            content: url('./images/arrow-right.png');
+            content: url('./images/arrow-right.svg');
+            line-height: 32px;
         }
     }
 `
