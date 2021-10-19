@@ -121,8 +121,8 @@ const SwiperMobile = styled(Swiper)`
 
     .swiper-wrapper {
         > div {
-            min-height: GRID(45);
-            border: GRID(0.125) solid #E9E9E9;
+            min-height: ${GRID(45)};
+            border: ${GRID(0.125)} solid #E9E9E9;
             padding: ${GRID(4)};
             max-width: 100%;
             border-radius: ${GRID(3)};
@@ -172,39 +172,39 @@ const WrapperCards = styled.div`
 `
 
 const Card = styled.div`
-    border: GRID(0.125) solid #E9E9E9;
+    border: ${GRID(0.125)} solid #E9E9E9;
     padding: ${GRID(4)};
     max-width: ${GRID(42.875)};
     border-radius: ${GRID(3)};
     
     
     @media only screen and (min-width: 1024px) {
-        max-width: calc(33% - GRID(1.75));
+        max-width: calc(33% - ${GRID(1.75)});
 
         &:hover {
-            box-shadow: 0 GRID(0.5) GRID(1) rgba(0, 0, 0, 0.08);
+            box-shadow: 0 ${GRID(0.5)} ${GRID(1)} rgba(0, 0, 0, 0.08);
         }
     }
 `
 
 const CardImg = styled.div`
-    width: GRID(12);
-    height: GRID(12);
+    width: ${GRID(12)};
+    height: ${GRID(12)};
     margin: 0 0 ${GRID(3)};
     background-size: cover;
 `
 
 const CardTitle = styled.h3`
     color: #223154;
-    margin: 0 0 GRID(2.5);
-    font-size: GRID(2.75);
+    margin: 0 0 ${GRID(2.5)};
+    font-size: ${GRID(2.75)};
     font-weight: 700;
     line-height: ${GRID(4.125)};
 `
 
 const CardDescription = styled.div`
     color: #8D95A7;
-    font-size: GRID(2);
+    font-size: ${GRID(2)};
     font-weight: 500;
     line-height: ${GRID(3)};
 `
