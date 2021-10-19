@@ -1,0 +1,14 @@
+<svg width="96" height="96" viewBox="0 0 96 96" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="96" height="96" fill="white"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M52.2256 13.1005C62.4886 14.157 66.7992 26.18 73.5026 34.4059C80.7569 43.3077 93.594 50.1395 91.8366 61.7079C90.0423 73.5194 76.4423 77.4378 66.1769 82.6282C55.9099 87.8195 45.2021 95.0208 34.5936 90.6512C23.3243 86.0095 16.3349 73.8267 14.3671 61.288C12.5332 49.6031 17.8044 38.5476 24.9823 29.4114C31.9804 20.504 41.2792 11.9737 52.2256 13.1005Z" fill="#5FEEA9"/>
+<rect x="8" y="74" width="80" height="11" rx="5.5" stroke="black" stroke-width="4"/>
+<path d="M80 73C80 55.8792 65.6731 42 48 42C30.3269 42 16 55.8792 16 73" stroke="black" stroke-width="4"/>
+<path d="M43 35V41.5" stroke="black" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M53 35V41.5" stroke="black" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M40 34H56" stroke="black" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M18 14.8573L20.5314 17.4401L20.5455 17.4545L20.5599 17.4686L23.1427 20L20.5599 22.5314L20.5455 22.5455L20.5314 22.5599L18 25.1427L15.4686 22.5599L15.4545 22.5455L15.4401 22.5314L12.8573 20L15.4401 17.4686L15.4545 17.4545L15.4686 17.4401L18 14.8573Z" stroke="black" stroke-width="4"/>
+<path d="M79 24.8573L81.5314 27.4401L81.5455 27.4545L81.5599 27.4686L84.1427 30L81.5599 32.5314L81.5455 32.5455L81.5314 32.5599L79 35.1427L76.4686 32.5599L76.4545 32.5455L76.4401 32.5314L73.8573 30L76.4401 27.4686L76.4545 27.4545L76.4686 27.4401L79 24.8573Z" stroke="black" stroke-width="4"/>
+<path d="M42 16V25" stroke="black" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M48 12V21" stroke="black" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M54 16V25" stroke="black" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
