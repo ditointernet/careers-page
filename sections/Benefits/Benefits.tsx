@@ -1,5 +1,10 @@
 import React from 'react';
 import styled from 'styled-components'
+import { Swiper, SwiperSlide } from "swiper/react";
+import SwiperCore, { Navigation } from 'swiper';
+
+import "swiper/css";
+import "swiper/css/navigation"
 
 type Card = {
     img: string,
@@ -8,6 +13,7 @@ type Card = {
 }
 
 const Benefits = () => {
+    SwiperCore.use([Navigation]);
 
     const cards: Card[] = [
         {
@@ -50,6 +56,15 @@ const Benefits = () => {
     return (
         <Section>
             <Title>Nossos benefícios</Title>
+            <SwiperMobile navigation={true} loop={true}>
+                {cards.map((card: Card, index: number) => (
+                    <SwiperSlide key={index}>
+                        <CardImg style={{ backgroundImage: `url(${card.img})` }} />
+                        <CardTitle>{card.title}</CardTitle>
+                        <CardDescription>{card.description}</CardDescription>
+                    </SwiperSlide>
+                ))}
+            </SwiperMobile>
             <WrapperCards>
                 {cards.map((card: Card, index: number) => (
                     <Card key={index}>
@@ -64,18 +79,21 @@ const Benefits = () => {
 };
 
 const Section = styled.section`
-    margin: 40px auto 0;
-    padding: 0 16px 112px;
+    margin: 0 auto;
+    padding: 40px 16px 320px;
     max-width: 1440px;
 
     background-image: url('./images/benefits.png');
+    background-size: 330px;
     background-repeat: no-repeat;
-    background-position-x: 85%;
+    background-position-x: 20%;
     background-position-y: 100%;
-
-    @media only screen and (min-width: 1366px) {
-        margin: 80px auto 0px;
-        padding: 0 72px 200px;
+    
+    @media only screen and (min-width: 1024px) {
+        margin: 0px auto;
+        padding: 80px 72px 200px;
+        background-size: auto;
+        background-position-x: 85%;
     }
 `
 
@@ -85,30 +103,81 @@ const Title = styled.h2`
     font-weight: 700;
     margin: 0px 0px 40px;
 
-    @media only screen and (min-width: 1366px) {
+    @media only screen and (min-width: 1024px) {
         font-size: 36px;
         line-height: 54px;
         margin: 0px 0px 112px;
     }
 `
 
-const WrapperCards = styled.div`
-    gap: 24px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+const SwiperMobile = styled(Swiper)`
+    padding: 0 0 44px;
+    max-width: 343px;
 
-    @media only screen and (min-width: 1366px) {
+    @media only screen and (min-width: 1024px) {
+        display: none;
+    }
+
+    .swiper-wrapper {
+        > div {
+            min-height: 360px;
+            border: 1px solid #E9E9E9;
+            padding: 32px;
+            max-width: 100%;
+            border-radius: 24px;
+        }
+    }
+
+    .swiper-button-prev {
+        left: unset;
+        right: 48px;
+        bottom: 0;
+        top: unset;
+        width: 32px;
+        height: 32px;
+
+        &::after {
+            content: url('./images/arrow-left.png');
+        }
+    }
+
+    .swiper-button-next {
+        right: 0;
+        bottom: 0;
+        top: unset;
+        width: 32px;
+        height: 32px;
+
+        &::after {
+            content: url('./images/arrow-right.png');
+        }
+    }
+`
+
+const WrapperCards = styled.div`
+    display: none;
+    
+    @media only screen and (min-width: 1024px) {
+        gap: 24px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
     }
 `
 
 const Card = styled.div`
     border: 1px solid #E9E9E9;
     padding: 32px;
-    max-width: calc(33% - 14px);
+    max-width: 343px;
     border-radius: 24px;
+    
+    
+    @media only screen and (min-width: 1024px) {
+        max-width: calc(33% - 14px);
 
-    @media only screen and (min-width: 1366px) {
+        &:hover {
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.08);
+        }
     }
 `
 
@@ -117,9 +186,6 @@ const CardImg = styled.div`
     height: 96px;
     margin: 0px 0px 24px;
     background-size: cover;
-
-    @media only screen and (min-width: 1366px) {
-    }
 `
 
 const CardTitle = styled.h3`
