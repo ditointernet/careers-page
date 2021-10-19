@@ -4,18 +4,19 @@ import { COLORS, GRID } from "@ditointernet/uai-foundation";
 
 const Hero: NextPage = () => (
   <Container>
-    <Logo src="/images/Logo.png" alt="slogan da Dito" />
-    <Subtitle>
-      Nossa paixão por tecnologia está revolucionando o varejo.
-    </Subtitle>
-    <Title>Vem com a gente!</Title>
+    <Logo
+      src="/images/logo-dito.png"
+      alt="Nossa paixão por tecnologia está revolucionando o varejo."
+    />
+    <Title>Nossa paixão por tecnologia está revolucionando o varejo.</Title>
+    <Subtitle>Vem com a gente!</Subtitle>
     <Link href="" target="_blank">
       Ver nossas vagas
     </Link>
     <FrameWrap>
       <Frame
-        src="/images/Frame.png"
-        alt="Picture of people looking for a computer"
+        src="/images/frame.png"
+        alt="Foto de pessoas trabalhando juntas em frente a um computador"
       />
     </FrameWrap>
 
@@ -26,8 +27,8 @@ const Hero: NextPage = () => (
   </Container>
 );
 
-const Container = styled.div`
-  background-image: url("/images/AboutPageBackgroundImage.png");
+const Container = styled.section`
+  background-image: url("/images/about-page-background-image.png");
   background-position: left top;
   background-repeat: no-repeat;
   display: flex;
@@ -35,6 +36,10 @@ const Container = styled.div`
   padding: 0px 3.2vw;
   position: relative;
   width: 100vw;
+
+  @media (max-width: 768px) {
+    background-size: 100% 100%;
+  }
 `;
 
 const Logo = styled.img`
@@ -48,27 +53,24 @@ const Logo = styled.img`
   }
 `;
 
-const Subtitle = styled.h2`
+const Title = styled.h1`
   color: #223154;
-  font-family: Poppins;
   font-size: ${GRID(3.75)};
-  font-style: normal;
   font-weight: 600;
   line-height: ${GRID(5.625)};
-  margin: 85px 0px 8px;
-  width: ${GRID(50)};
+  margin: ${GRID(10.625)} 0px ${GRID(1)};
+  width: ${GRID(58)};
   @media (max-width: 768px) {
     font-size: ${GRID(2)};
     line-height: ${GRID(3)};
-    margin: 40px 0px 8px;
-    width: ${GRID(25)};
+    margin: ${GRID(5)} 0px ${GRID(1)};
+    width: ${GRID(33)};
   }
 `;
 
-const Title = styled.h1`
+const Subtitle = styled.h2`
   color: ${COLORS.NAVY_DARK};
   font-size: ${GRID(4.5)};
-  font-style: normal;
   line-height: ${GRID(6.75)};
   margin-bottom: ${GRID(5)};
   @media (max-width: 768px) {
@@ -85,14 +87,12 @@ const Link = styled.a`
   border-radius: ${GRID(7)};
   color: ${COLORS.WHITE};
   display: flex;
-  font-family: Poppins;
   font-size: ${GRID(2)};
-  font-style: normal;
   font-weight: 500;
   height: ${GRID(6)};
   justify-content: center;
   line-height: ${GRID(3)};
-  padding: 12px 24px;
+  padding: ${GRID(1.5)} ${GRID(3)};
   text-align: center;
   width: ${GRID(23.875)};
   ::hover {
@@ -105,7 +105,7 @@ const Frame = styled.img`
   position: absolute;
   right: ${GRID(1.25)};
   top: 32vh;
-  @media (max-width: 800px) {
+  @media (max-width: 1024px) {
     position: static;
     margin-right: ${GRID(1.625)};
   }
@@ -114,7 +114,7 @@ const Frame = styled.img`
 const FrameWrap = styled.div`
   width: 100vw;
   height: ${GRID(50)};
-  @media (max-width: 800px) {
+  @media (max-width: 1024px) {
     margin-top: ${GRID(6.25)};
     display: flex;
     justify-content: flex-end;
@@ -129,6 +129,9 @@ const Footer = styled.footer`
   height: fit-content;
   padding-bottom: ${GRID(1.625)};
   width: 100%;
+  @media (max-width: 1024px) {
+    margin-top: ${GRID(18)};
+  }
   @media (max-width: 768px) {
     display: none;
   }
@@ -140,7 +143,7 @@ const Info = styled.p`
   font-style: normal;
   font-weight: 600;
   line-height: ${GRID(3)};
-  margin: 4px 0px 0px;
+  margin: ${GRID(0.5)} 0px 0px;
 `;
 
 export default Hero;
