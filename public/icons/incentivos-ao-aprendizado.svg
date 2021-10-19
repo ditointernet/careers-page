@@ -1,0 +1,24 @@
+<svg width="96" height="96" viewBox="0 0 96 96" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_659:2418)">
+<rect width="96" height="96" fill="white"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M59.2256 13.1005C69.4886 14.157 73.7992 26.18 80.5026 34.4059C87.7569 43.3077 100.594 50.1395 98.8366 61.7079C97.0423 73.5194 83.4423 77.4378 73.1769 82.6282C62.9099 87.8195 52.2021 95.0208 41.5936 90.6512C30.3243 86.0095 23.3349 73.8267 21.3671 61.288C19.5332 49.6031 24.8044 38.5476 31.9823 29.4114C38.9804 20.504 48.2792 11.9737 59.2256 13.1005Z" fill="#5FEEA9"/>
+<path d="M66 63V77L71 71.9744L76 77V63" stroke="black" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M82 44H56C51.5817 44 48 47.5817 48 52C48 56.4183 51.5817 60 56 60H82V44ZM56 40C49.3726 40 44 45.3726 44 52C44 58.6274 49.3726 64 56 64H86V42C86 40.8954 85.1046 40 84 40H56Z" fill="black"/>
+<path d="M66 44H35C30.5817 44 27 47.5817 27 52C27 56.4183 30.5817 60 35 60H66H70V64H35C28.3726 64 23 58.6274 23 52C23 45.3726 28.3726 40 35 40H70V44H66Z" fill="black"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M82 64H49C44.5817 64 41 67.5817 41 72C41 76.4183 44.5817 80 49 80H82V64ZM49 60C42.3726 60 37 65.3726 37 72C37 78.6274 42.3726 84 49 84H84C85.1046 84 86 83.1046 86 82V60H49Z" fill="black"/>
+<path d="M50 64H25C20.5817 64 17 67.5817 17 72C17 76.4183 20.5817 80 25 80H50H54V84H25C18.3726 84 13 78.6274 13 72C13 65.3726 18.3726 60 25 60H54V64H50Z" fill="black"/>
+<path d="M83 49L56 49" stroke="black" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M65 69L51 69" stroke="black" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M60 75H51" stroke="black" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M84 69H76" stroke="black" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M56 55L71 55" stroke="black" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M40 16H44C48.9706 16 53 20.0294 53 25V29H49C44.0294 29 40 24.9706 40 20V16Z" stroke="black" stroke-width="4"/>
+<path d="M53 27V41" stroke="black" stroke-width="4"/>
+<path d="M66 16L62 16C57.0294 16 53 20.0294 53 25L53 29L57 29C61.9706 29 66 24.9706 66 20L66 16Z" stroke="black" stroke-width="4"/>
+</g>
+<defs>
+<clipPath id="clip0_659:2418">
+<rect width="96" height="96" fill="white"/>
+</clipPath>
+</defs>
+</svg>
