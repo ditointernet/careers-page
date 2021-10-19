@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components'
+import { COLORS, GRID } from "@ditointernet/uai-foundation";
 import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, { Navigation } from 'swiper';
 
@@ -80,39 +81,39 @@ const Benefits = () => {
 
 const Section = styled.section`
     margin: 0 auto;
-    padding: 40px 16px 320px;
-    max-width: 1440px;
+    padding: ${GRID(5)} ${GRID(2)} ${GRID(40)};
+    max-width: ${GRID(180)};
 
     background-image: url('./images/benefits.svg');
-    background-size: 330px;
+    background-size: ${GRID(41.25)};
     background-repeat: no-repeat;
     background-position-x: 20%;
     background-position-y: 100%;
     
     @media only screen and (min-width: 1024px) {
-        margin: 0px auto;
-        padding: 80px 72px 200px;
+        margin: 0 auto;
+        padding: ${GRID(10)} ${GRID(9)} ${GRID(25)};
         background-size: auto;
         background-position-x: 85%;
     }
 `
 
 const Title = styled.h2`
-    font-size: 22px;
-    line-height: 33px;
+    font-size: ${GRID(2.75)};
+    line-height: ${GRID(4.125)};
     font-weight: 700;
-    margin: 0px 0px 40px;
+    margin: 0 0 ${GRID(5)};
 
     @media only screen and (min-width: 1024px) {
-        font-size: 36px;
-        line-height: 54px;
-        margin: 0px 0px 112px;
+        font-size: ${GRID(4.5)};
+        line-height: ${GRID(6.75)};
+        margin: 0 0 ${GRID(14)};
     }
 `
 
 const SwiperMobile = styled(Swiper)`
-    padding: 0 0 44px;
-    max-width: 343px;
+    padding: 0 0 ${GRID(5.5)};
+    max-width: ${GRID(42.875)};
 
     @media only screen and (min-width: 1024px) {
         display: none;
@@ -120,32 +121,32 @@ const SwiperMobile = styled(Swiper)`
 
     .swiper-wrapper {
         > div {
-            min-height: 360px;
-            border: 1px solid #E9E9E9;
-            padding: 32px;
+            min-height: GRID(45);
+            border: GRID(0.125) solid #E9E9E9;
+            padding: ${GRID(4)};
             max-width: 100%;
-            border-radius: 24px;
+            border-radius: ${GRID(3)};
         }
     }
 
     .swiper-button-prev {
-        width: 32px;
-        height: 32px;
+        width: ${GRID(4)};
+        height: ${GRID(4.125)};
 
         top: unset;
         left: unset;
-        right: 48px;
+        right: ${GRID(6)};
         bottom: 0;
 
         &::after {
-            content: url('./images/arrow-left.svg');
-            line-height: 32px;
+            content: url('./icons/arrow-left.svg');
+            line-height: ${GRID(4)};
         }
     }
 
     .swiper-button-next {
-        width: 32px;
-        height: 32px;
+        width: ${GRID(4)};
+        height: ${GRID(4.125)};
 
         top: unset;
         left: unset;
@@ -153,8 +154,8 @@ const SwiperMobile = styled(Swiper)`
         bottom: 0;
 
         &::after {
-            content: url('./images/arrow-right.svg');
-            line-height: 32px;
+            content: url('./icons/arrow-right.svg');
+            line-height: ${GRID(4)};
         }
     }
 `
@@ -163,7 +164,7 @@ const WrapperCards = styled.div`
     display: none;
     
     @media only screen and (min-width: 1024px) {
-        gap: 24px;
+        gap: ${GRID(3)};
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
@@ -171,41 +172,41 @@ const WrapperCards = styled.div`
 `
 
 const Card = styled.div`
-    border: 1px solid #E9E9E9;
-    padding: 32px;
-    max-width: 343px;
-    border-radius: 24px;
+    border: GRID(0.125) solid #E9E9E9;
+    padding: ${GRID(4)};
+    max-width: ${GRID(42.875)};
+    border-radius: ${GRID(3)};
     
     
     @media only screen and (min-width: 1024px) {
-        max-width: calc(33% - 14px);
+        max-width: calc(33% - GRID(1.75));
 
         &:hover {
-            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.08);
+            box-shadow: 0 GRID(0.5) GRID(1) rgba(0, 0, 0, 0.08);
         }
     }
 `
 
 const CardImg = styled.div`
-    width: 96px;
-    height: 96px;
-    margin: 0px 0px 24px;
+    width: GRID(12);
+    height: GRID(12);
+    margin: 0 0 ${GRID(3)};
     background-size: cover;
 `
 
 const CardTitle = styled.h3`
     color: #223154;
-    margin: 0px 0px 20px;
-    font-size: 22px;
+    margin: 0 0 GRID(2.5);
+    font-size: GRID(2.75);
     font-weight: 700;
-    line-height: 33px;
+    line-height: ${GRID(4.125)};
 `
 
 const CardDescription = styled.div`
     color: #8D95A7;
-    font-size: 16px;
+    font-size: GRID(2);
     font-weight: 500;
-    line-height: 24px;
+    line-height: ${GRID(3)};
 `
 
 export default Benefits;
