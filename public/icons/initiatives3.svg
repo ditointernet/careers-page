@@ -1,0 +1,19 @@
+<svg width="96" height="96" viewBox="0 0 96 96" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="96" height="96" fill="white"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M52.2256 14.1005C62.4886 15.157 66.7992 27.18 73.5026 35.4059C80.7569 44.3077 93.594 51.1395 91.8366 62.7079C90.0423 74.5194 76.4423 78.4378 66.1769 83.6282C55.9099 88.8195 45.2021 96.0208 34.5936 91.6512C23.3243 87.0095 16.3349 74.8267 14.3671 62.288C12.5332 50.6031 17.8044 39.5476 24.9823 30.4114C31.9804 21.504 41.2792 12.9737 52.2256 14.1005Z" fill="#5FEEA9"/>
+<path d="M48 76.4444C63.7094 76.4444 76.4444 63.7094 76.4444 48C76.4444 43.6963 75.4887 39.6159 73.7778 35.9593L76.4444 33.3255C78.7167 37.721 80 42.7106 80 48C80 65.6731 65.6731 80 48 80C30.3269 80 16 65.6731 16 48C16 30.3269 30.3269 16 48 16C56.4121 16 64.0661 19.2459 69.7778 24.5535L66.6667 26.5369C61.6711 22.1885 55.143 19.5556 48 19.5556C32.2906 19.5556 19.5556 32.2906 19.5556 48C19.5556 63.7094 32.2906 76.4444 48 76.4444Z" fill="black"/>
+<path d="M61 50C61 56.0751 56.0751 61 50 61" stroke="black" stroke-width="4" stroke-linecap="round"/>
+<path d="M69 50C69 60.4934 60.0457 69 49 69" stroke="black" stroke-width="4" stroke-linecap="round"/>
+<circle cx="48" cy="48" r="6" stroke="black" stroke-width="4"/>
+<path d="M15 75.8573L17.5314 78.4401L17.5455 78.4545L17.5599 78.4686L20.1427 81L17.5599 83.5314L17.5455 83.5455L17.5314 83.5599L15 86.1427L12.4686 83.5599L12.4545 83.5455L12.4401 83.5314L9.85729 81L12.4401 78.4686L12.4545 78.4545L12.4686 78.4401L15 75.8573Z" stroke="black" stroke-width="4"/>
+<path d="M15 7V11" stroke="black" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M81 75V79" stroke="black" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M15 17V21" stroke="black" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M81 85V89" stroke="black" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M11 14L7 14" stroke="black" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M77 82L73 82" stroke="black" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M23 14L19 14" stroke="black" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M89 82L85 82" stroke="black" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="72" cy="29" r="7" stroke="black" stroke-width="4"/>
+<path d="M79 29V8L86 11.6522" stroke="black" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

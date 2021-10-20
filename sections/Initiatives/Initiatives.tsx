@@ -1,25 +1,36 @@
 import React from 'react'
 import styled from 'styled-components'
-// import { COLORS, GRID } from "@ditointernet/uai-foundation";
-// import { Swiper, SwiperSlide } from "swiper/react";
-// import SwiperCore, { Navigation } from 'swiper';
-
-// import "swiper/css";
-// import "swiper/css/navigation"
+import CardsList from '@/components/CardsList';
+import { COLORS, GRID } from "@ditointernet/uai-foundation";
 
 const Initiatives = () => {
-    // SwiperCore.use([Navigation]);
 
-    // const cards: Card[] = [
-    //     {
-    //         img: "./icons/plano-de-saude.svg",
-    //         description: "Plano de saúde e odontológico Bradesco de cobertura nacional e sem coparticipação nem mensalidade para FERAs e dependentes.",
-    //     },
-    //     {
-    //         img: "./icons/cartao-caju.svg",
-    //         description: "Crédito no valor de R$30,00/dia em cartão com bandeira Visa™ para você usar como e onde quiser, inclusive como refeição e alimentação.",
-    //     },
-    // ];
+    const cards: any = [
+        {
+            img: "./icons/initiatives1.svg",
+            description: "Total liberdade de estilo, aqui não tem essa de dress code.",
+        },
+        {
+            img: "./icons/initiatives2.svg",
+            description: "Lanches, games e fliperama à vontade no escritório para relaxar durante os seus intervalos.",
+        },
+        {
+            img: "./icons/initiatives3.svg",
+            description: "Banda de FERAs, para quem curte fazer um som.",
+        },
+        {
+            img: "./icons/initiatives4.svg",
+            description: "Convênios e descontos em vários restaurantes, academias, instituições de ensino, escolas de idiomas, entre outros.",
+        },
+        {
+            img: "./icons/initiatives5.svg",
+            description: "Times de futebol (feminino e masculino) que batem um bolão.",
+        },
+        {
+            img: "./icons/initiatives6.svg",
+            description: "Confraternizações constantes e eventos de integração entre equipes para proporcionar novas conexões e amizades.",
+        },
+    ];
 
     return (
         <Section>
@@ -27,29 +38,21 @@ const Initiatives = () => {
             <Fragment>
                 <SubTitle>Comitês de Diversidade e Inclusão</SubTitle>
                 <Description>AfroDito, DitoPride, DitoGirls, DitoParents – que realizam eventos direcionados, debates e iniciativas de conscientização e inclusão de grupos minorizados.</Description>
-
-                {/* <SwiperMobile navigation={true} loop={true}>
-                    {cards.map((card: Card, index: number) => (
-                        <SwiperSlide key={index}>
-                            <CardImg style={{ backgroundImage: `url(${card.img})` }} />
-                            <CardTitle>{card.title}</CardTitle>
-                            <CardDescription>{card.description}</CardDescription>
-                        </SwiperSlide>
-                    ))}
-                </SwiperMobile> */}
             </Fragment>
             <Fragment>
                 <SubTitle>Dito Impacto</SubTitle>
                 <Description>Uma iniciativa criada para retribuir para a sociedade e multiplicar o sentimento de solidariedade. Além de ações de voluntariado, auxiliamos grupos ou instituições que lutam por causas de extrema importância com a ajuda do nosso time de FERAs.</Description>
             </Fragment>
             <SubTitle>Outras iniciativas</SubTitle>
+            <CardsList minMobileHeight={285} minDesktopHeight={285} cards={cards} />
         </Section>
     )
 };
 
 const Section = styled.section`
     padding: 64px 16px 80px;
-    text-align: center;
+    max-width: ${GRID(180)};
+    margin: 0 auto;
 `
 
 const Title = styled.h2`
@@ -70,7 +73,7 @@ const SubTitle = styled.h3`
 
 const Description = styled.p`
     color: #8D95A7;
-    margin: 0;
+    margin: 0 0 80px;
     font-size: 16px;
     font-weight: 500;
     line-height: 24px;
@@ -79,46 +82,5 @@ const Description = styled.p`
 const Fragment = styled.div`
     margin: 0 0 80px;
 `
-
-// const SwiperMobile = styled(Swiper)`
-//     padding: 0 0 ${GRID(5.5)};
-//     max-width: ${GRID(42.875)};
-//     @media only screen and (min-width: 1024px) {
-//         display: none;
-//     }
-//     .swiper-wrapper {
-//         > div {
-//             min-height: ${GRID(45)};
-//             border: ${GRID(0.125)} solid #E9E9E9;
-//             padding: ${GRID(4)};
-//             max-width: 100%;
-//             border-radius: ${GRID(3)};
-//         }
-//     }
-//     .swiper-button-prev {
-//         width: ${GRID(4)};
-//         height: ${GRID(4.125)};
-//         top: unset;
-//         left: unset;
-//         right: ${GRID(6)};
-//         bottom: 0;
-//         &::after {
-//             content: url('./icons/arrow-left.svg');
-//             line-height: ${GRID(4)};
-//         }
-//     }
-//     .swiper-button-next {
-//         width: ${GRID(4)};
-//         height: ${GRID(4.125)};
-//         top: unset;
-//         left: unset;
-//         right: 0;
-//         bottom: 0;
-//         &::after {
-//             content: url('./icons/arrow-right.svg');
-//             line-height: ${GRID(4)};
-//         }
-//     }
-// `
 
 export default Initiatives;
