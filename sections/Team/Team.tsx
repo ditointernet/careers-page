@@ -71,14 +71,14 @@ const Team = () => (
 
 const Section = styled.section`
   display: flex;
-  margin: ${GRID(10)} 0;
+  margin: ${GRID(16)} 0;
 
   @media (max-width: 1060px) {
     align-items: center;
   }
 
   @media (max-width: 768px) {
-    margin: 0;
+    margin: ${GRID(10)} 0;
     flex-direction: column-reverse;
     align-items: flex-start;
   }

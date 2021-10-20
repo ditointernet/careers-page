@@ -16,11 +16,7 @@ export const Tech = () => (
 export const Values = dynamic(() => import("./Values"), {
   ssr: false,
 });
-export const Team = () => (
-  <section id="nosso-time">
-    <h2>Team</h2>
-  </section>
-);
+export { default as Team } from "./Team";
 export { default as Testimonials } from "./Testimonials";
 export const Areas = () => <h2>Areas</h2>;
 export const Reasons = () => <h2>Reasons</h2>;
