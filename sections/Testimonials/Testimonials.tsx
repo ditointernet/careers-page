@@ -48,7 +48,7 @@ const Testimonials = () => {
 
     const SwiperItens = slideItens.map((slide: Slide, index: number) => (
         <SwiperSlide key={index}>
-            <ImgContainer style={{ backgroundImage: `url(${slide.url})` }} />
+            <ImgContainer image={slide.url} />
             <Wrapper>
                 <Name>{slide.name}</Name>
                 <Profession>{slide.profession}</Profession>
@@ -173,10 +173,11 @@ const SwiperDesktop = styled(Swiper)`
     }
 `
 
-const ImgContainer = styled.div`
+const ImgContainer = styled.div<{ image: string }>`
     width: 100%;
     height: ${GRID(17)};
     background-size: cover;
+    background-image: url(${props => props.image});
 
     @media only screen and (min-width: 1024px) {
         width: ${GRID(47.25)};
