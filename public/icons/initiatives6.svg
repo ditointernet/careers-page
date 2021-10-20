@@ -1,0 +1,23 @@
+<svg width="96" height="96" viewBox="0 0 96 96" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="96" height="96" fill="white"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M20.0916 55.2446C21.0545 45.3764 32.0122 41.2316 39.5092 34.786C47.6222 27.8107 53.8487 15.4673 64.392 17.1571C75.1569 18.8824 78.7282 31.9593 83.4586 41.8299C88.1899 51.702 94.7531 61.998 90.7707 72.1985C86.5403 83.0343 75.437 89.7549 64.0094 91.6471C53.3598 93.4104 43.2839 88.3419 34.9572 81.4401C26.8391 74.7112 19.0647 65.77 20.0916 55.2446Z" fill="#5FEEA9"/>
+<path d="M48.2346 10V20.0494" stroke="black" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="48.2346" cy="54.7653" r="27.2346" stroke="black" stroke-width="4"/>
+<path d="M40.9259 27.358V23.9629C40.9259 22.306 42.2691 20.9629 43.9259 20.9629H52.5432C54.2001 20.9629 55.5432 22.306 55.5432 23.9629V27.358" stroke="black" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M40.9259 28.2715C40.9259 28.2715 34.5309 39.4943 34.5309 54.3085C34.5309 69.1227 40.9259 80.3456 40.9259 80.3456" stroke="black" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M55.5432 28.2715C55.5432 28.2715 62.8519 39.4943 62.8519 54.3085C62.8519 69.1227 55.5432 80.3456 55.5432 80.3456" stroke="black" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M48 28L48 81" stroke="black" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M28 38L69 38" stroke="black" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M22 55L74 55" stroke="black" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M27 71L70 71" stroke="black" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M19 14.8573L21.5314 17.4401L21.5455 17.4545L21.5599 17.4686L24.1427 20L21.5599 22.5314L21.5455 22.5455L21.5314 22.5599L19 25.1427L16.4686 22.5599L16.4545 22.5455L16.4401 22.5314L13.8573 20L16.4401 17.4686L16.4545 17.4545L16.4686 17.4401L19 14.8573Z" stroke="black" stroke-width="4"/>
+<path d="M81 75.8573L83.5314 78.4401L83.5455 78.4545L83.5599 78.4686L86.1427 81L83.5599 83.5314L83.5455 83.5455L83.5314 83.5599L81 86.1427L78.4686 83.5599L78.4545 83.5455L78.4401 83.5314L75.8573 81L78.4401 78.4686L78.4545 78.4545L78.4686 78.4401L81 75.8573Z" stroke="black" stroke-width="4"/>
+<path d="M78 10V14" stroke="black" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M15 73V77" stroke="black" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M78 20V24" stroke="black" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M15 83V87" stroke="black" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M74 17L70 17" stroke="black" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M11 80L7 80" stroke="black" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M86 17L82 17" stroke="black" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M23 80L19 80" stroke="black" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
