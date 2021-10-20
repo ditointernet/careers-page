@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import { COLORS, GRID } from "@ditointernet/uai-foundation";
 
-const ButtonPrimary = styled.a`
+const ButtonSecondary = styled.a`
     color: ${COLORS.GREEN_MAIN};
     cursor: pointer;
     border: ${GRID(0.125)} solid ${COLORS.GREEN_MAIN};
@@ -21,4 +21,4 @@ const ButtonPrimary = styled.a`
     }
 `;
 
-export default ButtonPrimary
+export default ButtonSecondary
