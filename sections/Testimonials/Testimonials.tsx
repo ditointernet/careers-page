@@ -156,12 +156,24 @@ const SwiperDesktop = styled(Swiper)`
 
     .swiper-button-prev {
         left: 0;
-        color: ${COLORS.GREEN_MAIN};
+        width: ${GRID(4)};
+        height: ${GRID(4.125)};
+
+        &::after {
+            content: url('./icons/arrow-left.svg');
+            line-height: ${GRID(4)};
+        }
     }
 
     .swiper-button-next {
         right: 0;
-        color: ${COLORS.GREEN_MAIN};
+        width: ${GRID(4)};
+        height: ${GRID(4.125)};
+
+        &::after {
+            content: url('./icons/arrow-right.svg');
+            line-height: ${GRID(4)};
+        }
     }
 
     .swiper-pagination {
