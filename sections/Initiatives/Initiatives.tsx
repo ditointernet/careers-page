@@ -2,7 +2,6 @@ import React from "react";
 import styled from "styled-components";
 import CardsList from "@/components/CardsList";
 import { COLORS, GRID } from "@ditointernet/uai-foundation";
-
 import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, { Navigation, Pagination } from "swiper";
 
@@ -101,66 +100,66 @@ const Initiatives = () => {
 };
 
 const Section = styled.section`
-    padding: 64px 16px 80px;
+    padding: ${GRID(8)} ${GRID(2)} ${GRID(10)};
     max-width: ${GRID(180)};
     margin: 0 auto;
 `
 
 const Title = styled.h2`
-    color: #223154;
-    margin: 0 0 40px;
-    font-size: 22px;
+    color: ${COLORS.NAVY_DARK};
+    margin: 0 0 ${GRID(4)};
+    font-size: ${GRID(2.75)};
     text-align: center;
     font-weight: 700;
-    line-height: 33px;
+    line-height: ${GRID(4.125)};
 
     @media only screen and (min-width: 1024px) {
-        margin: 0 0 72px;
-        font-size: 36px;
-        line-height: 54px;
+        margin: 0 0 ${GRID(9)};
+        font-size: ${GRID(4.5)};
+        line-height: ${GRID(6.75)};
     }
 `
 
 const SubTitle = styled.h3`
-    color: #223154;
-    margin: 0 0 16px;
-    font-size: 16px;
+    color: ${COLORS.NAVY_DARK};
+    margin: 0 0 ${GRID(2)};
+    font-size: ${GRID(2)};
     text-align: center;
     font-weight: 700;
-    line-height: 24px;
+    line-height: ${GRID(3)};
 
     @media only screen and (min-width: 1024px) {
-        margin: 0 0 24px;
-        font-size: 28px;
-        line-height: 42px;
+        margin: 0 0 ${GRID(3)};
+        font-size: ${GRID(3.5)};
+        line-height: ${GRID(5.25)};
     }
 `
 
 const Description = styled.p`
-    color: #8D95A7;
-    margin: 0 auto 80px;
-    font-size: 16px;
-    max-width: 800px;
+    color: ${COLORS.GRAY_4};
+    margin: 0 auto ${GRID(10)};
+    font-size: ${GRID(2)};
+    max-width: ${GRID(100)};
     text-align: center;
     font-weight: 500;
-    line-height: 24px;
+    line-height: ${GRID(3)};
 
     @media only screen and (min-width: 1024px) {
-        margin: 0 auto 120px;
+        margin: 0 auto ${GRID(15)};
     }
 `
 
 const Fragment = styled.div`
-    margin: 0 0 80px;
+    margin: 0 0 ${GRID(10)};
 
     @media only screen and (min-width: 1024px) {
-        margin: 0 auto 120px;
+        margin: 0 auto ${GRID(15)};
     }
 `
 
 const InitiativeSwiperMobile = styled(Swiper)`
     padding: 0 0 ${GRID(5.5)};
-    margin: 0 -16px;
+    margin: 0 -${GRID(2)};
 
     .swiper-wrapper {
         .swiper-slide-active {
@@ -169,7 +168,7 @@ const InitiativeSwiperMobile = styled(Swiper)`
             }
             
             .initiativeName {
-                color: #223154;
+                color: ${COLORS.NAVY_DARK};
             }
         }
     }
@@ -216,11 +215,11 @@ const InitiativeSlide = styled.div`
 `
 
 const InitiativeImg = styled.div<{ image: string }>`
-    width: 140px;
-    height: 140px;
+    width: ${GRID(17.5)};
+    height: ${GRID(17.5)};
     background-image: url(${props => props.image});
     background-position: center;
-    margin-bottom: 24px;
+    margin-bottom: ${GRID(3)};
     filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale");
 
     @media only screen and (min-width: 768px) {
@@ -229,14 +228,14 @@ const InitiativeImg = styled.div<{ image: string }>`
 `
 
 const InitiativeTitle = styled.p`
-    color: #4141411A;
+    color: ${COLORS.GRAY_2};
     margin: 0;
-    font-size: 22px;
+    font-size: ${GRID(2.75)};
     font-weight: 600;
-    line-height: 33px;
+    line-height: ${GRID(4.125)};
 
     @media only screen and (min-width: 768px) {
-        color: #223154;
+        color: ${COLORS.NAVY_DARK};
     }
 `
 
