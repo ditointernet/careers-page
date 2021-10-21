@@ -1,8 +1,8 @@
-import React from 'react'
-import styled from 'styled-components'
+import React from "react"
+import styled from "styled-components"
 import { COLORS, GRID } from "@ditointernet/uai-foundation";
 import { Swiper, SwiperSlide } from "swiper/react";
-import SwiperCore, { Navigation } from 'swiper';
+import SwiperCore, { Navigation } from "swiper";
 
 import "swiper/css";
 import "swiper/css/navigation"
@@ -74,7 +74,7 @@ const SwiperMobile = styled(Swiper) <{ minHeight: number }>`
         bottom: 0;
 
         &::after {
-            content: url('./icons/arrow-left.svg');
+            content: url("./icons/arrow-left.svg");
             line-height: ${GRID(4)};
         }
     }
@@ -89,7 +89,7 @@ const SwiperMobile = styled(Swiper) <{ minHeight: number }>`
         bottom: 0;
 
         &::after {
-            content: url('./icons/arrow-right.svg');
+            content: url("./icons/arrow-right.svg");
             line-height: ${GRID(4)};
         }
     }
