@@ -61,7 +61,7 @@ const Section = styled.section`
     padding: ${GRID(5)} ${GRID(2)} ${GRID(40)};
     max-width: ${GRID(180)};
 
-    background-image: url('./images/benefits.svg');
+    background-image: url("./images/benefits.svg");
     background-size: ${GRID(41.25)};
     background-repeat: no-repeat;
     background-position-x: 20%;

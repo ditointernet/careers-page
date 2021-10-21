@@ -1,10 +1,10 @@
-import React from 'react'
-import styled from 'styled-components'
-import CardsList from '@/components/CardsList';
+import React from "react";
+import styled from "styled-components";
+import CardsList from "@/components/CardsList";
 import { COLORS, GRID } from "@ditointernet/uai-foundation";
 
 import { Swiper, SwiperSlide } from "swiper/react";
-import SwiperCore, { Navigation, Pagination } from 'swiper';
+import SwiperCore, { Navigation, Pagination } from "swiper";
 
 import "swiper/css";
 import "swiper/css/navigation"
@@ -76,7 +76,7 @@ const Initiatives = () => {
                 <InitiativeSwiperMobile
                     loop={true}
                     navigation={true}
-                    slidesPerView={'auto'}
+                    slidesPerView={"auto"}
                     slidesPerGroup={1}
                     centeredSlides={true}
                 >
