@@ -25,4 +25,4 @@ export const Jobs = () => (
     <h2>Jobs</h2>
   </section>
 );
-export const Connect = () => <h2>Connect</h2>;
+export { default as Socials } from "./Socials";
