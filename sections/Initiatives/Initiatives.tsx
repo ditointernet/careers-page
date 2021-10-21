@@ -152,6 +152,10 @@ const Description = styled.p`
 
 const Fragment = styled.div`
     margin: 0 0 80px;
+
+    @media only screen and (min-width: 1024px) {
+        margin: 0 auto 120px;
+    }
 `
 
 const InitiativeSwiperMobile = styled(Swiper)`
