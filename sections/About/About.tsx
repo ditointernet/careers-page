@@ -28,27 +28,22 @@ const About: NextPage = () => (
         gente.
       </Text>
     </TextWrap>
-    <Frame
-      src="/images/frame-0.png"
-      alt="imagem de um homem andando sob um gráfico"
-    />
+    <FrameWrap>
+      <Frame
+        alt="imagem de um homem andando sob um gráfico"
+        src="/images/frame-0.png"
+      />
+    </FrameWrap>
   </Container>
 );
 
 const Container = styled.section`
-  align-items: flex-start;
-  display: flex;
-  flex-direction: column;
-  padding: 10vh 5vw;
-  position: relative;
+  margin: ${GRID(12.5)} 0px ${GRID(17.5)};
+  padding: 0px 0px 0px ${GRID(10.5)};
   width: 100vw;
-
-  @media (max-width: 1024px) {
-    height: fit-content;
-  }
-
   @media (max-width: 768px) {
-    padding: ${GRID(15)} 5vw 2vh 5vw;
+    margin: ${GRID(15)} 0px ${GRID(5.75)};
+    padding: 0px ${GRID(2)};
   }
 `;
 
@@ -56,12 +51,11 @@ const Subtitle = styled.h3`
   color: ${COLORS.GREEN_MAIN};
   font-size: ${GRID(2.75)};
   font-weight: 600;
-  line-height: ${GRID(1.125)};
-  margin: 0px 0px ${GRID(2.375)};
+  height: ${GRID(4.125)};
+  margin: 0px;
   @media (max-width: 768px) {
     font-size: ${GRID(2)};
     line-height: ${GRID(3)};
-    margin-bottom: ${GRID(2)};
   }
 `;
 
@@ -70,15 +64,13 @@ const Title = styled.h2`
   font-size: ${GRID(4.5)};
   font-weight: 700;
   line-height: ${GRID(6.75)};
-  margin: 0px 0px ${GRID(5)};
-  max-width: 42vw;
-
+  margin: ${GRID(2.375)} 0px 0px;
+  width: ${GRID(74.75)};
   @media (max-width: 768px) {
-    max-width: 100vw;
     font-size: ${GRID(2.75)};
     line-height: ${GRID(4.125)};
-    margin-bottom: ${GRID(3)};
-    width: ${GRID(42.87)};
+    margin: ${GRID(2)} 0px 0px;
+    width: 100%;
   }
 `;
 
@@ -87,35 +79,45 @@ const Text = styled.p`
   font-size: ${GRID(2)};
   font-weight: 500;
   line-height: ${GRID(3)};
-
+  margin-top: 0px;
   > strong {
     color: ${COLORS.NAVY_DARK};
   }
 `;
 
 const TextWrap = styled.div`
+  margin: ${GRID(5)} 0px 0px;
   width: ${GRID(65)};
-  margin-bottom: ${GRID(30)};
-
-  @media (max-width: 1024px) {
-    margin-bottom: ${GRID(0)};
-  }
-
   @media (max-width: 768px) {
+    margin: ${GRID(3)} 0px 0px;
     width: 100%;
   }
 `;
 
-const Frame = styled.img`
-  bottom: 12%;
-  position: absolute;
-  right: ${GRID(2)};
-  width: 60%;
+const FrameWrap = styled.div`
+  display: flex;
+  height: ${GRID(30)};
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  @media (max-width: 1366px) {
+    height: ${GRID(65)};
+  }
+  @media (max-width: 768px) {
+    height: ${GRID(24.25)};
+  }
+`;
 
-  @media (max-width: 1024px) {
-    height: auto;
+const Frame = styled.img`
+  bottom: ${GRID(8.375)};
+  position: absolute;
+  right: ${GRID(3.75)};
+  @media (max-width: 1366px) {
+    right: 0px;
+  }
+  @media (max-width: 768px) {
     position: static;
-    width: 100%;
+    height: 100%;
   }
 `;
 
