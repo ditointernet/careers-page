@@ -1,8 +1,8 @@
-import React from 'react';
-import styled from 'styled-components'
+import React from "react";
+import styled from "styled-components"
 import { COLORS, GRID } from "@ditointernet/uai-foundation";
 import { Swiper, SwiperSlide } from "swiper/react";
-import SwiperCore, { Navigation } from 'swiper';
+import SwiperCore, { Navigation } from "swiper";
 
 import "swiper/css";
 import "swiper/css/navigation"
@@ -202,7 +202,7 @@ const CardTitle = styled.h3`
     line-height: ${GRID(4.125)};
 `
 
-const CardDescription = styled.div`
+const CardDescription = styled.p`
     color: #8D95A7;
     font-size: ${GRID(2)};
     font-weight: 500;

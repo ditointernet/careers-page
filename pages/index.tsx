@@ -17,7 +17,7 @@ const Home: NextPage = () => (
     <Sections.Benefits />
     <Sections.Screening />
     <Sections.Jobs />
-    <Sections.Connect />
+    <Sections.Socials />
   </main>
 );
 
