@@ -4,7 +4,7 @@ import { COLORS, GRID } from "@ditointernet/uai-foundation";
 
 const Socials = () => (
     <Section id="socials">
-        <Title>A Dito por FERAS</Title>
+        <Title>Fique por dentro</Title>
         <Description>Acompanhe as nossas novidades.</Description>
         <WrapperSocials>
             <Glassdoor target="_blank" href="https://www.glassdoor.com.br/Vis%C3%A3o-geral/Trabalhar-na-Dito-CRM-EI_IE2902642.13,21.htm">
