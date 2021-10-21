@@ -49,7 +49,7 @@ const Benefits = () => {
     ];
 
     return (
-        <Section>
+        <Section id="beneficios">
             <Title>Nossos benefícios</Title>
             <CardsList cards={cards} minMobileHeight={370} />
         </Section>
