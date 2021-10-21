@@ -69,7 +69,7 @@ const Section = styled.section`
     
     @media only screen and (min-width: 1024px) {
         margin: 0 auto;
-        padding: ${GRID(10)} ${GRID(9)} ${GRID(25)};
+        padding: ${GRID(10)} ${GRID(2)} ${GRID(25)};
         background-size: ${GRID(53.75)};
         background-position-x: 85%;
     }
