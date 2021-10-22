@@ -37,7 +37,7 @@ const Section = styled.section`
 
     @media only screen and (min-width: 1024px) {
         &::before {
-            top: 630px;
+            top: ${GRID(78.75)};
             left: 0;
             z-index: -1;
             content: url('./images/screening-left.svg');
@@ -45,7 +45,7 @@ const Section = styled.section`
         }
 
         &::after {
-            top: 310px;
+            top: ${GRID(38.75)};
             right: 0;
             z-index: -1;
             content: url('./images/screening-right.svg');
@@ -55,8 +55,8 @@ const Section = styled.section`
 `
 
 const SectionWrapper = styled.div`
-    margin: 0 0 96px;
-    padding: 96px ${GRID(2)} 0;
+    margin: 0 0 ${GRID(12)};
+    padding: ${GRID(12)} ${GRID(2)} 0;
     max-width: ${GRID(180)};
 
     @media only screen and (min-width: 1024px) {
@@ -72,16 +72,16 @@ const SectionWrapper = styled.div`
                 }
             }
             &:nth-child(2) {
-                margin-left: 66px;
+                margin-left: ${GRID(8.25)};
             }
             &:nth-child(3) {
-                margin-right: 158px;
+                margin-right: ${GRID(19.75)};
             }
             &:nth-child(4) {
-                margin-left: 26px;
+                margin-left: ${GRID(3.25)};
             }
             &:nth-child(5) {
-                margin-right: 27px;
+                margin-right: ${GRID(3.375)};
             }
         }
 
@@ -94,7 +94,7 @@ const SectionWrapper = styled.div`
         > p {
             margin: 0 auto;
             padding: 0;
-            max-width: 1043px;
+            max-width: ${GRID(130.375)};
             text-align: center;
         }
     }
@@ -102,41 +102,41 @@ const SectionWrapper = styled.div`
 `
 
 const Fragment = styled.div<{ maxWidth: number }>`
-    margin: 0 0 88px;
+    margin: 0 0 ${GRID(11)};
     max-width: ${({ maxWidth }) => GRID(maxWidth / 8)};
 
     @media only screen and (min-width: 1024px) {
-        margin: 0 0 130px;
+        margin: 0 0 ${GRID(16.25)};
     }
 `
 
 const Title = styled.h2`
     color: ${COLORS.NAVY_DARK};
     margin: 0 0 ${GRID(2)};
-    font-size: 22px;
+    font-size: ${GRID(2.75)};
     font-weight: 700;
-    line-height: 33px;
+    line-height: ${GRID(4.125)};
 
     @media only screen and (min-width: 1024px) {
         margin: 0 0 ${GRID(3)};
-        font-size: 36px;
-        line-height: 54px;
+        font-size: ${GRID(4.5)};
+        line-height: ${GRID(6.75)};
     }
 `
 
 const SubTitle = styled.h3<{ number: string }>`
     color: ${COLORS.GREEN_MAIN};
     margin: 0 0 ${GRID(2)};
-    padding: 27px 0 0 ${GRID(2)};
+    padding: ${GRID(3.375)} 0 0 ${GRID(2)};
     position: relative;
-    font-size: 22px;
+    font-size: ${GRID(2.75)};
     font-weight: 700;
-    line-height: 33px;
+    line-height: ${GRID(4.125)};
 
     @media only screen and (min-width: 1024px) {
-        padding: 52px 0 0 29px;
-        font-size: 28px;
-        line-height: 42px;
+        padding: ${GRID(6.5)} 0 0 ${GRID(3.625)};
+        font-size: ${GRID(3.5)};
+        line-height: ${GRID(5.25)};
     }
 
     ::before {
@@ -146,13 +146,13 @@ const SubTitle = styled.h3<{ number: string }>`
         z-index: -1;
         content: "${({ number }) => number}";
         position: absolute;
-        font-size: 36px;
+        font-size: ${GRID(4.5)};
         font-weight: 700;
-        line-height: 54px;
+        line-height: ${GRID(6.75)};
 
         @media only screen and (min-width: 1024px) {
-            font-size: 64px;
-            line-height: 96px;
+            font-size: ${GRID(8)};
+            line-height: ${GRID(12)};
         }
     }
 `
@@ -160,9 +160,9 @@ const SubTitle = styled.h3<{ number: string }>`
 const Description = styled.p`
     color: ${COLORS.GRAY_4};
     margin: 0;
-    font-size: 16px;
+    font-size: ${GRID(2)};
     font-weight: 500;
-    line-height: 24px;
+    line-height: ${GRID(3)};
 
     b {
         color: ${COLORS.NAVY_DARK};
@@ -170,7 +170,7 @@ const Description = styled.p`
     }
 
     @media only screen and (min-width: 1024px) {
-        padding: 0 0 0 40px;
+        padding: 0 0 0 ${GRID(5)};
     }
 `
 
