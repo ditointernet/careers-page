@@ -19,7 +19,7 @@ export { default as Areas } from "./Areas";
 export const Reasons = () => <h2>Reasons</h2>;
 export { default as Initiatives } from "./Initiatives";
 export { default as Benefits } from "./Benefits";
-export const Screening = () => <h2>Screening</h2>;
 export { default as Socials } from "./Socials";
 export { default as Jobs } from "./Jobs";
+export { default as Screening } from "./Screening";
 export const Connect = () => <h2>Connect</h2>;
