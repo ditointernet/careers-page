@@ -4,8 +4,8 @@ import Document, {
   Main,
   NextScript,
   DocumentContext,
-} from "next/document";
-import { ServerStyleSheet } from "styled-components";
+} from 'next/document';
+import { ServerStyleSheet } from 'styled-components';
 
 class CustomDocument extends Document {
   static async getInitialProps(context: DocumentContext) {
@@ -39,6 +39,15 @@ class CustomDocument extends Document {
     return (
       <Html>
         <Head>
+          <meta
+            name="description"
+            content="Nossa paixão por tecnologia está revolucionando o varejo. Vem com a gente!"
+          />
+          <link rel="icon" href="/favicon.ico" />
+          <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=0"
+          />
           <link rel="preconnect" href="https://fonts.googleapis.com" />
           <link
             rel="preconnect"
