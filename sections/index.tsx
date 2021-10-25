@@ -20,9 +20,6 @@ export const Reasons = () => <h2>Reasons</h2>;
 export const Initiatives = () => <h2>Initiatives</h2>;
 export { default as Benefits } from "./Benefits";
 export const Screening = () => <h2>Screening</h2>;
-export const Jobs = () => (
-  <section id="nosso-processo-seletivo">
-    <h2>Jobs</h2>
-  </section>
-);
 export { default as Socials } from "./Socials";
+export { default as Jobs } from "./Jobs";
+export const Connect = () => <h2>Connect</h2>;
