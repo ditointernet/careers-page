@@ -94,7 +94,7 @@ const Reasons = () => {
       <SlideBlocks ref={sliderRef}>
         {reasonsBlocks.map((block, index) => (
           <Block key={index} active={currentBlock === index}>
-            <img src={block.image} />
+            <img src={block.image} alt={block.text} />
             <p>{block.text}</p>
           </Block>
         ))}
@@ -169,7 +169,7 @@ const Reasons = () => {
                 {imageSlider.map(({ url, title }, index) => (
                   <img
                     src={url}
-                    alt={index}
+                    alt={title}
                     key={index}
                     className={currentSlider === index ? "active" : ""}
                   />
