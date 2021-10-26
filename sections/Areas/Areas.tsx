@@ -44,35 +44,35 @@ const Areas = () => (
 
 const Section = styled.section`
     margin: 0 auto;
-    padding: 0 16px;
-    max-width: 1440px;
+    padding: 0 ${GRID(2)};
+    max-width: ${GRID(180)};
     
     @media only screen and (min-width: 1024px) {
         margin: 0 auto;
-        padding: 0 72px;
+        padding: 0 ${GRID(9)};
     }
 `
 
 const Title = styled.h2`
     color: ${COLORS.NAVY_DARK};
-    margin: 0 0 20px;
-    font-size: 22px;
-    line-height: 33px;
+    margin: 0 0 ${GRID(2.5)};
+    font-size: ${GRID(2.75)};
+    line-height: ${GRID(4.125)};
     font-weight: 700;
 
     @media only screen and (min-width: 1024px) {
-        font-size: 36px;
-        line-height: 54px;
-        margin: 0 0 24px;
+        font-size: ${GRID(4.5)};
+        line-height: ${GRID(6.75)};
+        margin: 0 0 ${GRID(3)};
     }
 `
 
 const Description = styled.p<{ marginBottomMobile: number, marginBottomDesktop: number }>`
     color: ${COLORS.GRAY_4};
     margin: 0 0 ${({ marginBottomMobile }) => GRID(marginBottomMobile / 8)};
-    font-size: 16px;
+    font-size: ${GRID(2)};
     font-weight: 500;
-    line-height: 24px;
+    line-height: ${GRID(3)};
     
     b {
         color: ${COLORS.NAVY_DARK};
@@ -85,13 +85,13 @@ const Description = styled.p<{ marginBottomMobile: number, marginBottomDesktop: 
 `
 
 const AreaWrapper = styled.div`
-    gap: 32px;
+    gap: ${GRID(4)};
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
     
     @media only screen and (min-width: 1024px) {
-        gap: 80px;
+        gap: ${GRID(10)};
     }
 
     > div { 
@@ -105,18 +105,18 @@ const Area = styled.div<{ maxWidth: number, margin: string }>`
     display: flex;
     flex-direction: column;
 
-    padding: 24px 20px;
-    box-shadow: 0px 8px 32px rgba(0, 0, 0, 0.16);
-    border-radius: 8px;
+    padding: ${GRID(3)} ${GRID(2.5)};
+    box-shadow: 0 ${GRID(1)} ${GRID(4)} rgba(0, 0, 0, 0.16);
+    border-radius: ${GRID(1)};
     background-color: ${COLORS.WHITE};
     
     @media only screen and (min-width: 1024px) {
-        gap: 60px;
-        border: 1px solid #EFF0F2;
+        gap: ${GRID(7.5)};
+        border: ${GRID(0.125)} solid #EFF0F2;
         margin: ${({ margin }) => margin};
-        padding: 32px 54px;
+        padding: ${GRID(4)} ${GRID(6.75)};
         max-width: ${({ maxWidth }) => GRID(maxWidth / 8)};
-        box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.05);
+        box-shadow: 0 0 ${GRID(1.25)} ${GRID(0.125)} rgba(0, 0, 0, 0.05);
         align-items: center;
         flex-direction: row;
     }
@@ -129,32 +129,32 @@ const AreaContent = styled.div`
 `
 
 const AreaImg = styled.div<{ image: string }>`
-    width: 80px;
-    height: 80px;
-    margin: 0 0 32px;
+    width: ${GRID(10)};
+    height: ${GRID(10)};
+    margin: 0 0 ${GRID(4)};
     background-size: 90%;
     background-image: url(${({ image }) => image});
     background-repeat: no-repeat;
     background-position: center;
 
     @media only screen and (min-width: 1024px) {
-        width: 250px;
+        width: ${GRID(31.25)};
         margin: 0;
-        height: 210px;
+        height: ${GRID(26.25)};
     }
 `
 
 const AreaTitle = styled.div`
     color: ${COLORS.NAVY_DARK};
-    margin: 0 0 8px;
-    font-size: 22px;
-    line-height: 33px;
+    margin: 0 0 ${GRID(1)};
+    font-size: ${GRID(2.75)};
+    line-height: ${GRID(4.125)};
     font-weight: 700;
 
     @media only screen and (min-width: 1024px) {
-        font-size: 30px;
-        line-height: 45px;
-        margin: 0 0 16px;
+        font-size: ${GRID(3.75)};
+        line-height: ${GRID(5.625)};
+        margin: 0 0 ${GRID(2)};
     }
 `
 
