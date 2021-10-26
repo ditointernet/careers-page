@@ -216,11 +216,11 @@ const InitiativeSlide = styled.div`
 
 const InitiativeImg = styled.div<{ image: string }>`
     width: ${GRID(17.5)};
+    filter: grayscale(1);
     height: ${GRID(17.5)};
+    margin-bottom: ${GRID(3)};
     background-image: url(${props => props.image});
     background-position: center;
-    margin-bottom: ${GRID(3)};
-    filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale");
 
     @media only screen and (min-width: 768px) {
         filter: none;
