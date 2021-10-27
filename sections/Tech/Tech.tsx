@@ -50,30 +50,6 @@ const Tech = () => (
 const Section = styled.section`
     position: relative;
     background-color: #121A2D;
-
-    &:before {
-        top: -80px;
-        left: 0;
-        width: 100%;
-        height: 80px;
-        content: "";
-        position: absolute;
-        background-size: 100%;
-        background-image: url('./images/navigation-top.svg');
-        background-repeat: no-repeat;
-    }
-
-    &:after {
-        left: 0;
-        width: 100%;
-        height: 80px;
-        bottom: -80px;
-        content: "";
-        position: absolute;
-        background-size: 100%;
-        background-image: url('./images/navigation-down.svg');
-        background-repeat: no-repeat;
-    }
 `
 
 const SectionWrapper = styled.div`
