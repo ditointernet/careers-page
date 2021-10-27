@@ -1,6 +1,6 @@
-import React from 'react';
-import styled from 'styled-components'
-import { COLORS, GRID } from '@ditointernet/uai-foundation';
+import React from "react";
+import styled from "styled-components"
+import { COLORS, GRID } from "@ditointernet/uai-foundation";
 
 const Tech = () => (
     <Section>
@@ -182,7 +182,7 @@ const Description = styled.p<{
 
     @media only screen and (min-width: 1024px) {
         margin: 0 0 ${({ marginBottomDesktop }) => marginBottomDesktop ? GRID(marginBottomDesktop / 8) : 0} 0;
-        max-width: ${({ maxWidth }) => maxWidth ? GRID(maxWidth / 8) : 'max-content'};
+        max-width: ${({ maxWidth }) => maxWidth ? GRID(maxWidth / 8) : "max-content"};
     }
 
     b {
