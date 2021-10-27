@@ -7,6 +7,7 @@ export { default as Scale } from './Scale';
 export { default as Team } from './Team';
 export { default as Testimonials } from './Testimonials';
 export { default as Tech } from './Tech';
+export { default as TechOld } from './TechOld';
 export const Values = dynamic(() => import('./Values'), {
   ssr: false,
 });
