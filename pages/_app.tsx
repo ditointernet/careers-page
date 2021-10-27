@@ -1,3 +1,4 @@
+import Head from 'next/head'
 import type { AppProps } from 'next/app';
 import { createGlobalStyle } from 'styled-components';
 import { COLORS, GRID, TYPOGRAPHY } from '@ditointernet/uai-foundation';
@@ -62,6 +63,12 @@ const GlobalStyle = createGlobalStyle`
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
+      <Head>
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=0"
+        />
+      </Head>
       <GlobalStyle />
       <Component {...pageProps} />
     </>
