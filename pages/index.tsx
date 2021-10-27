@@ -12,7 +12,6 @@ const Home: NextPage = () => (
     <Sections.About />
     <Sections.Scale />
     <Sections.Tech />
-    <Sections.TechOld />
     <Sections.Team />
     <Sections.Values />
     <Sections.Testimonials />
