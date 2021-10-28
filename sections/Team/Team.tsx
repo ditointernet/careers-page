@@ -3,86 +3,96 @@ import styled from "styled-components";
 import { Carousel } from "react-responsive-carousel";
 import { ChevronLeft, ChevronRight } from "@ditointernet/uai-icons";
 
-import teamImage from "../../public/images/team.svg";
-import dotsImage from "../../public/images/dots.svg";
-
 const Team = () => (
   <Section>
-    <ImageWrapper>
-      <Carousel
-        showStatus={false}
-        showThumbs={false}
-        renderArrowPrev={(onClickHandler, hasPrev, label) =>
-          hasPrev && (
-            <ArrowButton type="button" onClick={onClickHandler} title={label}>
-              <ChevronLeft />
-            </ArrowButton>
-          )
-        }
-        renderArrowNext={(onClickHandler, hasNext, label) =>
-          hasNext && (
-            <ArrowButton
-              type="button"
-              onClick={onClickHandler}
-              title={label}
-              isNext
-            >
-              <ChevronRight />
-            </ArrowButton>
-          )
-        }
-        infiniteLoop
-        autoPlay
-      >
-        <img src={teamImage.src} alt="Nosso time" />
-        <img src={teamImage.src} alt="Nosso time" />
-      </Carousel>
-      <Circle top={GRID(-9)} left="75%" />
-      <Circle
-        top={GRID(-9)}
-        left="66%"
-        size={GRID(5)}
-        color={COLORS.NAVY_MAIN}
-      />
-      <Circle bottom={GRID(-7)} right="75%" />
-      <Retangle />
-      <img src={dotsImage.src} className="dots-top" alt="dots" />
-      <img src={dotsImage.src} className="dots-bottom" alt="dots" />
-    </ImageWrapper>
+    <SectionWrapper>
+      <ImageWrapper>
+        <Carousel
+          showStatus={false}
+          showThumbs={false}
+          renderArrowPrev={(onClickHandler, hasPrev, label) =>
+            hasPrev && (
+              <ArrowButton type="button" onClick={onClickHandler} title={label}>
+                <ChevronLeft />
+              </ArrowButton>
+            )
+          }
+          renderArrowNext={(onClickHandler, hasNext, label) =>
+            hasNext && (
+              <ArrowButton
+                type="button"
+                onClick={onClickHandler}
+                title={label}
+                isNext
+              >
+                <ChevronRight />
+              </ArrowButton>
+            )
+          }
+          infiniteLoop
+          autoPlay
+        >
+          <img src="./images/feras_001.jpg" alt="Nosso time" />
+          <img src="./images/feras_002.jpg" alt="Nosso time" />
+          <img src="./images/feras_003.jpg" alt="Nosso time" />
+        </Carousel>
+        <Circle top={GRID(-9)} left="75%" />
+        <Circle
+          top={GRID(-9)}
+          left="66%"
+          size={GRID(5)}
+          color={COLORS.NAVY_MAIN}
+        />
+        <Circle bottom={GRID(-7)} right="75%" />
+        <Retangle />
+        <img src="./images/dots.svg" className="dots-top" alt="dots" />
+        <img src="./images/dots.svg" className="dots-bottom" alt="dots" />
+      </ImageWrapper>
 
-    <Content>
-      <h2>Nosso time é formado por FERAs. Falta você.</h2>
-      <p>
-        <b>Valorizamos e acreditamos nas pessoas</b>. Dos produtos orientados
-        pela experiência de quem usa, ao ambiente sempre favorável à evolução da
-        nossa equipe, elas estão no centro de tudo.
-      </p>
-      <p>
-        Por aqui, você vai encontrar vários desafios, além de
-        <b> muita parceria e espírito colaborativo</b>. Porque entendemos que,
-        crescendo juntos, podemos ir muito mais longe. Então, se ao longo da sua
-        jornada, você perceber que acumulou aprendizados – e isso for motivo de
-        muita alegria, é sinal de que você se encaixou perfeitamente à nossa
-        cultura.
-      </p>
-    </Content>
+      <Content>
+        <h2>Nosso time é formado por FERAs. Falta você.</h2>
+        <p>
+          <b>Valorizamos e acreditamos nas pessoas</b>. Dos produtos orientados
+          pela experiência de quem usa, ao ambiente sempre favorável à evolução da
+          nossa equipe, elas estão no centro de tudo.
+        </p>
+        <p>
+          Por aqui, você vai encontrar vários desafios, além de
+          <b> muita parceria e espírito colaborativo</b>. Porque entendemos que,
+          crescendo juntos, podemos ir muito mais longe. Então, se ao longo da sua
+          jornada, você perceber que acumulou aprendizados – e isso for motivo de
+          muita alegria, é sinal de que você se encaixou perfeitamente à nossa
+          cultura.
+        </p>
+      </Content>
+    </SectionWrapper>
   </Section>
 );
 
 const Section = styled.section`
-  display: flex;
-  margin: ${GRID(16)} 0;
-
-  @media (max-width: 1060px) {
-    align-items: center;
-  }
-
-  @media (max-width: 768px) {
-    margin: ${GRID(10)} 0;
-    flex-direction: column-reverse;
-    align-items: flex-start;
+  margin: ${GRID(10)} 0;
+  
+  @media (min-width: 1024px) {
+    margin: ${GRID(16)} 0;
   }
 `;
+
+const SectionWrapper = styled.div`
+  gap: ${GRID(4)};
+  margin: 0 auto;
+  display: flex;
+  padding: 0 ${GRID(2)};
+  max-width: 1440px;
+  align-items: center;
+  flex-direction: column-reverse;
+
+  @media (min-width: 1024px) {
+    gap: ${GRID(10)};
+    padding: 0 ${GRID(9)} 0 0;
+    align-items: flex-start;
+    flex-direction: row;
+  }
+`
 
 const ImageWrapper = styled.div`
   border-radius: 0px 0px 20% 0px;
@@ -157,38 +167,39 @@ const ArrowButton = styled.button<{ isNext?: boolean }>`
 `;
 
 const Content = styled.div`
-  display: flex;
-  flex-direction: column;
   width: 100%;
-  max-width: ${GRID(80.5)};
-  padding: ${GRID(8)} ${GRID(10)};
+  display: flex;
+  padding: 0 ${GRID(2)};
+  flex-direction: column;
+  
+  @media (min-width: 1024px) {
+    max-width: ${GRID(80.5)};
+  }
 
   h2 {
-    margin: 0;
     color: ${COLORS.NAVY_DARK};
-    margin-bottom: ${GRID(5)};
+    margin: 0;
+    margin: 0 0 ${GRID(5)} 0;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 33px;
+
+    @media (min-width: 1024px) {
+      font-size: 36px;
+      line-height: 54px;
+    }
   }
 
   p {
     color: ${COLORS.GRAY_4};
-    margin-top: 0;
-    margin-bottom: ${GRID(3)};
-  }
-
-  b {
-    color: ${COLORS.NAVY_DARK};
-  }
-
-  @media (max-width: 1060px) {
-    padding: ${GRID(2)} ${GRID(4)};
-  }
-
-  @media (max-width: 768px) {
-    padding: ${GRID(2)};
-    margin-bottom: ${GRID(2)};
-
-    h2 {
-      margin-bottom: ${GRID(3)};
+    margin: 0 0 ${GRID(3)} 0;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    
+    b {
+      color: ${COLORS.NAVY_DARK};
+      font-weight: 700;
     }
   }
 `;
