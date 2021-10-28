@@ -208,7 +208,7 @@ const Description = styled.p<{
 
             &::after {
                 top: ${GRID(22.875)};
-                left: ${GRID(22.875)};
+                left: ${GRID(63)};
                 width: ${GRID(1)};
                 height: ${GRID(1)};
                 border: ${GRID(0.125)} solid #6A7486;
