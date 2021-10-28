@@ -25,15 +25,19 @@ const Hero: NextPage = () => (
 );
 
 const Section = styled.section`
+  margin: 0 0 ${GRID(2)} 0;
   position: relative;
   background-size: cover;
   background-image: url("/images/about-page-background-image.png");
   background-repeat: no-repeat;
   background-position: 0;
+
+  @media (min-width: 768px) {
+    margin: 0 0 ${GRID(1)} 0;
+  }
 `;
 
 const SectionWrapper = styled.div`
-  gap: 50px;
   width: 100vw;
   margin: 64px auto 0;
   display: flex;
@@ -41,9 +45,11 @@ const SectionWrapper = styled.div`
   max-width: 1440px;
   min-height: calc(100vh - 64px);
   flex-direction: column;
+  justify-content: space-between;
   
   @media (min-width: 768px) {
     padding: ${GRID(10)} ${GRID(10.5)};
+    justify-content: center;
   }
 `;
 
