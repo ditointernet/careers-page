@@ -1,30 +1,27 @@
-import Image from "next/image"
 import styled from "styled-components";
 import { GRID } from "@ditointernet/uai-foundation";
 import { useCallback } from "react";
 import { ParallaxProvider, Parallax } from "react-scroll-parallax";
 
-const arrayBrands = [
-  <Image src="/images/acer.jpg" alt="Acer" key="acter" />,
-  <Image src="/images/lego.jpg" alt="Lego" key="lego" />,
-  <Image src="/images/animale.jpg" alt="Animale" key="animale" />,
-  <Image src="/images/cea.jpg" alt="C&A" key="cea" />,
-  <Image src="/images/polishop.jpg" alt="Polishop" key="polishop" />,
-  <Image src="/images/tef.jpg" alt="Track & Field" key="trackandfield" />,
-  <Image src="/images/ingresso.jpg" alt="Ingresso.com" key="ingresso" />,
-  <Image src="/images/chillibeans.jpg" alt="Chilli Beans" key="chillibeans" />,
-  <Image src="/images/imaginarium.jpg" alt="Imaginarium" key="imaginaruim" />,
-  <Image src="/images/farm.jpg" alt="Farm" key="farm" />,
-];
-
 const Brands = () => {
-  let isMobile = useCallback(() => {
-    return Boolean(
-      window?.navigator.userAgent.match(
-        /Android|BlackBerry|iPhone|iPad|iPod|Opera Mini|IEMobile|WPDesktop/i
-      ) || window.innerWidth < 768
-    );
-  }, []);
+  const arrayBrands = [
+    <ImageBox src="/images/acer.jpg" key="acter" />,
+    <ImageBox src="/images/lego.jpg" key="lego" />,
+    <ImageBox src="/images/animale.jpg" key="animale" />,
+    <ImageBox src="/images/cea.jpg" key="cea" />,
+    <ImageBox src="/images/polishop.jpg" key="polishop" />,
+    <ImageBox src="/images/tef.jpg" key="trackandfield" />,
+    <ImageBox src="/images/ingresso.jpg" key="ingresso" />,
+    <ImageBox src="/images/chillibeans.jpg" key="chillibeans" />,
+    <ImageBox src="/images/imaginarium.jpg" key="imaginaruim" />,
+    <ImageBox src="/images/farm.jpg" key="farm" />,
+  ];
+
+  let isMobile = useCallback(() => Boolean(
+    window?.navigator.userAgent.match(
+      /Android|BlackBerry|iPhone|iPad|iPod|Opera Mini|IEMobile|WPDesktop/i
+    ) || window.innerWidth < 768
+  ), []);
 
   return (
     <BrandsContainer>
@@ -64,21 +61,25 @@ const Row = styled.div`
   }
 
   @media (min-width: 768px) {
-    img ~ img {
-      margin-left: ${GRID(13)};
-    }
+    gap: ${GRID(13)};
   }
 `;
 
+const ImageBox = styled.div<{ src: string }>`
+  width: ${GRID(18.75)};
+  height: ${GRID(11.25)};
+  background-image: url(${({ src }) => src});
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+`
+
 const BrandsContainer = styled.div`
-  white-space: nowrap;
+  gap: ${GRID(8)};
   display: flex;
   flex-flow: column;
   align-items: center;
-
-  ${Row}:last-of-type {
-    margin-bottom: ${GRID(8)};
-  }
+  white-space: nowrap;
 `;
 
 export default Brands;
