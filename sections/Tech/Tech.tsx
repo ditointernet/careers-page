@@ -54,61 +54,61 @@ const Section = styled.section`
 
 const SectionWrapper = styled.div`
     margin: 0 auto;
-    padding: 40px 16px;
-    max-width: 1440px;
+    padding: ${GRID(5)} ${GRID(2)};
+    max-width: ${GRID(180)};
 
     @media only screen and (min-width: 1024px) {
-        padding: 70px 72px;
+        padding: ${GRID(8.75)} ${GRID(9)};
     }
 `
 
 const Title = styled.h2`
-    font-size: 22px;
+    font-size: ${GRID(2.75)};
     font-weight: 700;
-    line-height: 33px;
+    line-height: ${GRID(4.125)};
     background: linear-gradient(271.75deg, #0fe38a 16.6%, #85ffc4 89.72%);
-    margin: 0 0 33px 0;
+    margin: 0 0 ${GRID(4.125)} 0;
     background-clip: text;
     -ms-background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 
     @media only screen and (min-width: 1024px) {
-        margin: 0 0 76px 0;
-        font-size: 36px;
-        max-width: 675px;
-        line-height: 54px;
+        margin: 0 0 ${GRID(9.5)} 0;
+        font-size: ${GRID(4.5)};
+        max-width: ${GRID(84.375)};
+        line-height: ${GRID(6.75)};
     }
 `
 
 const Container = styled.div`
-    padding: 0 0 0 22px;
+    padding: 0 0 0 ${GRID(2.75)};
     position: relative;
-    border-left: 1px solid #6A7486;
-    border-image: linear-gradient(to bottom, #121A2D 22px, #6A7486 0,#6A7486 calc(100% - 22px),#121A2D 0);
+    border-left: ${GRID(0.125)} solid #6A7486;
+    border-image: linear-gradient(to bottom, #121A2D ${GRID(2.75)}, #6A7486 0,#6A7486 calc(100% - ${GRID(2.75)}),#121A2D 0);
     border-image-slice: 1;
     
     @media only screen and (min-width: 1024px) {
-        padding: 0 0 0 24px;
+        padding: 0 0 0 ${GRID(3)};
     }
 
     &::before {
-        top: 6px;
-        left: -6px;
-        width: 9px;
-        height: 9px;
-        border: 1px solid #6A7486;
+        top: ${GRID(0.75)};
+        left: -${GRID(0.75)};
+        width: ${GRID(1.125)};
+        height: ${GRID(1.125)};
+        border: ${GRID(0.125)} solid #6A7486;
         content: '';
         position: absolute;
         border-radius: 100%;
     }
 
     &::after {
-        left: -6px;
-        width: 9px;
-        bottom: 6px;
-        height: 9px;
-        border: 1px solid #6A7486;
+        left: -${GRID(0.75)};
+        width: ${GRID(1.125)};
+        bottom: ${GRID(0.75)};
+        height: ${GRID(1.125)};
+        border: ${GRID(0.125)} solid #6A7486;
         content: '';
         position: absolute;
         border-radius: 100%;
@@ -120,13 +120,13 @@ const MainWrapper = styled.div`
     flex-direction: column;
 
     @media only screen and (min-width: 1024px) {
-        gap: 108px;
+        gap: ${GRID(13.5)};
         flex-direction: row;
     }
 `
 
 const BoxesWrapper = styled.div`
-    margin: 0 0 19px 0;
+    margin: 0 0 ${GRID(2.375)} 0;
     display: flex;
     flex-direction: column;
 
@@ -140,7 +140,7 @@ const NumbersWrapper = styled.div`
     flex-direction: column;
 
     @media only screen and (min-width: 1024px) {
-        padding: 81px 0 0 0;
+        padding: ${GRID(10.125)} 0 0 0;
     }
 `
 
@@ -152,9 +152,9 @@ const Description = styled.p<{
     color: ${COLORS.GRAY_1};
     margin: 0 0 ${({ marginBottomMobile }) => marginBottomMobile ? GRID(marginBottomMobile / 8) : 0} 0;
     position: relative;
-    font-size: 16px;
+    font-size: ${GRID(2)};
     font-weight: 500;
-    line-height: 24px;
+    line-height: ${GRID(3)};
 
     @media only screen and (min-width: 1024px) {
         margin: 0 0 ${({ marginBottomDesktop }) => marginBottomDesktop ? GRID(marginBottomDesktop / 8) : 0} 0;
@@ -169,19 +169,19 @@ const Description = styled.p<{
     &.arrowRight {
         &::before {
             top: 0;
-            left: -14px;
+            left: -${GRID(1.75)};
             content: url('./icons/navigation-arrow-right.svg');
             position: absolute;
         }
     }
 
     &.contrast {
-        font-size: 22px;
-        line-height: 36px;
+        font-size: ${GRID(2.75)};
+        line-height: ${GRID(4.5)};
 
         @media only screen and (min-width: 1024px) {
-            font-size: 28px;
-            line-height: 42px;
+            font-size: ${GRID(3.5)};
+            line-height: ${GRID(5.25)};
         }
     }
 
@@ -197,21 +197,21 @@ const Description = styled.p<{
             position: inherit;
             
             &::before {
-                top: 187px;
-                left: 0px;
-                width: 500px;
-                height: 1px;
+                top: ${GRID(23.375)};
+                left: 0;
+                width: ${GRID(62.5)};
+                height: ${GRID(0.125)};
                 content: '';
                 position: absolute;
-                border-top: 1px solid #6A7486;
+                border-top: ${GRID(0.125)} solid #6A7486;
             }
 
             &::after {
-                top: 183px;
-                left: 504px;
-                width: 8px;
-                height: 8px;
-                border: 1px solid #6A7486;
+                top: ${GRID(22.875)};
+                left: ${GRID(22.875)};
+                width: ${GRID(1)};
+                height: ${GRID(1)};
+                border: ${GRID(0.125)} solid #6A7486;
                 content: '';
                 position: absolute;
                 border-radius: 100%;
@@ -222,14 +222,14 @@ const Description = styled.p<{
 `
 const BoxShadow = styled.div`
     width: 100%;
-    margin: 0 0 36px 0;
+    margin: 0 0 ${GRID(4.5)} 0;
     z-index: 1;
     position: relative;
-    max-width: 356px;
+    max-width: ${GRID(44.5)};
     
     @media only screen and (min-width: 1024px) {
-        width: 356px;
-        margin: 0 0 48px 34px;
+        width: ${GRID(44.5)};
+        margin: 0 0 ${GRID(6)} ${GRID(4.25)};
     }
 
     &::before {
@@ -240,26 +240,26 @@ const BoxShadow = styled.div`
         content: '';
         position: absolute;
         border-radius: 100%;
-        box-shadow: 0px 0px 61px 20px rgba(3, 255, 210, 0.2);
+        box-shadow: 0 0 ${GRID(7.625)} ${GRID(2.5)} rgba(3, 255, 210, 0.2);
     }
 
 `
 
 const Box = styled.div`
     width: 100%;
-    border: 1px solid #2E384E;
-    padding: 20px 16px 20px 26px;
+    border: ${GRID(0.125)} solid #2E384E;
+    padding: ${GRID(2.5)} ${GRID(2)} ${GRID(2.5)} ${GRID(3.25)};
     position: relative;
     box-sizing: border-box;
-    box-shadow: 0px 7px 20px -2px rgba(0, 0, 0, 0.8);
-    border-radius: 16px;
+    box-shadow: 0 ${GRID(0.875)} ${GRID(2.5)} -${GRID(0.25)} rgba(0, 0, 0, 0.8);
+    border-radius: ${GRID(2)};
     background-color: #0D1425;
 
     &::before {
-        top: calc(50% - 24px);
-        left: -23px;
-        width: 17px;
-        height: 36px;
+        top: calc(50% - ${GRID(3)});
+        left: -${GRID(2.875)};
+        width: ${GRID(2.125)};
+        height: ${GRID(4.5)};
         content: "";
         position: absolute;
         background-size: cover;
@@ -268,10 +268,10 @@ const Box = styled.div`
         background-position-x: right;
 
         @media only screen and (min-width: 1024px) {
-            top: calc(50% - 72px);
-            left: -60px;
-            width: 50px;
-            height: 82px;
+            top: calc(50% - ${GRID(9)});
+            left: -${GRID(7.5)};
+            width: ${GRID(6.25)};
+            height: ${GRID(10.25)};
             background-image: url('./icons/desktop-link-left.svg');
         }
     }
@@ -279,8 +279,8 @@ const Box = styled.div`
 
 const BoxContent = styled.div`
     position: relative;
-    border-left: 1px solid #6A7486;
-    border-image: linear-gradient(to bottom, #121A2D 22px, #6A7486 0,#6A7486 calc(100% - 22px),#121A2D 0);
+    border-left: ${GRID(0.125)} solid #6A7486;
+    border-image: linear-gradient(to bottom, #121A2D ${GRID(2.75)}, #6A7486 0,#6A7486 calc(100% - ${GRID(2.75)}),#121A2D 0);
     border-image-slice: 1;
 
     p {
@@ -290,10 +290,10 @@ const BoxContent = styled.div`
     }
 
     &::before {
-        top: 6px;
-        left: -6px;
-        width: 12px;
-        height: 12px;
+        top: ${GRID(0.75)};
+        left: -${GRID(0.75)};
+        width: ${GRID(1.5)};
+        height: ${GRID(1.5)};
         content: "";
         position: absolute;
         background-size: 100%;
@@ -302,10 +302,10 @@ const BoxContent = styled.div`
     }
 
     &::after {
-        left: -6px;
-        width: 12px;
-        bottom: 6px;
-        height: 12px;
+        left: -${GRID(0.75)};
+        width: ${GRID(1.5)};
+        bottom: ${GRID(0.75)};
+        height: ${GRID(1.5)};
         content: "";
         position: absolute;
         background-size: 100%;
@@ -316,17 +316,17 @@ const BoxContent = styled.div`
 
 const BoxItem = styled.p`
     color: ${COLORS.GRAY_2};
-    padding: 0 0 0 12px;
-    margin: 0 0 24px 0;
+    padding: 0 0 0 ${GRID(1.5)};
+    margin: 0 0 ${GRID(3)} 0;
     position: relative;
-    font-size: 16px;
+    font-size: ${GRID(2)};
     font-weight: 400;
-    line-height: 24px;
+    line-height: ${GRID(3)};
 
     &.hyphen {
         &::before {
-            top: 1px;
-            left: -1px;
+            top: ${GRID(0.125)};
+            left: -${GRID(0.125)};
             color: #6A7486;
             content: '-';
             position: absolute;
