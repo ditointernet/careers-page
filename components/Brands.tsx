@@ -1,20 +1,20 @@
-import { useCallback } from "react";
-
+import Image from "next/image"
 import styled from "styled-components";
 import { GRID } from "@ditointernet/uai-foundation";
+import { useCallback } from "react";
 import { ParallaxProvider, Parallax } from "react-scroll-parallax";
 
 const arrayBrands = [
-  <img src="/images/acer.jpg" alt="Acer" key="acter" />,
-  <img src="/images/lego.jpg" alt="Lego" key="lego" />,
-  <img src="/images/animale.jpg" alt="Animale" key="animale" />,
-  <img src="/images/cea.jpg" alt="C&A" key="cea" />,
-  <img src="/images/polishop.jpg" alt="Polishop" key="polishop" />,
-  <img src="/images/tef.jpg" alt="Track & Field" key="trackandfield" />,
-  <img src="/images/ingresso.jpg" alt="Ingresso.com" key="ingresso" />,
-  <img src="/images/chillibeans.jpg" alt="Chilli Beans" key="chillibeans" />,
-  <img src="/images/imaginarium.jpg" alt="Imaginarium" key="imaginaruim" />,
-  <img src="/images/farm.jpg" alt="Farm" key="farm" />,
+  <Image src="/images/acer.jpg" alt="Acer" key="acter" />,
+  <Image src="/images/lego.jpg" alt="Lego" key="lego" />,
+  <Image src="/images/animale.jpg" alt="Animale" key="animale" />,
+  <Image src="/images/cea.jpg" alt="C&A" key="cea" />,
+  <Image src="/images/polishop.jpg" alt="Polishop" key="polishop" />,
+  <Image src="/images/tef.jpg" alt="Track & Field" key="trackandfield" />,
+  <Image src="/images/ingresso.jpg" alt="Ingresso.com" key="ingresso" />,
+  <Image src="/images/chillibeans.jpg" alt="Chilli Beans" key="chillibeans" />,
+  <Image src="/images/imaginarium.jpg" alt="Imaginarium" key="imaginaruim" />,
+  <Image src="/images/farm.jpg" alt="Farm" key="farm" />,
 ];
 
 const Brands = () => {

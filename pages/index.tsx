@@ -1,6 +1,6 @@
-import { NextPage } from 'next';
-import Head from 'next/head';
-import * as Sections from '../sections';
+import { NextPage } from "next";
+import Head from "next/head";
+import * as Sections from "../sections";
 
 const Home: NextPage = () => (
   <main>

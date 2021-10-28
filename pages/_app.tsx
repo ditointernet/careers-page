@@ -1,9 +1,9 @@
-import Head from 'next/head'
-import type { AppProps } from 'next/app';
-import { createGlobalStyle } from 'styled-components';
-import { COLORS, GRID, TYPOGRAPHY } from '@ditointernet/uai-foundation';
+import Head from "next/head"
+import type { AppProps } from "next/app";
+import { createGlobalStyle } from "styled-components";
+import { COLORS, GRID, TYPOGRAPHY } from "@ditointernet/uai-foundation";
 
-import 'react-responsive-carousel/lib/styles/carousel.min.css';
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 const GlobalStyle = createGlobalStyle`
   html,
