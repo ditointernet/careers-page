@@ -20,7 +20,7 @@ const About: NextPage = () => (
         </Text>
         <Text>
           Em 2020, influenciamos mais de{" "}
-          <strong>R$ 2.5 bilhões em receita de grandes marcas</strong> e estamos
+          <strong>R$ 2,5 bilhões em receita de grandes marcas</strong> e estamos
           trabalhando para atingir uma ARR (Receita Anual Recorrente) superior a{" "}
           <strong>R$500 milhões</strong> até 2028.
         </Text>

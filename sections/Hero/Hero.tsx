@@ -18,7 +18,7 @@ const Hero: NextPage = () => (
       <ImageWrapper src="./images/people.svg" />
       <Footer>
         <img src="/images/chevron-down.png" alt="" />
-        <p>Deslize a página para descobrir mais sobre a Dito</p>
+        <p>Deslize a página para descobrir mais sobre nós</p>
       </Footer>
     </SectionWrapper>
   </Section>

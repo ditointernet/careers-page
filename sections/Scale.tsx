@@ -14,32 +14,27 @@ const Scale = () => (
       <Brands />
 
       <Content>
-        Impactamos mais ​​de <b>102 milhões de pessoas</b> consumidoras. E
-        anualmente geramos:
+        Impactamos mais ​​de <b>102 milhões de pessoas</b> consumidoras. E, anualmente, geramos:
       </Content>
 
       <Blocks>
-        <Block>
-          <BlockTitle>R$ 2.5 bilhões</BlockTitle>
+        <Block minWidth={300}>
+          <BlockTitle>R$ 2,5 bilhões</BlockTitle>
           <BlockContent>
-            Em receita <br />
-            influenciada
+            em receita influenciada
           </BlockContent>
         </Block>
-
-        <Block>
-          <BlockTitle>+ 8.8 bilhões</BlockTitle>
-          <BlockContent>De comportamentos mapeados anualmente</BlockContent>
+        <Block minWidth={332}>
+          <BlockTitle>+ 8,8 bilhões</BlockTitle>
+          <BlockContent>de comportamentos mapeados anualmente</BlockContent>
         </Block>
-
-        <Block>
+        <Block minWidth={323}>
           <BlockTitle>+ 103 milhões</BlockTitle>
-          <BlockContent>De contatos realizados por times de vendas</BlockContent>
+          <BlockContent>de contatos realizados por times de vendas</BlockContent>
         </Block>
-
-        <Block>
+        <Block minWidth={300}>
           <BlockTitle>+ 13 milhões</BlockTitle>
-          <BlockContent>De campanhas recebidas</BlockContent>
+          <BlockContent>de campanhas recebidas</BlockContent>
         </Block>
       </Blocks>
     </SectionWrapper>
@@ -62,7 +57,7 @@ const SectionWrapper = styled.div`
   flex-direction: column;
   
   @media only screen and (min-width: 1024px) {
-      padding: ${GRID(10)} ${GRID(9)};
+    padding: ${GRID(10)} ${GRID(9)};
   }
 `
 
@@ -84,10 +79,10 @@ const Title = styled.h2`
 `;
 
 const Content = styled.p`
-  font-size: ${GRID(2.75)};
   color: ${COLORS.GRAY_4};
   margin: 54px auto;
   display: inline-block;
+  font-size: ${GRID(2.75)};
   font-weight: 400;
 
   @media (max-width: 768px) {
@@ -96,32 +91,32 @@ const Content = styled.p`
   }
 
   b {
-    font-weight: bold;
+    font-weight: 700;
     color: ${COLORS.NAVY_DARK};
   }
 `;
 
 const Blocks = styled.div`
+  gap: ${GRID(3)};
   display: flex;
   flex-wrap: wrap;
-  margin: 0 auto;
-  max-width: ${GRID(160)};
-  gap: ${GRID(3)};
+  justify-content: space-evenly;
 
-  @media (min-width: 768px) {
-    gap: ${GRID(1.5)};
+  @media (min-width: 1024px) {
+    gap: inherit;
   }
 `;
 
-const Block = styled.div`
+const Block = styled.div<{ minWidth: number }>`
+  width: 100%;
   display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  flex: 1;
-  align-self: stretch;
-  background: ${COLORS.WHITE};
   padding: ${GRID(4.5)} ${GRID(4)};
-  min-width: 300px;
+  flex-direction: column;
+  background-color: ${COLORS.WHITE};
+  
+  @media (min-width: 1024px) {
+    width: ${({ minWidth }) => GRID(minWidth / 8)};
+  }
 
   &:hover {
     box-shadow: 0 ${GRID(0.375)} ${GRID(2)} ${GRID(0.5)} rgba(0, 0, 0, 0.05);
@@ -130,17 +125,19 @@ const Block = styled.div`
 `;
 
 const BlockTitle = styled.h3`
-  font-size: ${GRID(3.5)};
   color: ${COLORS.GREEN_MAIN};
-  padding: 0;
-  margin: 0 0 ${GRID(1.5)} 0;
+  margin: 0 0 ${GRID(0.25)} 0;
+  font-size: ${GRID(3.5)};
+  font-weight: 700;
+  line-height: ${GRID(5.25)};
 `;
 
 const BlockContent = styled.p`
-  font-size: ${GRID(2.5)};
   color: ${COLORS.NAVY_DARK};
-  padding: 0;
   margin: 0;
+  font-size: ${GRID(2.75)};
+  font-weight: 700;
+  line-height: ${GRID(4.125)};
 `;
 
 export default Scale;
