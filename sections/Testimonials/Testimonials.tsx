@@ -1,9 +1,9 @@
-import React from 'react'
-import styled from 'styled-components'
+import React from "react"
+import styled from "styled-components"
 import ButtonSecondary from "@/components/ButtonSecondary";
 import { COLORS, GRID } from "@ditointernet/uai-foundation";
 import { Swiper, SwiperSlide } from "swiper/react";
-import SwiperCore, { Pagination, Navigation, EffectCards } from 'swiper';
+import SwiperCore, { Pagination, Navigation, EffectCards } from "swiper";
 
 import "swiper/css";
 import "swiper/css/pagination"
@@ -28,21 +28,21 @@ const Testimonials = () => {
             name: "Nome",
             profession: "Desenvolvedor Frontend",
             local: "Belo Horizonte, MG",
-            testimonial: '"Eu sou sempre muito incentivada aqui dentro a ser a pessoa que eu sou, uma cientista de dados..."',
+            testimonial: "\"Eu sou sempre muito incentivada aqui dentro a ser a pessoa que eu sou, uma cientista de dados...\"",
         },
         {
             url: "./images/temp_testimonials.png",
             name: "Nome",
             profession: "Desenvolvedor Frontend",
             local: "Belo Horizonte, MG",
-            testimonial: '"Eu sou sempre muito incentivada aqui dentro a ser a pessoa que eu sou, uma cientista de dados..."',
+            testimonial: "\"Eu sou sempre muito incentivada aqui dentro a ser a pessoa que eu sou, uma cientista de dados...\"",
         },
         {
             url: "./images/temp_testimonials.png",
             name: "Nome",
             profession: "Desenvolvedor Frontend",
             local: "Belo Horizonte, MG",
-            testimonial: '"Eu sou sempre muito incentivada aqui dentro a ser a pessoa que eu sou, uma cientista de dados..."',
+            testimonial: "\"Eu sou sempre muito incentivada aqui dentro a ser a pessoa que eu sou, uma cientista de dados...\"",
         },
     ];
 
@@ -61,39 +61,52 @@ const Testimonials = () => {
 
     return (
         <Section>
-            <Title>A Dito por FERAS</Title>
-            <SwiperMobile
-                effect='cards'
-                grabCursor={true}
-            >
-                {SwiperItens}
-            </SwiperMobile>
-            <SwiperDesktop
-                loop={true}
-                navigation={true}
-                spaceBetween={50}
-                slidesPerView={1}
-                pagination={{
-                    "clickable": true
-                }}
-            >
-                {SwiperItens}
-            </SwiperDesktop>
+            <SectionWrapper>
+                <Title>A Dito por FERAS</Title>
+                <SwiperMobile
+                    effect='cards'
+                    grabCursor={true}
+                >
+                    {SwiperItens}
+                </SwiperMobile>
+                <SwiperDesktop
+                    loop={true}
+                    navigation={true}
+                    spaceBetween={60}
+                    slidesPerView={1}
+                    pagination={{
+                        "clickable": true
+                    }}
+                >
+                    {SwiperItens}
+                </SwiperDesktop>
+            </SectionWrapper>
         </Section >
     )
 }
 
+
 const Section = styled.section`
+    margin: ${GRID(1)} 0;
+  
+    @media only screen and (min-width: 1024px) {
+        margin: ${GRID(2)} 0;
+    }
+`
+
+const SectionWrapper = styled.section`
+    margin: 0 auto;
     display: flex;
+    padding: ${GRID(8)} ${GRID(2)};
+    max-width: ${GRID(180)};
     align-items: center;
     flex-direction: column;
     justify-content: center;
-    margin: ${GRID(7)} 0 ${GRID(12.75)};
-
+  
     @media only screen and (min-width: 1024px) {
-        margin: ${GRID(15)} 0 ${GRID(21.75)};
+        padding: ${GRID(10)} ${GRID(9)};
     }
-`;
+`
 
 const Title = styled.h2`
     color: ${COLORS.NAVY_DARK};
@@ -103,6 +116,7 @@ const Title = styled.h2`
     font-weight: 700;
 
     @media only screen and (min-width: 1024px) {
+        margin: 0;
         font-size: ${GRID(4.5)};
         line-height: ${GRID(6.75)};
     }
@@ -132,7 +146,7 @@ const SwiperMobile = styled(Swiper)`
 const SwiperDesktop = styled(Swiper)`
     width: calc(100% - ${GRID(3.75)});
     display: none;
-    padding: 0px ${GRID(6.25)} ${GRID(5)};
+    padding: 60px;
     max-width: ${GRID(129.125)};
 
     @media only screen and (min-width: 1024px) {
@@ -149,7 +163,7 @@ const SwiperDesktop = styled(Swiper)`
             background-color: ${COLORS.WHITE};
             
             &.swiper-slide-active {
-                box-shadow: 0px 0px ${GRID(10.625)} rgba(0, 0, 0, 0.1);
+                box-shadow: 0px 0px ${GRID(6)} rgba(0, 0, 0, 0.1);
             }
         }
     }
