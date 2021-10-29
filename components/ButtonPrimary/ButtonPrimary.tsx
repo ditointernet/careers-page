@@ -4,6 +4,7 @@ import { COLORS, GRID } from "@ditointernet/uai-foundation";
 const ButtonPrimary = styled.a`
   color: ${COLORS.WHITE};
   cursor: pointer;
+  z-index: 1;
   outline: none;
   display: inline-block;
   padding: ${GRID(1.5)} ${GRID(3)};
@@ -13,6 +14,10 @@ const ButtonPrimary = styled.a`
   line-height: ${GRID(3)};
   border-radius: ${GRID(7)};
   background-color: ${COLORS.GREEN_MAIN};
+
+  &:hover {
+    background-color: ${COLORS.GREEN_DARK};
+  }
 `;
 
 export default ButtonPrimary;
