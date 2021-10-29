@@ -105,7 +105,7 @@ const WrapperCards = styled.div`
         flex-wrap: wrap;
         justify-content: space-between;
     }
-    `
+`
 
 const Card = styled.div<{ minheight: number }>`
     border: ${GRID(0.125)} solid #E9E9E9;

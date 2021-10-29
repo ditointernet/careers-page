@@ -80,13 +80,13 @@ const Title = styled.h2`
 
 const Content = styled.p`
   color: ${COLORS.GRAY_4};
-  margin: 54px auto;
+  margin: ${GRID(6.75)} auto;
   display: inline-block;
   font-size: ${GRID(2.75)};
   font-weight: 400;
 
   @media (max-width: 768px) {
-    margin: 40px auto;
+    margin: ${GRID(5)} auto;
     font-size: ${GRID(2)};
   }
 

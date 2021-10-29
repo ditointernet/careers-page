@@ -178,22 +178,22 @@ const Content = styled.div`
   h2 {
     color: ${COLORS.NAVY_DARK};
     margin: 0 0 ${GRID(5)} 0;
-    font-size: 22px;
+    font-size: ${GRID(2.75)};
     font-weight: 700;
-    line-height: 33px;
+    line-height: ${GRID(4.125)};
 
     @media (min-width: 1024px) {
-      font-size: 36px;
-      line-height: 54px;
+      font-size: ${GRID(4.5)};
+      line-height: ${GRID(6.75)};
     }
   }
 
   p {
     color: ${COLORS.GRAY_4};
     margin: 0 0 ${GRID(3)} 0;
-    font-size: 16px;
+    font-size: ${GRID(2)};
     font-weight: 500;
-    line-height: 24px;
+    line-height: ${GRID(3)};
     
     b {
       color: ${COLORS.NAVY_DARK};
