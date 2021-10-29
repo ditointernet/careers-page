@@ -70,25 +70,25 @@ const Team = () => (
 );
 
 const Section = styled.section`
-  margin: ${GRID(10)} 0;
-  
-  @media (min-width: 1024px) {
-    margin: ${GRID(16)} 0;
+  margin: ${GRID(1)} 0;
+
+  @media only screen and (min-width: 1024px) {
+    margin: ${GRID(2)} 0;
   }
-`;
+`
 
 const SectionWrapper = styled.div`
   gap: ${GRID(4)};
   margin: 0 auto;
   display: flex;
-  padding: 0 ${GRID(2)};
-  max-width: 1440px;
+  padding: ${GRID(8)} ${GRID(2)};
+  max-width: ${GRID(180)};
   align-items: center;
   flex-direction: column-reverse;
 
   @media (min-width: 1024px) {
     gap: ${GRID(10)};
-    padding: 0 ${GRID(9)} 0 0;
+    padding: ${GRID(10)} ${GRID(9)};
     align-items: flex-start;
     flex-direction: row;
   }
@@ -169,16 +169,14 @@ const ArrowButton = styled.button<{ isNext?: boolean }>`
 const Content = styled.div`
   width: 100%;
   display: flex;
-  padding: 0 ${GRID(2)};
   flex-direction: column;
   
   @media (min-width: 1024px) {
-    max-width: ${GRID(80.5)};
+    margin-top: ${GRID(8)};
   }
 
   h2 {
     color: ${COLORS.NAVY_DARK};
-    margin: 0;
     margin: 0 0 ${GRID(5)} 0;
     font-size: 22px;
     font-weight: 700;

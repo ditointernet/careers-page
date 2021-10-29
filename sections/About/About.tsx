@@ -40,21 +40,21 @@ const About: NextPage = () => (
 );
 
 const Section = styled.section`
-    margin: ${GRID(1)} 0;
+  margin: ${GRID(1)} 0;
 
-    @media only screen and (min-width: 1024px) {
-        margin: ${GRID(2)} 0;
-    }
+  @media only screen and (min-width: 1024px) {
+      margin: ${GRID(2)} 0;
+  }
 `
 
 const SectionWrapper = styled.section`
-    margin: 0 auto;
-    padding: ${GRID(8)} ${GRID(2)};
-    max-width: ${GRID(180)};
-    
-    @media only screen and (min-width: 1024px) {
-        padding: ${GRID(10)} ${GRID(9)};
-    }
+  margin: 0 auto;
+  padding: ${GRID(8)} ${GRID(2)};
+  max-width: ${GRID(180)};
+  
+  @media only screen and (min-width: 1024px) {
+      padding: ${GRID(10)} ${GRID(9)};
+  }
 `
 
 const Subtitle = styled.h3`
@@ -119,12 +119,9 @@ const FrameWrap = styled.div`
 `;
 
 const Frame = styled.img`
-  bottom: ${GRID(8.375)};
+  right: 0;
+  bottom: 0;
   position: absolute;
-  right: ${GRID(3.75)};
-  @media (max-width: 1366px) {
-    right: 0px;
-  }
   @media (max-width: 768px) {
     position: static;
     height: 100%;

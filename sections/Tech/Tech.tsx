@@ -48,18 +48,23 @@ const Tech = () => (
 );
 
 const Section = styled.section`
+    margin: ${GRID(1)} 0;
     position: relative;
     background-color: #121A2D;
-`
-
-const SectionWrapper = styled.div`
-    margin: 0 auto;
-    padding: ${GRID(5)} ${GRID(2)};
-    max-width: ${GRID(180)};
 
     @media only screen and (min-width: 1024px) {
-        padding: ${GRID(8.75)} ${GRID(9)};
+        margin: ${GRID(2)} 0;
     }
+`
+
+const SectionWrapper = styled.section`
+  margin: 0 auto;
+  padding: ${GRID(8)} ${GRID(2)};
+  max-width: ${GRID(180)};
+  
+  @media only screen and (min-width: 1024px) {
+      padding: ${GRID(10)} ${GRID(9)};
+  }
 `
 
 const Title = styled.h2`
