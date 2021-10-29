@@ -87,6 +87,8 @@ const Testimonials = () => {
 
 
 const Section = styled.section`
+    // section disabled temporary for waiting approve content
+    display: none;
     margin: ${GRID(1)} 0;
   
     @media only screen and (min-width: 1024px) {

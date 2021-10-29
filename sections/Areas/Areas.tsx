@@ -20,7 +20,7 @@ const Areas = () => (
                     <AreaContent>
                         <AreaTitle>Tecnologia</AreaTitle>
                         <Description marginBottomMobile={32} marginBottomDesktop={36}>É a nossa maior área, responsável por <b>dinamizar a plataforma</b> através das linguagens de programação (front e back-end) e por cuidar da <b>arquitetura e da infraestrutura</b> dos nossos produtos. Além disso, se encarregam de <b>manter</b> e <b>melhorar</b> os produtos, mapear e garantir o desenvolvimento de <b>novas funcionalidades</b> e assegurar uma <b>boa experiência</b> para as pessoas usuárias.</Description>
-                        <ButtonSecondary>Ver vagas de Tecnologia</ButtonSecondary>
+                        <ButtonSecondary target="_black" href="https://dito.hire.trakstar.com/?team_id=8496&team_id=5567&q=&limit=25#content">Ver vagas de Tecnologia</ButtonSecondary>
                     </AreaContent>
                 </Area>
                 <Area maxWidth={957} margin="0 53px 0 0">
@@ -28,7 +28,7 @@ const Areas = () => (
                     <AreaContent>
                         <AreaTitle>Comercial</AreaTitle>
                         <Description marginBottomMobile={32} marginBottomDesktop={36}>O Comercial é a ponte entre nosso produto e o mundo, responsável por promover ações que visam <b>difundir nossa marca</b> e nos conectar com <b>potenciais clientes</b>. Essa área é composta por <b>Vendas</b>, <b>Customer Success (CS)</b>, <b>Marketing</b> e <b>Suporte ao Cliente</b>.</Description>
-                        <ButtonSecondary>Ver vagas de Comercial</ButtonSecondary>
+                        <ButtonSecondary target="_black" href="https://dito.hire.trakstar.com/?team_id=5436&q=&limit=25#content">Ver vagas de Comercial</ButtonSecondary>
                     </AreaContent>
                 </Area>
                 <Area maxWidth={972} margin="0 0 0 127px">
@@ -36,7 +36,7 @@ const Areas = () => (
                     <AreaContent>
                         <AreaTitle>Gente & Gestão</AreaTitle>
                         <Description marginBottomMobile={32} marginBottomDesktop={36}>A área reúne <b>Pessoas</b>, <b>Planejamento & Gestão</b> e <b>Financeiro</b>. Os times são responsáveis por trazer mais FERAs, cuidam da gestão do clima e do desenvolvimento das pessoas, definem os caminhos a serem tomados e administram os recursos financeiros da nossa empresa.</Description>
-                        <ButtonSecondary>Ver vagas de Gente & Gestão</ButtonSecondary>
+                        <ButtonSecondary target="_black" href="https://dito.hire.trakstar.com/?team_id=26339&team_id=27867&q=&limit=25#content">Ver vagas de Gente & Gestão</ButtonSecondary>
                     </AreaContent>
                 </Area>
             </AreaWrapper>

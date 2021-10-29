@@ -4,7 +4,7 @@ import { COLORS, GRID } from "@ditointernet/uai-foundation";
 
 const Screening = () => {
     return (
-        <Section id="processo-seletivo">
+        <Section id="nosso-processo-seletivo">
             <SectionWrapper>
                 <Content maxWidth={795}>
                     <Title>Nosso processo seletivo</Title>
