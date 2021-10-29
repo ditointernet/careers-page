@@ -7,50 +7,50 @@ import Location from "../public/images/location.svg";
 
 const reasonsBlocks = [
   {
-    image: "/images/gptw.jpg",
+    image: "./images/gptw.jpg",
     text: "Desde 2017, estamos entre as melhores empresas para trabalhar (GPTW).",
   },
   {
-    image: "/images/time.svg",
+    image: "./images/time.svg",
     text: "Time formado por mais de 100 FERAS de todo o Brasil.",
   },
   {
-    image: "/images/flex-worksheet.svg",
+    image: "./images/flex-worksheet.svg",
     text: "Horários flexíveis de verdade, sem essa de bater ponto por aqui.",
   },
   {
-    image: "/images/career-map.svg",
+    image: "./images/career-map.svg",
     text: "Ajudamos a desenvolver seu mapa de carreira para você seguir crescendo.",
   },
   {
-    image: "/images/coop.svg",
+    image: "./images/coop.svg",
     text: "Espírito colaborativo. Aqui não tem concorrência, tem parceria.",
   },
   {
-    image: "/images/performance.svg",
+    image: "./images/performance.svg",
     text: "Realizamos ciclos de performance periódicos.",
   },
 ];
 
 const imageSlider = [
   {
-    url: "/images/slider.jpg",
+    url: "./images/sede-001.jpg",
     title: "Dito",
   },
   {
-    url: "/images/slider.jpg",
+    url: "./images/sede-002.jpg",
     title: "Dito",
   },
   {
-    url: "/images/slider.jpg",
+    url: "./images/sede-003.jpg",
     title: "Dito",
   },
   {
-    url: "/images/slider.jpg",
+    url: "./images/sede-004.jpg",
     title: "Dito",
   },
   {
-    url: "/images/slider.jpg",
+    url: "./images/sede-005.jpg",
     title: "Dito",
   },
 ];
