@@ -148,7 +148,7 @@ const SwiperMobile = styled(Swiper)`
 const SwiperDesktop = styled(Swiper)`
     width: calc(100% - ${GRID(3.75)});
     display: none;
-    padding: 60px;
+    padding: ${GRID(7.5)};
     max-width: ${GRID(129.125)};
 
     @media only screen and (min-width: 1024px) {
