@@ -5,7 +5,7 @@ import { COLORS, GRID } from "@ditointernet/uai-foundation";
 const Tech = () => (
     <Section id="nossas-tecnologias">
         <SectionWrapper>
-            <Title>Já somos uma grande Martech* e não paramos de crescer.</Title>
+            <Title>Já somos uma grande martech* e não paramos de crescer.</Title>
             <Container>
                 <Description marginBottomMobile={71} marginBottomDesktop={48} maxWidth={694} className="arrowRight">A plataforma Dito foi toda desenvolvida internamente, com <b>~/tecnologia própria/~</b>, e impacta <b>~/milhões de consumidores/~</b> por mês, de forma inteligente e multicanal.</Description>
                 <MainWrapper>
@@ -16,7 +16,7 @@ const Tech = () => (
                                 <BoxContent>
                                     <BoxItem>Golang</BoxItem>
                                     <BoxItem className="hyphen">Kubernetes</BoxItem>
-                                    <BoxItem className="hyphen">Elasticsearch (cluster de 210 bilhoes de documentos)</BoxItem>
+                                    <BoxItem className="hyphen">Elasticsearch (cluster de 210 bilhões de documentos)</BoxItem>
                                     <BoxItem className="hyphen">Kinesis</BoxItem>
                                     <BoxItem>AWS e GCP como cloud</BoxItem>
                                 </BoxContent>
