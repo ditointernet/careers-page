@@ -246,14 +246,14 @@ const SectionWrapper = styled.section`
 
 const Title = styled.h2`
   color: ${COLORS.NAVY_DARK};
-  font-size: ${GRID(4.5)};
-  margin-bottom: ${GRID(12.5)};
-  line-height: ${GRID(4.1)};
+  margin: 0 0 ${GRID(4)} 0;
+  font-size: ${GRID(2.75)};
+  line-height: ${GRID(4.125)};
 
-  @media (max-width: 768px) {
-    font-size: ${GRID(2.75)};
-    padding: 0 ${GRID(2)};
-    margin-bottom: ${GRID(4)};
+  @media (min-width: 768px) {
+    margin: 0 0 ${GRID(7)} 0;
+    font-size: ${GRID(4.5)};
+    line-height: ${GRID(6.75)};
   }
 `;
 
@@ -261,7 +261,6 @@ const SlideBlocks = styled.div`
   display: flex;
   overflow-x: scroll;
   flex-wrap: nowrap;
-  margin: 0 -${GRID(9)};
   padding: ${GRID(2)} 0 ${GRID(2)} ${GRID(9)};
   scroll-behavior: smooth;
 
