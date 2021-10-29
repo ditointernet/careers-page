@@ -42,7 +42,7 @@ class CustomDocument extends Document {
         "Carreiras Dito - Nossa paixão por tecnologia está revolucionando o varejo. Vem com a gente!",
       description:
         "Por aqui, você vai encontrar vários desafios, além de muita parceria e espírito colaborativo. Porque entendemos que, crescendo juntos, podemos ir muito mais longe.",
-      image: "/dito-empresa-banner.jpg",
+      image: "https://carreiras.dito.com.br/images/dito-empresa-banner.jpg",
       keywords: "dito, empresa, tecnologia, varejo",
     };
 
