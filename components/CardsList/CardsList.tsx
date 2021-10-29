@@ -56,11 +56,12 @@ const SwiperMobile = styled(Swiper) <{ minheight: number }>`
 
     .swiper-wrapper {
         > div {
-            min-height: ${({ minheight }) => minheight ? GRID(minheight / 8) : 0};
             border: ${GRID(0.125)} solid #E9E9E9;
             padding: ${GRID(4)};
             max-width: 100%;
+            min-height: ${({ minheight }) => minheight ? GRID(minheight / 8) : 0};
             border-radius: ${GRID(3)};
+            background-color: ${COLORS.WHITE};
         }
     }
 
@@ -104,7 +105,7 @@ const WrapperCards = styled.div`
         flex-wrap: wrap;
         justify-content: space-between;
     }
-`
+    `
 
 const Card = styled.div<{ minheight: number }>`
     border: ${GRID(0.125)} solid #E9E9E9;
@@ -112,6 +113,7 @@ const Card = styled.div<{ minheight: number }>`
     max-width: ${GRID(42.875)};
     min-height: ${({ minheight }) => minheight ? GRID(minheight / 8) : 0};
     border-radius: ${GRID(3)};
+    background-color: ${COLORS.WHITE};
 
     @media only screen and (min-width: 1024px) {
         max-width: calc(33% - ${GRID(1.75)});
