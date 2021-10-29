@@ -89,150 +89,166 @@ const Reasons = () => {
 
   return (
     <Section>
-      <Title>Mais razões para trabalhar na Dito</Title>
+      <SectionWrapper>
+        <Title>Mais razões para trabalhar na Dito</Title>
 
-      <SlideBlocks ref={sliderRef}>
-        {reasonsBlocks.map((block, index) => (
-          <Block key={index} active={currentBlock === index}>
-            <img src={block.image} alt={block.text} />
-            <p>{block.text}</p>
-          </Block>
-        ))}
-      </SlideBlocks>
+        <SlideBlocks ref={sliderRef}>
+          {reasonsBlocks.map((block, index) => (
+            <Block key={index} active={currentBlock === index}>
+              <img src={block.image} alt={block.text} />
+              <p>{block.text}</p>
+            </Block>
+          ))}
+        </SlideBlocks>
 
-      <SliderActions>
-        <Button onClick={() => scrollLeft()} desactive={currentBlock == 0}>
-          <svg
-            width="9"
-            height="12"
-            viewBox="0 0 9 12"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
+        <SliderActions>
+          <Button onClick={() => scrollLeft()} desactive={currentBlock == 0}>
+            <svg
+              width="9"
+              height="12"
+              viewBox="0 0 9 12"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fillRule="evenodd"
+                clipRule="evenodd"
+                d="M7.69698 0.321548C8.10798 0.736644 8.10834 1.4052 7.69779 1.82075L3.56875 6.00002L7.6978 10.1793C8.10834 10.5948 8.10798 11.2634 7.69698 11.6785C7.27985 12.0998 6.59914 12.0998 6.18201 11.6785L0.621486 6.06258C0.587179 6.02793 0.587179 5.97212 0.621486 5.93747L6.18201 0.321548C6.59914 -0.0997335 7.27985 -0.0997338 7.69698 0.321548Z"
+                fill="#00BD6A"
+              />
+            </svg>
+          </Button>
+          <Button
+            onClick={() => scrollRight()}
+            desactive={currentBlock == reasonsBlocks.length - 1}
           >
-            <path
-              fillRule="evenodd"
-              clipRule="evenodd"
-              d="M7.69698 0.321548C8.10798 0.736644 8.10834 1.4052 7.69779 1.82075L3.56875 6.00002L7.6978 10.1793C8.10834 10.5948 8.10798 11.2634 7.69698 11.6785C7.27985 12.0998 6.59914 12.0998 6.18201 11.6785L0.621486 6.06258C0.587179 6.02793 0.587179 5.97212 0.621486 5.93747L6.18201 0.321548C6.59914 -0.0997335 7.27985 -0.0997338 7.69698 0.321548Z"
-              fill="#00BD6A"
-            />
-          </svg>
-        </Button>
-        <Button
-          onClick={() => scrollRight()}
-          desactive={currentBlock == reasonsBlocks.length - 1}
-        >
-          <svg
-            width="9"
-            height="12"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              fillRule="evenodd"
-              clipRule="evenodd"
-              d="M1.303 11.678a1.066 1.066 0 0 1 0-1.499L5.43 6 1.302 1.82A1.066 1.066 0 0 1 2.818.322l5.56 5.616a.089.089 0 0 1 0 .126l-5.56 5.615a1.066 1.066 0 0 1-1.515 0Z"
-              fill="#00BD6A"
-            />
-          </svg>
-        </Button>
-      </SliderActions>
+            <svg
+              width="9"
+              height="12"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fillRule="evenodd"
+                clipRule="evenodd"
+                d="M1.303 11.678a1.066 1.066 0 0 1 0-1.499L5.43 6 1.302 1.82A1.066 1.066 0 0 1 2.818.322l5.56 5.616a.089.089 0 0 1 0 .126l-5.56 5.615a1.066 1.066 0 0 1-1.515 0Z"
+                fill="#00BD6A"
+              />
+            </svg>
+          </Button>
+        </SliderActions>
 
-      <Content>
-        <Columns>
-          <Column>
-            <RemoteJob viewBox="0 0 237 244" />
-          </Column>
-          <Column>
-            <h3>Trabalho remoto como padrão</h3>
-            <p>
-              Você pode trabalhar de <b>qualquer lugar do país</b> e aproveitar
-              toda a flexibilidade desse modelo para ter mais{" "}
-              <b>qualidade de vida.</b> É você quem escolhe se prefere viver na
-              praia, no campo, no interior, onde for.
-            </p>
-          </Column>
-        </Columns>
+        <Content>
+          <Columns>
+            <Column>
+              <RemoteJob viewBox="0 0 237 244" />
+            </Column>
+            <Column>
+              <h3>Trabalho remoto como padrão</h3>
+              <p>
+                Você pode trabalhar de <b>qualquer lugar do país</b> e aproveitar
+                toda a flexibilidade desse modelo para ter mais{" "}
+                <b>qualidade de vida.</b> É você quem escolhe se prefere viver na
+                praia, no campo, no interior, onde for.
+              </p>
+            </Column>
+          </Columns>
 
-        <Columns>
-          <Column>
-            <Location viewBox="0 0 235 219" />
-          </Column>
-          <Column>
-            <h3>Sede localizada no coração da Savassi</h3>
-            <p>
-              Caso prefira o trabalho presencial, você pode optar por trabalhar
-              na nossa sede, em <b>Belo Horizonte.</b>
-            </p>
+          <Columns>
+            <Column>
+              <Location viewBox="0 0 235 219" />
+            </Column>
+            <Column>
+              <h3>Sede localizada no coração da Savassi</h3>
+              <p>
+                Caso prefira o trabalho presencial, você pode optar por trabalhar
+                na nossa sede, em <b>Belo Horizonte.</b>
+              </p>
 
-            <SliderWrapper>
-              <Slider>
-                {imageSlider.map(({ url, title }, index) => (
-                  <img
-                    src={url}
-                    alt={title}
-                    key={index}
-                    className={currentSlider === index ? "active" : ""}
-                  />
-                ))}
-              </Slider>
-              <SliderControls>
-                <Button
-                  onClick={() => slideLeft()}
-                  desactive={currentSlider == 0}
-                >
-                  <svg
-                    width="9"
-                    height="12"
-                    viewBox="0 0 9 12"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      fillRule="evenodd"
-                      clipRule="evenodd"
-                      d="M7.69698 0.321548C8.10798 0.736644 8.10834 1.4052 7.69779 1.82075L3.56875 6.00002L7.6978 10.1793C8.10834 10.5948 8.10798 11.2634 7.69698 11.6785C7.27985 12.0998 6.59914 12.0998 6.18201 11.6785L0.621486 6.06258C0.587179 6.02793 0.587179 5.97212 0.621486 5.93747L6.18201 0.321548C6.59914 -0.0997335 7.27985 -0.0997338 7.69698 0.321548Z"
-                      fill="#00BD6A"
+              <SliderWrapper>
+                <Slider>
+                  {imageSlider.map(({ url, title }, index) => (
+                    <img
+                      src={url}
+                      alt={title}
+                      key={index}
+                      className={currentSlider === index ? "active" : ""}
                     />
-                  </svg>
-                </Button>
-                <Button
-                  onClick={() => slideRight()}
-                  desactive={currentSlider == imageSlider.length - 1}
-                >
-                  <svg
-                    width="9"
-                    height="12"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
+                  ))}
+                </Slider>
+                <SliderControls>
+                  <Button
+                    onClick={() => slideLeft()}
+                    desactive={currentSlider == 0}
                   >
-                    <path
-                      fillRule="evenodd"
-                      clipRule="evenodd"
-                      d="M1.303 11.678a1.066 1.066 0 0 1 0-1.499L5.43 6 1.302 1.82A1.066 1.066 0 0 1 2.818.322l5.56 5.616a.089.089 0 0 1 0 .126l-5.56 5.615a1.066 1.066 0 0 1-1.515 0Z"
-                      fill="#00BD6A"
-                    />
-                  </svg>
-                </Button>
-              </SliderControls>
-            </SliderWrapper>
-          </Column>
-        </Columns>
-      </Content>
+                    <svg
+                      width="9"
+                      height="12"
+                      viewBox="0 0 9 12"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fillRule="evenodd"
+                        clipRule="evenodd"
+                        d="M7.69698 0.321548C8.10798 0.736644 8.10834 1.4052 7.69779 1.82075L3.56875 6.00002L7.6978 10.1793C8.10834 10.5948 8.10798 11.2634 7.69698 11.6785C7.27985 12.0998 6.59914 12.0998 6.18201 11.6785L0.621486 6.06258C0.587179 6.02793 0.587179 5.97212 0.621486 5.93747L6.18201 0.321548C6.59914 -0.0997335 7.27985 -0.0997338 7.69698 0.321548Z"
+                        fill="#00BD6A"
+                      />
+                    </svg>
+                  </Button>
+                  <Button
+                    onClick={() => slideRight()}
+                    desactive={currentSlider == imageSlider.length - 1}
+                  >
+                    <svg
+                      width="9"
+                      height="12"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fillRule="evenodd"
+                        clipRule="evenodd"
+                        d="M1.303 11.678a1.066 1.066 0 0 1 0-1.499L5.43 6 1.302 1.82A1.066 1.066 0 0 1 2.818.322l5.56 5.616a.089.089 0 0 1 0 .126l-5.56 5.615a1.066 1.066 0 0 1-1.515 0Z"
+                        fill="#00BD6A"
+                      />
+                    </svg>
+                  </Button>
+                </SliderControls>
+              </SliderWrapper>
+            </Column>
+          </Columns>
+        </Content>
+      </SectionWrapper>
     </Section>
   );
 };
 
 const Section = styled.section`
+  margin: ${GRID(1)} 0;
+
+  @media only screen and (min-width: 1024px) {
+      margin: ${GRID(2)} 0;
+  }
+`
+
+const SectionWrapper = styled.section`
+  margin: 0 auto;
   display: flex;
+  padding: ${GRID(8)} ${GRID(2)};
+  max-width: ${GRID(180)};
   flex-direction: column;
-`;
+  
+  @media only screen and (min-width: 1024px) {
+      padding: ${GRID(10)} ${GRID(9)};
+  }
+`
 
 const Title = styled.h2`
   color: ${COLORS.NAVY_DARK};
   font-size: ${GRID(4.5)};
   margin-bottom: ${GRID(12.5)};
   line-height: ${GRID(4.1)};
-  padding: 0 ${GRID(9)};
 
   @media (max-width: 768px) {
     font-size: ${GRID(2.75)};
@@ -245,6 +261,7 @@ const SlideBlocks = styled.div`
   display: flex;
   overflow-x: scroll;
   flex-wrap: nowrap;
+  margin: 0 -${GRID(9)};
   padding: ${GRID(2)} 0 ${GRID(2)} ${GRID(9)};
   scroll-behavior: smooth;
 

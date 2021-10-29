@@ -5,7 +5,7 @@ import ButtonSecondary from "@/components/ButtonSecondary";
 
 const Areas = () => (
     <Section>
-        <WrapperSection>
+        <SectionWrapper>
             <Title>Nossas áreas</Title>
             <Description
                 marginBottomMobile={60}
@@ -40,29 +40,31 @@ const Areas = () => (
                     </AreaContent>
                 </Area>
             </AreaWrapper>
-        </WrapperSection>
+        </SectionWrapper>
     </Section>
 )
 
 const Section = styled.section`
+    margin: ${GRID(1)} 0;
     background-size: cover;
     background-image: url("./images/areas-mb-bg.svg");
     background-repeat: no-repeat;
     background-position: inherit;
     
     @media only screen and (min-width: 1024px) {
+        margin: ${GRID(2)} 0;
         background-image: url("./images/areas-bg.svg");
     }
 `
 
-const WrapperSection = styled.div`
+const SectionWrapper = styled.div`
     margin: 0 auto;
-    padding: ${GRID(12.75)} ${GRID(2)} ${GRID(22.5)} ${GRID(2)};
+    padding: ${GRID(8)} ${GRID(2)};
     max-width: ${GRID(180)};
 
     @media only screen and (min-width: 1024px) {
         margin: 0 auto;
-        padding: ${GRID(13.375)} ${GRID(9)} ${GRID(26.125)} ${GRID(9)};
+        padding: ${GRID(10)} ${GRID(9)};
     }
 `
 
