@@ -33,9 +33,12 @@ const Screening = () => {
 }
 
 const Section = styled.section`
+    margin: ${GRID(1)} 0;
     position: relative;
 
     @media only screen and (min-width: 1024px) {
+        margin: ${GRID(2)} 0;
+
         &::before {
             top: ${GRID(78.75)};
             left: 0;
@@ -55,14 +58,13 @@ const Section = styled.section`
 `
 
 const SectionWrapper = styled.div`
-    margin: 0 0 ${GRID(12)};
-    padding: ${GRID(12)} ${GRID(2)} 0;
+    margin: 0 auto;
+    padding: ${GRID(8)} ${GRID(2)};
     max-width: ${GRID(180)};
 
     @media only screen and (min-width: 1024px) {
-        margin: 0 auto;
         display: flex;
-        padding: ${GRID(20)} ${GRID(9)} ${GRID(15)};
+        padding: ${GRID(10)} ${GRID(9)};
         flex-direction: column;
         
         > div {
