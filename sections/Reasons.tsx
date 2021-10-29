@@ -232,7 +232,7 @@ const Section = styled.section`
   }
 `
 
-const SectionWrapper = styled.section`
+const SectionWrapper = styled.div`
   margin: 0 auto;
   display: flex;
   padding: ${GRID(8)} ${GRID(2)};
