@@ -5,6 +5,7 @@ const ButtonSecondary = styled.a`
   color: ${COLORS.GREEN_MAIN};
   cursor: pointer;
   border: ${GRID(0.125)} solid ${COLORS.GREEN_MAIN};
+  z-index: 1;
   outline: none;
   padding: ${GRID(0.875)} ${GRID(2)};
   display: inline-block;
@@ -18,6 +19,10 @@ const ButtonSecondary = styled.a`
     padding: ${GRID(1.25)} ${GRID(3)};
     font-size: ${GRID(1.75)};
     line-height: ${GRID(2.5)};
+  }
+
+  &:hover {
+    background-color: ${COLORS.GREEN_LIGHT};
   }
 `;
 
