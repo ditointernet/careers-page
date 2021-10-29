@@ -9,7 +9,7 @@ const Hero: NextPage = () => (
       <Content>
         <Logo
           alt="Nossa paixão por tecnologia está revolucionando o varejo."
-          src="/images/logo-dito.png"
+          src="/images/logo.svg"
         />
         <Title>Nossa paixão por tecnologia está revolucionando o varejo.</Title>
         <Subtitle>Vem com a gente!</Subtitle>
