@@ -36,13 +36,26 @@ class CustomDocument extends Document {
   }
 
   render() {
+    const meta = {
+      url: "https://carreiras.dito.com.br",
+      title:
+        "Carreiras Dito - Nossa paixão por tecnologia está revolucionando o varejo. Vem com a gente!",
+      description:
+        "Por aqui, você vai encontrar vários desafios, além de muita parceria e espírito colaborativo. Porque entendemos que, crescendo juntos, podemos ir muito mais longe.",
+      image: "/dito-empresa-banner.jpg",
+      keywords: "dito, empresa, tecnologia, varejo",
+    };
+
     return (
       <Html>
         <Head>
-          <meta
-            name="description"
-            content="Nossa paixão por tecnologia está revolucionando o varejo. Vem com a gente!"
-          />
+          <meta property="og:title" content={meta.title} />
+          <meta name="description" content={meta.description} />
+          <meta property="og:description" content={meta.description} />
+          <meta property="og:url" content={meta.url} />
+          <meta property="og:image" content={meta.image} />
+          <meta name="keywords" content={meta.keywords} />
+
           <link rel="icon" href="/favicon.ico" />
           <link rel="preconnect" href="https://fonts.googleapis.com" />
           <link
