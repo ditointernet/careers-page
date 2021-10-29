@@ -5,7 +5,10 @@ import * as Sections from "../sections";
 const Home: NextPage = () => (
   <main>
     <Head>
-      <title>Carreiras | Dito</title>
+      <title>
+        Carreiras Dito - Nossa paixão por tecnologia está revolucionando o
+        varejo. Vem com a gente!
+      </title>
     </Head>
     <Sections.Navbar />
     <Sections.Hero />
