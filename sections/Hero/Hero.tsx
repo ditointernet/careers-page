@@ -13,7 +13,7 @@ const Hero: NextPage = () => (
         />
         <Title>Nossa paixão por tecnologia está revolucionando o varejo.</Title>
         <Subtitle>Vem com a gente!</Subtitle>
-        <ButtonPrimary href="#vagas">Ver nossas vagas</ButtonPrimary>
+        <ButtonPrimary href="#nossas-vagas">Ver nossas vagas</ButtonPrimary>
       </Content>
       <ImageWrapper src="./images/people.svg" />
       <Footer>

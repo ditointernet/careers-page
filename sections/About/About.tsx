@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { COLORS, GRID } from "@ditointernet/uai-foundation";
 
 const About: NextPage = () => (
-  <Section>
+  <Section id="sobre-a-dito">
     <SectionWrapper>
       <Subtitle>Sabemos onde queremos chegar:</Subtitle>
       <Title>Ser a maior autoridade em CRM no Brasil com atuação global.</Title>

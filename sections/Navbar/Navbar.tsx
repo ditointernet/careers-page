@@ -44,7 +44,7 @@ const Navbar = () => {
 
   return (
     <Header id="navbar">
-      <ButtonBackPage href="#back">
+      <ButtonBackPage href="https://www.dito.com.br/">
         <svg
           width="24"
           height="24"
@@ -61,7 +61,7 @@ const Navbar = () => {
       </ButtonBackPage>
       <BurgerIcon onClick={() => toggleMenu(!isOpenMenu)} active={isOpenMenu} />
       <Menu open={isOpenMenu} />
-      <ButtonPrimary style={{ marginLeft: "20px" }} href="#vagas">
+      <ButtonPrimary style={{ marginLeft: "20px" }} href="#nossas-vagas">
         Ver nossas vagas
       </ButtonPrimary>
     </Header>

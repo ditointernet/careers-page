@@ -3,7 +3,7 @@ import styled from "styled-components"
 import { COLORS, GRID } from "@ditointernet/uai-foundation";
 
 const Tech = () => (
-    <Section>
+    <Section id="nossas-tecnologias">
         <SectionWrapper>
             <Title>Já somos uma grande Martech* e não paramos de crescer.</Title>
             <Container>

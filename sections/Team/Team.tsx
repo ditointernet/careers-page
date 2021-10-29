@@ -4,7 +4,7 @@ import { Carousel } from "react-responsive-carousel";
 import { ChevronLeft, ChevronRight } from "@ditointernet/uai-icons";
 
 const Team = () => (
-  <Section>
+  <Section id="nosso-time">
     <SectionWrapper>
       <ImageWrapper>
         <Carousel

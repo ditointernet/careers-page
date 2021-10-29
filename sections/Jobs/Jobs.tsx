@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { COLORS, GRID } from "@ditointernet/uai-foundation";
 
 const Jobs = () => (
-    <Section>
+    <Section id="nossas-vagas">
         <SectionWrapper>
             <Title>Nossas vagas</Title>
             <Description>Estamos crescendo – e rápido – por isso, buscamos mais FERAs para o nosso time.<br />Aproveite para dar uma olhada nas nossas vagas. Pode ser que a oportunidade que você procurava para ir além na sua carreira esteja bem aqui. </Description>
