@@ -62,7 +62,7 @@ const Testimonials = () => {
     return (
         <Section>
             <SectionWrapper>
-                <Title>A Dito por FERAS</Title>
+                <Title>Como é trabalhar aqui</Title>
                 <SwiperMobile
                     effect='cards'
                     grabCursor={true}

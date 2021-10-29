@@ -24,7 +24,7 @@ const Screening = () => {
                 </Content>
                 <Content className="phases" maxWidth={770}>
                     <SubTitle number="04">Deu match!</SubTitle>
-                    <Description>Deu match! Agora falta pouco. Fazemos uma proposta para você e, se entrarmos em um acordo, chegamos no grande momento: a admissão.</Description>
+                    <Description>Agora falta pouco. Fazemos uma proposta para você e, se entrarmos em um acordo, chegamos no grande momento: a admissão.</Description>
                 </Content>
                 <Description><b>Ah, importante:</b> independentemente do resultado, sempre damos retorno – e o mais rápido possível. Essa é mais uma forma de mostrarmos que, de fato, nos importamos com as pessoas e com a experiência delas com a gente.</Description>
             </SectionWrapper>

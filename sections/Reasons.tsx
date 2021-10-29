@@ -90,7 +90,7 @@ const Reasons = () => {
   return (
     <Section>
       <SectionWrapper>
-        <Title>Mais razões para trabalhar na Dito</Title>
+        <Title>Mais razões para trabalhar aqui</Title>
 
         <SlideBlocks ref={sliderRef}>
           {reasonsBlocks.map((block, index) => (
