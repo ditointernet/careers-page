@@ -50,26 +50,35 @@ const Benefits = () => {
 
     return (
         <Section id="beneficios">
-            <Title>Nossos benefícios</Title>
-            <CardsList cards={cards} minMobileHeight={370} />
+            <SectionWrapper>
+                <Title>Nossos benefícios</Title>
+                <CardsList cards={cards} minMobileHeight={370} />
+            </SectionWrapper>
         </Section>
     )
 };
 
 const Section = styled.section`
+    margin: ${GRID(1)} 0;
+
+    @media only screen and (min-width: 1024px) {
+        margin: ${GRID(2)} 0;
+    }
+`
+
+const SectionWrapper = styled.section`
     margin: 0 auto;
-    padding: ${GRID(5)} ${GRID(2)} ${GRID(40)};
+    padding: ${GRID(8)} ${GRID(2)} ${GRID(27.5)};
     max-width: ${GRID(180)};
 
+    background-size: "auto";
     background-image: url("./images/benefits.svg");
-    background-size: ${GRID(41.25)};
     background-repeat: no-repeat;
     background-position-x: 20%;
     background-position-y: 100%;
-    
+  
     @media only screen and (min-width: 1024px) {
-        margin: 0 auto;
-        padding: ${GRID(10)} ${GRID(2)} ${GRID(25)};
+        padding: ${GRID(10)} ${GRID(9)} ${GRID(20)};
         background-size: ${GRID(53.75)};
         background-position-x: 85%;
     }
