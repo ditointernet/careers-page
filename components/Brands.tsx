@@ -66,16 +66,22 @@ const Row = styled.div`
 `;
 
 const ImageBox = styled.div<{ src: string }>`
-  width: ${GRID(18.75)};
-  height: ${GRID(11.25)};
+  width: ${GRID(8)};
+  height: ${GRID(4.5)};
   background-image: url(${({ src }) => src});
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
+  
+  @media (min-width: 768px) {
+    width: ${GRID(18.75)};
+    height: ${GRID(11.25)};
+  }
 `
 
 const BrandsContainer = styled.div`
   gap: ${GRID(8)};
+  margin: 0 0 ${GRID(4)};
   display: flex;
   flex-flow: column;
   align-items: center;
