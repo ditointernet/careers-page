@@ -85,15 +85,16 @@ const SectionWrapper = styled.div`
 `
 
 const Title = styled.h2`
-    font-size: ${GRID(2.75)};
-    line-height: ${GRID(4.125)};
-    font-weight: 700;
+    color: ${COLORS.NAVY_DARK};
     margin: 0 0 ${GRID(5)};
+    font-size: ${GRID(2.75)};
+    font-weight: 700;
+    line-height: ${GRID(4.125)};
 
     @media only screen and (min-width: 1024px) {
+        margin: 0 0 ${GRID(14)};
         font-size: ${GRID(4.5)};
         line-height: ${GRID(6.75)};
-        margin: 0 0 ${GRID(14)};
     }
 `
 
