@@ -25,6 +25,7 @@ const Hero: NextPage = () => (
 );
 
 const Section = styled.section`
+  height: calc(100vh - 64px);
   margin: 0 0 ${GRID(2)} 0;
   position: relative;
   background-size: cover;
@@ -40,32 +41,42 @@ const Section = styled.section`
 const SectionWrapper = styled.div`
   width: 100vw;
   margin: 64px auto 0;
+  height: calc(100vh - 64px);
   display: flex;
   padding: ${GRID(8)} ${GRID(2.5)};
+  position: relative;
   max-width: 1440px;
-  min-height: calc(100vh - 64px);
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
   
   @media (min-width: 768px) {
     padding: ${GRID(10)} ${GRID(10.5)};
-    justify-content: center;
   }
 `;
 
 const Content = styled.div`
+  z-index: 1;
   display: flex;
   align-items: flex-start;
   flex-direction: column;
 `
 
 const ImageWrapper = styled.img`
-  width: 90%;
+  right: 16px;
+  width: calc(100% - 32px);
+  bottom: 16px;
+  z-index: 0;
+  position: absolute;
   max-width: 940px;
-  align-self: flex-end;
   
   @media (min-width: 768px) {
-    margin-top: -40px;
+    width: 50%;
+    right: 84px;
+    bottom: 100px;
+  }
+
+  @media (min-width: 1024px) {
+    width: 60%;
   }
 `
 
