@@ -17,7 +17,7 @@ const Hero: NextPage = () => (
       </Content>
       <ImageWrapper src="./images/people.svg" />
       <Footer>
-        <img src="/images/chevron-down.png" alt="" />
+        <img src="/images/chevron-down.svg" alt="" />
         <p>Deslize a página para descobrir mais sobre nós</p>
       </Footer>
     </SectionWrapper>
@@ -28,7 +28,7 @@ const Section = styled.section`
   margin: 0 0 ${GRID(2)} 0;
   position: relative;
   background-size: cover;
-  background-image: url("/images/about-page-background-image.png");
+  background-image: url("./images/about-page-background-image.png");
   background-repeat: no-repeat;
   background-position: 0;
 

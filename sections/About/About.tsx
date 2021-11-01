@@ -32,7 +32,7 @@ const About: NextPage = () => (
       <FrameWrap>
         <Frame
           alt="imagem de um homem andando sob um gráfico"
-          src="/images/frame-0.png"
+          src="/images/about.svg"
         />
       </FrameWrap>
     </SectionWrapper>
