@@ -121,7 +121,7 @@ const ImageBox = styled.a`
 
         @media only screen and (min-width: 1024px) {
             path {
-                filter: grayscale(100%);
+                filter: opacity(.8);
             }
         }
     }
@@ -131,7 +131,7 @@ const ImageBox = styled.a`
         left: 0;
         width: 100%;
         height: 100%;
-        filter: grayscale(100%);
+        filter: opacity(.8);
         content: "";
         position: absolute;
         border-radius: ${GRID(3)};
