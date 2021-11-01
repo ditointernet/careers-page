@@ -148,7 +148,7 @@ const SwiperCustom = styled(Swiper)`
     width: 100%;
     margin: 0;
     padding: 0 5%;
-    max-width: calc(557px + 150px);
+    max-width: ${GRID(88.375)};
     align-self: flex-end;
 
     @media only screen and (min-width: 768px) {
@@ -218,33 +218,33 @@ const Slide = styled.div<{ image: string }>`
 `
 
 const Container = styled.div`
-    gap: 56px;
-    margin: 56px auto 40px;
+    gap: ${GRID(7)};
+    margin: ${GRID(7)} auto ${GRID(5)};
     display: flex;
     flex-direction: column;
 `;
 
 const Box = styled.div`
-    gap: 30px;
+    gap: ${GRID(3.75)};
     margin: 0;
     display: flex;
     align-items: center;
     flex-direction: column;
     
     @media (min-width: 1024px) {
-        gap: 96px;
+        gap: ${GRID(12)};
         flex-direction: row;
     }
 
     > svg {
-        margin: 0 0 30px;
-        min-width: 83px;
-        min-height: 80px;
+        margin: 0 0 ${GRID(3.75)};
+        min-width: ${GRID(10.375)};
+        min-height: ${GRID(10)};
 
         @media (min-width: 1024px) {
             margin: 0;
-            min-width: 237px;
-            min-height: 244px;
+            min-width: ${GRID(29.625)};
+            min-height: ${GRID(30.5)};
         }
     }
 `;
@@ -252,7 +252,7 @@ const Box = styled.div`
 const Content = styled.div<{ maxWidth?: number }>`
     display: flex;
     flex-direction: column;
-    max-width: 812px;
+    max-width: ${GRID(101.5)};
 
     @media (min-width: 1024px) {
         max-width: ${({ maxWidth }) => maxWidth ? GRID(maxWidth / 8) : "max-content"};
@@ -261,21 +261,21 @@ const Content = styled.div<{ maxWidth?: number }>`
     > h3 {
         margin: 0 0 ${GRID(2)};
         color: ${COLORS.NAVY_DARK};
-        font-size: 22px;
-        line-height: 33px;
+        font-size: ${GRID(2.75)};
+        line-height: ${GRID(4.125)};
         font-weight: 600;
 
         @media (min-width: 1024px) {
             margin: 0 0 ${GRID(3)};
-            font-size: 28px;
-            line-height: 42px;
+            font-size: ${GRID(3.5)};
+            line-height: ${GRID(5.25)};
         }
     }
 
     > p {
         color: ${COLORS.GRAY_4};
-        font-size: 16px;
-        line-height: 24px;
+        font-size: ${GRID(2)};
+        line-height: ${GRID(3)};
         font-weight: 500;
 
         b {
