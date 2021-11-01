@@ -80,7 +80,7 @@ const Header = styled.header`
   top: 0;
   left: 0;
   z-index: 3;
-  transition: transform 0.4s;
+  transition: transform 0.2s;
 
   &.scroll-up {
     transform: none;
