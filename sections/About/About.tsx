@@ -90,6 +90,7 @@ const Text = styled.p`
   font-weight: 500;
   line-height: ${GRID(3)};
   margin-top: 0px;
+  margin-bottom: ${GRID(3)};
   > strong {
     color: ${COLORS.NAVY_DARK};
   }
