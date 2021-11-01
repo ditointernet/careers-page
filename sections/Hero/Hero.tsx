@@ -40,12 +40,12 @@ const Section = styled.section`
 
 const SectionWrapper = styled.div`
   width: 100vw;
-  margin: 64px auto 0;
+  margin: ${GRID(8)} auto 0;
   height: calc(100vh - 64px);
   display: flex;
   padding: ${GRID(8)} ${GRID(2.5)};
   position: relative;
-  max-width: 1440px;
+  max-width: ${GRID(180)};
   flex-direction: column;
   justify-content: flex-start;
   
@@ -62,17 +62,17 @@ const Content = styled.div`
 `
 
 const ImageWrapper = styled.img`
-  right: 16px;
+  right: ${GRID(2)};
   width: calc(100% - 32px);
-  bottom: 16px;
+  bottom: ${GRID(2)};
   z-index: 0;
   position: absolute;
-  max-width: 940px;
+  max-width: ${GRID(117.5)};
   
   @media (min-width: 768px) {
     width: 50%;
-    right: 84px;
-    bottom: 100px;
+    right: ${GRID(10.5)};
+    bottom: ${GRID(12.5)};
   }
 
   @media (min-width: 1024px) {
@@ -93,13 +93,13 @@ const Logo = styled.img`
 const Title = styled.h1`
   color: ${COLORS.NAVY_DARK};
   margin: 0 0 ${GRID(1)} 0;
-  max-width: 264px;
+  max-width: ${GRID(33)};
   font-size: ${GRID(2)};
   font-weight: 600;
   line-height: ${GRID(3)};
 
   @media (min-width: 768px) {
-    max-width: 464px;
+    max-width: ${GRID(58)};
     font-size: ${GRID(3.75)};
     line-height: ${GRID(5.625)};
   }
@@ -124,7 +124,7 @@ const Footer = styled.footer`
   
   @media (min-width: 768px) {
     left: calc(50% - 200px);
-    bottom: 14px;
+    bottom: ${GRID(1.75)};
     display: flex;
     position: absolute;
     flex-flow: column wrap;
