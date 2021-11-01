@@ -47,6 +47,7 @@ const CardsList = ({ cards, minMobileHeight, minDesktopHeight }: Props) => {
 }
 
 const SwiperMobile = styled(Swiper) <{ minheight: number }>`
+    width: 100%;
     padding: 0 0 ${GRID(5.5)};
     max-width: ${GRID(42.875)};
 
