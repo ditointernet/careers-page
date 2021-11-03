@@ -3,14 +3,14 @@ import styled from "styled-components";
 import CardsList from "@/components/CardsList";
 import { COLORS, GRID } from "@ditointernet/uai-foundation";
 import { Swiper, SwiperSlide } from "swiper/react";
-import SwiperCore, { Navigation, Pagination } from "swiper";
+import SwiperCore, { Autoplay, Navigation, Pagination } from "swiper";
 
 import "swiper/css";
 import "swiper/css/navigation"
 import "swiper/css/pagination"
 
 const Initiatives = () => {
-    SwiperCore.use([Navigation, Pagination]);
+    SwiperCore.use([Autoplay, Navigation, Pagination]);
 
     const principalInitiatives: any = [
         {
@@ -75,6 +75,9 @@ const Initiatives = () => {
                     </InitiativeWrapperDesktop>
                     <InitiativeSwiperMobile
                         loop={true}
+                        autoplay={{
+                            delay: 2500,
+                        }}
                         navigation={true}
                         slidesPerView={"auto"}
                         slidesPerGroup={1}
