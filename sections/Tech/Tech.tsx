@@ -16,8 +16,8 @@ const Tech = () => (
                                 <BoxContent>
                                     <BoxItem>Golang</BoxItem>
                                     <BoxItem className="hyphen">Kubernetes</BoxItem>
-                                    <BoxItem className="hyphen">Elasticsearch (cluster de 210 bilhões de documentos)</BoxItem>
-                                    <BoxItem className="hyphen">Kinesis</BoxItem>
+                                    <BoxItem className="hyphen">BigQuery e Elasticsearch (cluster de 110 bilhões de documentos)</BoxItem>
+                                    <BoxItem className="hyphen">Kinesis e PubSub para mensageria</BoxItem>
                                     <BoxItem>AWS e GCP como cloud</BoxItem>
                                 </BoxContent>
                             </Box>
@@ -90,8 +90,12 @@ const Container = styled.div`
     padding: 0 0 0 ${GRID(2.75)};
     position: relative;
     border-left: ${GRID(0.125)} solid #6A7486;
+    border-style: solid;
     border-image: linear-gradient(to bottom, #121A2D ${GRID(2.75)}, #6A7486 0,#6A7486 calc(100% - ${GRID(2.75)}),#121A2D 0);
     border-image-slice: 1;
+    border-image-width: 0 0 0 1px;
+    border-image-repeat: unset;
+
     
     @media only screen and (min-width: 1024px) {
         padding: 0 0 0 ${GRID(3)};
@@ -286,7 +290,11 @@ const BoxContent = styled.div`
     position: relative;
     border-left: ${GRID(0.125)} solid #6A7486;
     border-image: linear-gradient(to bottom, #121A2D ${GRID(2.75)}, #6A7486 0,#6A7486 calc(100% - ${GRID(2.75)}),#121A2D 0);
+    border-style: solid;
     border-image-slice: 1;
+    border-image-width: 0 0 0 1px;
+    border-image-repeat: unset;
+
 
     p {
         &:last-child {
