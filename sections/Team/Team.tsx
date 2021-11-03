@@ -104,7 +104,7 @@ const ImageWrapper = styled.div`
 
   img {
     width: 100%;
-    height: fit-content;
+    height: auto;
   }
 
   ul.control-dots > li.selected {
