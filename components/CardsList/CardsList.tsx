@@ -2,7 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import { COLORS, GRID } from "@ditointernet/uai-foundation";
 import { Swiper, SwiperSlide } from "swiper/react";
-import SwiperCore, { Navigation } from "swiper";
+import SwiperCore, { Autoplay, Navigation } from "swiper";
 
 import "swiper/css";
 import "swiper/css/navigation"
@@ -20,11 +20,18 @@ type Props = {
 }
 
 const CardsList = ({ cards, minMobileHeight, minDesktopHeight }: Props) => {
-    SwiperCore.use([Navigation]);
+    SwiperCore.use([Autoplay, Navigation]);
 
     return (
         <>
-            <SwiperMobile minheight={minMobileHeight || 0} navigation={true} loop={true}>
+            <SwiperMobile
+                loop={true}
+                autoplay={{
+                    delay: 2500,
+                }}
+                minheight={minMobileHeight || 0}
+                navigation={true}
+            >
                 {cards.map(({ img, title, description }: Card, index: number) => (
                     <SwiperSlide key={index}>
                         {img && <CardImg style={{ backgroundImage: `url(${img})` }} />}

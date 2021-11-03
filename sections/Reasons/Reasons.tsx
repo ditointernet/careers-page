@@ -7,7 +7,7 @@ import Location from "../../public/images/location.svg";
 import CardsList from "@/components/CardsList";
 
 import { Swiper, SwiperSlide } from "swiper/react";
-import SwiperCore, { Navigation, EffectCards } from "swiper";
+import SwiperCore, { Autoplay, Navigation, EffectCards } from "swiper";
 
 import "swiper/css";
 import "swiper/css/navigation"
@@ -20,7 +20,7 @@ type Slide = {
 
 
 const Reasons = () => {
-    SwiperCore.use([Navigation, EffectCards]);
+    SwiperCore.use([Autoplay, Navigation, EffectCards]);
 
     const reasonsBlocks = [
         {
@@ -96,6 +96,9 @@ const Reasons = () => {
                 </Container>
                 <SwiperCustom
                     loop={true}
+                    autoplay={{
+                        delay: 2500,
+                    }}
                     navigation={true}
                     grabCursor={true}
                     effect='cards'
