@@ -200,7 +200,7 @@ const SwiperMobile = styled(Swiper)`
             justify-content: space-between;
             flex-direction: column;
             background-color: ${COLORS.WHITE};
-            box-shadow: 0px 0px ${GRID(10.625)} rgba(0, 0, 0, 0.1);
+            box-shadow: 0 0 ${GRID(10.625)} rgba(0, 0, 0, 0.1);
             border-radius: ${GRID(2)};
         }
     }
@@ -268,11 +268,12 @@ const MidiaContainer = styled.div<{ image: string }>`
     height: ${GRID(17)};
     background-size: cover;
     background-image: url(${props => props.image});
-    background-position-y: -20px;
+    background-position-y: -${GRID(2.5)};
 
     @media only screen and (min-width: 1200px) {
         width: ${GRID(47.25)};
         height: 100%;
+        background-position-y: 0;
         border-top-left-radius: ${GRID(3)};
         border-bottom-left-radius: ${GRID(3)};
     }
