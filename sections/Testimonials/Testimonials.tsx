@@ -36,7 +36,7 @@ const Testimonials = () => {
             testimonial: "\"Eu sou sempre muito incentivada aqui dentro a ser a pessoa que eu sou, ...\"",
         },
         {
-            image: "",
+            image: "./images/temp_testimonials.png",
             video: "https://player.vimeo.com/video/640030966?h=27fac8eef8",
             name: "Luis Sena",
             profession: "Consultor de Negócios",
@@ -44,7 +44,7 @@ const Testimonials = () => {
             testimonial: "",
         },
         {
-            image: "",
+            image: "./images/temp_testimonials.png",
             video: "https://player.vimeo.com/video/640051678?h=c4ffd2f1aa",
             name: "Luciana Batista",
             profession: "Product Manager",
@@ -52,7 +52,7 @@ const Testimonials = () => {
             testimonial: "",
         },
         {
-            image: "",
+            image: "./images/temp_testimonials.png",
             video: "https://player.vimeo.com/video/640071139?h=0b52cee9cb",
             name: "Victória Villas Boas",
             profession: "Desenvolvedora",
@@ -60,7 +60,7 @@ const Testimonials = () => {
             testimonial: "",
         },
         {
-            image: "",
+            image: "./images/temp_testimonials.png",
             video: "https://player.vimeo.com/video/640153879?h=69e193e966",
             name: "Luiza Rezende",
             profession: "Analista de Gestão de Pessoas",
@@ -68,7 +68,7 @@ const Testimonials = () => {
             testimonial: "",
         },
         {
-            image: "",
+            image: "./images/temp_testimonials.png",
             video: "https://player.vimeo.com/video/640173575?h=62716d8b85",
             name: "Pedro Rezende",
             profession: "Desenvolvedor",
