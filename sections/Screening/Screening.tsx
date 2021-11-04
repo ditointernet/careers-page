@@ -8,25 +8,33 @@ const Screening = () => {
             <SectionWrapper>
                 <Content maxWidth={795}>
                     <Title>Nosso processo seletivo</Title>
-                    <Description>Entrevista inicial, entrevista técnica (para alguns casos), desafio, entrevista de cultura, proposta e admissão. Saiba mais sobre as etapas necessárias para entrar para o nosso time de FERAs. <b>time de FERAs.</b></Description>
+                    <Description>Entrevista inicial, entrevista técnica (para alguns casos), desafio, entrevista de cultura, proposta e admissão. Saiba mais sobre as etapas necessárias para entrar para o nosso <b>time de FERAs.</b></Description>
                 </Content>
-                <Content className="phases" maxWidth={816}>
+                <Content className="phases" maxWidth={815}>
                     <SubTitle number="01">Conversa inicial</SubTitle>
                     <Description>Depois do nosso primeiro contato, seja por cadastro, LinkedIn ou outra via, partimos para a nossa <b>entrevista inicial</b>. Um papo bem informal e sem roteiro, uma oportunidade de nos conhecermos. É aqui que apresentamos o desafio para você.</Description>
                 </Content>
-                <Content className="phases" maxWidth={639}>
-                    <SubTitle number="02">Apresentação do desafio</SubTitle>
-                    <Description>Pode ser que a gente peça para você realizar um desafio – uma forma de entender melhor como você desenvolve seu trabalho.</Description>
+                <Content className="phases" maxWidth={644}>
+                    <SubTitle number="02">Entrevista técnica</SubTitle>
+                    <Description>Pode acontecer de, após o primeiro contato, irmos direto para a <b>entrevista técnica</b>. Nesse momento, você deve <b>mostrar seus conhecimentos</b> e suas competências, contar sobre sua trajetória profissional e sobre o que você busca para sua carreira, especialmente, aqui na Dito.</Description>
                 </Content>
-                <Content className="phases" maxWidth={709}>
-                    <SubTitle number="03">Entrevista de cultura</SubTitle>
-                    <Description>Correndo tudo bem, avançamos para a entrevista de cultura. Durante essa conversa, vamos identificando se o nosso jeito de trabalhar e os nossos valores fazem sentido para você.<br /><br />E, claro, se essa parceria tem tudo para ser especial, para as duas partes.</Description>
+                <Content className="phases" maxWidth={706}>
+                    <SubTitle number="03">Apresentação do desafio</SubTitle>
+                    <Description>Pode ser que a gente peça para você realizar um <b>desafio</b> – uma forma de entender melhor como você desenvolve seu trabalho. Se você é uma pessoa desenvolvedora, não vai passar por essa etapa, ok?</Description>
                 </Content>
-                <Content className="phases" maxWidth={770}>
-                    <SubTitle number="04">Deu match!</SubTitle>
-                    <Description>Agora falta pouco. Fazemos uma proposta para você e, se entrarmos em um acordo, chegamos no grande momento: a admissão.</Description>
+                <Content className="phases" maxWidth={775}>
+                    <SubTitle number="04">Entrevista de cultura</SubTitle>
+                    <Description>Correndo tudo bem, avançamos para a <b>entrevista de cultura</b>. Durante essa conversa, vamos identificando se o nosso jeito de trabalhar e os nossos valores fazem sentido para você. E, claro, se essa parceria tem tudo para ser especial, para as duas partes.</Description>
                 </Content>
-                <Description><b>Ah, importante:</b> independentemente do resultado, sempre damos retorno – e o mais rápido possível. Essa é mais uma forma de mostrarmos que, de fato, nos importamos com as pessoas e com a experiência delas com a gente.</Description>
+                <Content className="phases" maxWidth={775}>
+                    <SubTitle number="05">Deu match!</SubTitle>
+                    <Description>Agora falta pouco. Fazemos uma <b>proposta</b> para você e, se entrarmos em um acordo, chegamos no grande momento: <b>a admissão</b>.</Description>
+                </Content>
+                <Content className="phases" maxWidth={775}>
+                    <SubTitle number="06">Envio de documentação</SubTitle>
+                    <Description>Aí é correr pro abraço! Você <b>envia os seus documentos</b> e nós enviamos seu material de trabalho e mais alguns brindes para já ir entrando no clima. E deixamos tudo no jeito: além dos <b>nossos onboardings</b>, criamos um documento que conta o que esperamos de você logo nos primeiros meses para você saber por onde começar. Spoiler: Vai ser incrível!</Description>
+                </Content>
+                <Description><b>Ah, importante:</b> independentemente do resultado, sempre damos <b>retorno</b> – e o mais rápido possível. Essa é mais uma forma de mostrarmos que, de fato, nos importamos com as pessoas e com a experiência delas com a gente.</Description>
             </SectionWrapper>
         </Section>
     );
@@ -73,16 +81,16 @@ const SectionWrapper = styled.div`
                     padding: 0;
                 }
             }
-            &:nth-child(2) {
+            &:nth-child(even) {
                 margin-left: ${GRID(8.25)};
             }
             &:nth-child(3) {
                 margin-right: ${GRID(19.75)};
             }
-            &:nth-child(4) {
-                margin-left: ${GRID(3.25)};
-            }
             &:nth-child(5) {
+                margin-right: ${GRID(3.375)};
+            }
+            &:nth-child(7) {
                 margin-right: ${GRID(3.375)};
             }
         }
