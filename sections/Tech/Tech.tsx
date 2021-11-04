@@ -39,7 +39,8 @@ const Tech = () => (
                         <Description marginBottomMobile={24} marginBottomDesktop={20} className="indicator">Alguns dos nossos números:</Description>
                         <Description marginBottomMobile={32} marginBottomDesktop={40} className="contrast blue" maxWidth={750}>São <b>676 rotinas periódicas</b> e mais de <b>180 microsserviços</b>, totalizando <b>284 instâncias</b>, rodando em <b>58 máquinas</b>.</Description>
                         <Description marginBottomMobile={24} marginBottomDesktop={24} className="blue" maxWidth={622}>Ah, e se você ainda não domina a linguagem <b>Go (Golang)</b>, mas tem muita vontade, não se preocupe porque a gente tem todo o prazer em ensinar. A maior parte do nosso time aprendeu aqui mesmo.</Description>
-                        <Description marginBottomMobile={36} maxWidth={622}>Por aqui, a gente valoriza tanto o aprendizado que ele faz parte da nossa rotina. Além do nosso code review, em que todo o time aproveita para tirar dúvidas, temos o hackathon, um momento de troca livre de experiências e conhecimentos para propormos soluções para melhorar processos, códigos etc.</Description>
+                        <Description marginBottomMobile={24} marginBottomDesktop={24} maxWidth={622}>Por aqui, a gente valoriza tanto o aprendizado que ele faz parte da nossa rotina. Além do nosso code review, em que todo o time aproveita para tirar dúvidas, temos o hackathon, um momento de troca livre de experiências e conhecimentos para propormos soluções para melhorar processos, códigos etc.</Description>
+                        <Description marginBottomMobile={36} maxWidth={622} className="martech">*Martech: Empresa de tecnologia da área de marketing. É a categoria da qual fazemos parte, em que um software ou ferramenta otimiza estratégias ou campanhas de marketing.</Description>
                     </NumbersWrapper>
                 </MainWrapper>
             </Container>
@@ -173,6 +174,12 @@ const Description = styled.p<{
     b {
         color: ${COLORS.GREEN_MAIN};
         font-weight: 600;
+    }
+
+    &.martech {
+        font-size: ${GRID(1.5)};
+        font-weight: 500;
+        line-height: ${GRID(3)};
     }
 
     &.arrowRight {
