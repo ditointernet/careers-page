@@ -8,11 +8,11 @@ const Screening = () => {
             <SectionWrapper>
                 <Content maxWidth={795}>
                     <Title>Nosso processo seletivo</Title>
-                    <Description>Entrevista inicial, entrevista técnica, desafio, entrevista de cultura, proposta e admissão. Saiba mais sobre as etapas necessárias para entrar para o nosso <b>time de FERAs.</b></Description>
+                    <Description>Entrevista inicial, entrevista técnica (para alguns casos), desafio, entrevista de cultura, proposta e admissão. Saiba mais sobre as etapas necessárias para entrar para o nosso time de FERAs. <b>time de FERAs.</b></Description>
                 </Content>
                 <Content className="phases" maxWidth={816}>
                     <SubTitle number="01">Conversa inicial</SubTitle>
-                    <Description>Depois do nosso primeiro contato, seja por cadastro, LinkedIn ou outra via, partimos para a nossa entrevista inicial ou vamos direto para a entrevista técnica.<br /><br />Essa é a oportunidade para você mostrar seus conhecimentos e suas competências, contar sobre sua trajetória profissional e sobre o que você busca para sua carreira, especialmente, aqui na Dito.</Description>
+                    <Description>Depois do nosso primeiro contato, seja por cadastro, LinkedIn ou outra via, partimos para a nossa <b>entrevista inicial</b>. Um papo bem informal e sem roteiro, uma oportunidade de nos conhecermos. É aqui que apresentamos o desafio para você.</Description>
                 </Content>
                 <Content className="phases" maxWidth={639}>
                     <SubTitle number="02">Apresentação do desafio</SubTitle>
