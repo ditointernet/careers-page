@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import styled from "styled-components"
 import ButtonSecondary from "@/components/ButtonSecondary";
 import { COLORS, GRID } from "@ditointernet/uai-foundation";
@@ -11,7 +11,8 @@ import "swiper/css/navigation"
 import "swiper/css/effect-cards"
 
 type Slide = {
-    url: string,
+    image: string,
+    video: string,
     name: string,
     profession: string,
     local: string,
@@ -22,33 +23,69 @@ type Slide = {
 const Testimonials = () => {
     SwiperCore.use([Pagination, Navigation, EffectCards]);
 
+    const [modalOpen, setModalOpen] = useState(false);
+    const [iframeVideo, setIframeVideo] = useState("");
+
     const slideItens: Slide[] = [
         {
-            url: "./images/temp_testimonials.png",
-            name: "Nome",
-            profession: "Desenvolvedor Frontend",
+            image: "./images/temp_testimonials.png",
+            video: "https://player.vimeo.com/video/640017082?h=5190752281",
+            name: "Isabella Moema",
+            profession: "Especialista de Sucesso do Cliente",
             local: "Belo Horizonte, MG",
-            testimonial: "\"Eu sou sempre muito incentivada aqui dentro a ser a pessoa que eu sou, uma cientista de dados...\"",
+            testimonial: "\"Eu sou sempre muito incentivada aqui dentro a ser a pessoa que eu sou, ...\"",
         },
         {
-            url: "./images/temp_testimonials.png",
-            name: "Nome",
-            profession: "Desenvolvedor Frontend",
-            local: "Belo Horizonte, MG",
-            testimonial: "\"Eu sou sempre muito incentivada aqui dentro a ser a pessoa que eu sou, uma cientista de dados...\"",
+            image: "",
+            video: "https://player.vimeo.com/video/640030966?h=27fac8eef8",
+            name: "Luis Sena",
+            profession: "Consultor de Negócios",
+            local: "",
+            testimonial: "",
         },
         {
-            url: "./images/temp_testimonials.png",
-            name: "Nome",
-            profession: "Desenvolvedor Frontend",
-            local: "Belo Horizonte, MG",
-            testimonial: "\"Eu sou sempre muito incentivada aqui dentro a ser a pessoa que eu sou, uma cientista de dados...\"",
+            image: "",
+            video: "https://player.vimeo.com/video/640051678?h=c4ffd2f1aa",
+            name: "Luciana Batista",
+            profession: "Product Manager",
+            local: "",
+            testimonial: "",
+        },
+        {
+            image: "",
+            video: "https://player.vimeo.com/video/640071139?h=0b52cee9cb",
+            name: "Victória Villas Boas",
+            profession: "Desenvolvedora",
+            local: "",
+            testimonial: "",
+        },
+        {
+            image: "",
+            video: "https://player.vimeo.com/video/640153879?h=69e193e966",
+            name: "Luiza Rezende",
+            profession: "Analista de Gestão de Pessoas",
+            local: "",
+            testimonial: "",
+        },
+        {
+            image: "",
+            video: "https://player.vimeo.com/video/640173575?h=62716d8b85",
+            name: "Pedro Rezende",
+            profession: "Desenvolvedor",
+            local: "",
+            testimonial: "",
         },
     ];
 
     const SwiperItens = slideItens.map((slide: Slide, index: number) => (
         <SwiperSlide key={index}>
-            <ImgContainer image={slide.url} />
+            <MidiaContainer
+                image={slide.image}
+                onClick={() => {
+                    setModalOpen(!modalOpen);
+                    setIframeVideo(slide.video);
+                }}
+            />
             <Wrapper>
                 <Name>{slide.name}</Name>
                 <Profession>{slide.profession}</Profession>
@@ -81,14 +118,22 @@ const Testimonials = () => {
                     {SwiperItens}
                 </SwiperDesktop>
             </SectionWrapper>
+            <ModalEmbed
+                open={modalOpen}
+                onClick={() => {
+                    setModalOpen(!modalOpen)
+                    setIframeVideo("");
+                }}
+            >
+                <iframe title="vimeo-player" src={iframeVideo} frameBorder="0" allowFullScreen></iframe>
+            </ModalEmbed>
         </Section >
     )
 }
 
-
 const Section = styled.section`
     // section disabled temporary for waiting approve content
-    display: none;
+    /* display: none; */
     margin: ${GRID(1)} 0;
   
     @media only screen and (min-width: 1024px) {
@@ -201,15 +246,27 @@ const SwiperDesktop = styled(Swiper)`
     }
 `
 
-const ImgContainer = styled.div<{ image: string }>`
+const MidiaContainer = styled.div<{ image: string }>`
     width: 100%;
+    cursor: pointer;
     height: ${GRID(17)};
+    display: flex;
+    align-items: center;
     background-size: cover;
+    justify-content: center;
     background-image: url(${props => props.image});
 
     @media only screen and (min-width: 1024px) {
         width: ${GRID(47.25)};
         height: 100%;
+    }
+
+    &::before {
+        width: ${GRID(11.625)};
+        height: ${GRID(11.625)};
+        content: '';
+        background-size: cover;
+        background-image: url('./icons/play.svg');
     }
 `
 
@@ -270,6 +327,41 @@ const Testimonial = styled(DescriptionDefault)`
 
     @media only screen and (min-width: 1024px) {
         margin-bottom: ${GRID(6)};
+    }
+`
+
+const ModalEmbed = styled.div<{ open: boolean }>`
+    display: ${({ open }) => open ? "flex" : "none"};
+
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 3;
+    position: fixed;
+    background: rgb(0 0 0 / 30%);
+    align-items: center;
+    justify-content: center;
+
+    &::before {
+        width: ${GRID(12.5)};
+        height: ${GRID(12.5)};
+        z-index: 1;
+        content: '';
+        position: absolute;
+        background-size: cover;
+        background-image: url('./icons/loading.gif');
+    }
+
+    iframe {
+        width: ${GRID(40)};
+        height: ${GRID(22.5)};
+        z-index: 1;
+        
+        @media only screen and (min-width: 768px) {
+            width: ${GRID(87.5)};
+            height: ${GRID(50)};
+        }
     }
 `
 
