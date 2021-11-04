@@ -14,7 +14,7 @@ const Benefits = () => {
         {
             img: "./icons/plano-de-saude.svg",
             title: "Plano de saúde",
-            description: "Plano de saúde e odontológico Bradesco de cobertura nacional e sem coparticipação nem mensalidade para FERAs e dependentes.",
+            description: "Plano de saúde e odontológico Bradesco de cobertura nacional e sem coparticipação para FERAs e dependentes.",
         },
         {
             img: "./icons/cartao-caju.svg",
@@ -24,7 +24,7 @@ const Benefits = () => {
         {
             img: "./icons/licenca-maternidade.svg",
             title: "Licença maternidade",
-            description: "São 180 dias para mamães e 20 dias para papais, que valem também para casos de adoção e guarda judicial. Durante esse período, VA/VR são mantidos.",
+            description: "São 180 dias para mamães e 20 dias para papais, que valem também para casos de adoção e guarda judicial. Durante esse período, os créditos do Caju são mantidos.",
         },
         {
             img: "./icons/gympass.svg",
@@ -34,7 +34,7 @@ const Benefits = () => {
         {
             img: "./icons/ingles-in-company.svg",
             title: "Inglês in company",
-            description: "Turmas reduzidas divididas por nível de fluência.",
+            description: "Turmas reduzidas que vão do básico ao avançado.",
         },
         {
             img: "./icons/incentivos-ao-aprendizado.svg",
