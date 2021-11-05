@@ -149,15 +149,15 @@ const Testimonials = () => {
                     setVideoId("");
                 }}
             >
-                {videoId && <iframe
-                    src={"http://www.youtube.com/embed/" + videoId + "?autoplay=1&rel=0"}
+                <iframe
+                    src={"https://www.youtube.com/embed/" + videoId + "?autoplay=1&rel=0"}
                     width="720"
                     title="Depoimentos dos FERAs"
-                    allow="autoplay"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     height="405"
                     frameBorder="0"
                     allowFullScreen
-                ></iframe>}
+                ></iframe>
             </ModalEmbed>
         </Section >
     )
@@ -165,7 +165,7 @@ const Testimonials = () => {
 
 const Section = styled.section`
     margin: ${GRID(1)} 0;
-  
+
     @media only screen and (min-width: 1200px) {
         margin: ${GRID(2)} 0;
     }
