@@ -151,10 +151,8 @@ const Testimonials = () => {
             >
                 <iframe
                     src={"https://www.youtube.com/embed/" + videoId + "?autoplay=1&rel=0"}
-                    width="720"
                     title="Depoimentos dos FERAs"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    height="405"
                     frameBorder="0"
                     allowFullScreen
                 ></iframe>
@@ -380,7 +378,7 @@ const ModalEmbed = styled.div<{ open: boolean }>`
     height: 100vh;
     z-index: 3;
     position: fixed;
-    background: rgb(0 0 0 / 30%);
+    background: rgb(0 0 0 / 70%);
     align-items: center;
     justify-content: center;
 
@@ -401,7 +399,12 @@ const ModalEmbed = styled.div<{ open: boolean }>`
         
         @media only screen and (min-width: 768px) {
             width: ${GRID(87.5)};
-            height: ${GRID(50)};
+            height: ${GRID(49.125)};
+        }
+
+        @media only screen and (min-width: 1200px) {
+            width: ${GRID(125)};
+            height: ${GRID(70.25)};
         }
     }
 `
