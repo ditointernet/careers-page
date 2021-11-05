@@ -31,14 +31,14 @@ const Testimonials = () => {
     SwiperCore.use([Pagination, Navigation, EffectCards]);
 
     const [modalOpen, setModalOpen] = useState(false);
-    const [iframeVideo, setIframeVideo] = useState("");
+    const [videoId, setVideoId] = useState("");
 
     const slideItens: Slide[] = [
         {
             area: Area.COMERCIAL,
             name: "Isabella Moema",
             image: "./images/feras/isabella-moema.jpg",
-            video: "https://player.vimeo.com/video/640017082?h=5190752281",
+            video: "1fwMlklPf-M",
             profession: "Especialista de sucesso do cliente",
             testimonial: "\"Eu vim de outras startups onde essa questão da cultura é bem enraizada, mas eu nunca vivi, de fato, uma cultura igual a gente vive aqui na Dito, no dia a dia.\"",
             link: "https://dito.hire.trakstar.com/?team_id=5436&q=&limit=25#content",
@@ -47,7 +47,7 @@ const Testimonials = () => {
             area: Area.COMERCIAL,
             name: "Luis Sena",
             image: "./images/feras/luis-sena.jpg",
-            video: "https://player.vimeo.com/video/640030966?h=27fac8eef8",
+            video: "fr_alJWh13Y",
             profession: "Consultor de negócios",
             testimonial: "\"Eu indicaria a Dito para qualquer pessoa que, de fato, queira entregar algo relevante para o mercado. Se a pessoa está disposta a estudar, a fazer boas entregas, a Dito é o melhor lugar.\"",
             link: "https://dito.hire.trakstar.com/?team_id=5436&q=&limit=25#content",
@@ -56,7 +56,7 @@ const Testimonials = () => {
             area: Area.TECNOLOGIA,
             name: "Luciana Batista",
             image: "./images/feras/luciana-batista.jpg",
-            video: "https://player.vimeo.com/video/640051678?h=c4ffd2f1aa",
+            video: "ywcOYY85gSw",
             profession: "Product manager",
             testimonial: "\"O ambiente aqui é muito saudável. A rotina aqui é muito fluida, a gente consegue se comunicar com qualquer pessoa.\"",
             link: "https://dito.hire.trakstar.com/?team_id=8496&team_id=5567&q=&limit=25#content",
@@ -65,7 +65,7 @@ const Testimonials = () => {
             area: Area.TECNOLOGIA,
             name: "Victória Villas Boas",
             image: "./images/feras/victoria-villas-boas.jpg",
-            video: "https://player.vimeo.com/video/640071139?h=0b52cee9cb",
+            video: "Va6ueXpxNb0",
             profession: "Desenvolvedora",
             testimonial: "\"A Dito tem muita gente que está aqui há anos e é muito difícil você encontrar isso em outras empresas de tecnologia. Isso que encontrei aqui: muita gente muito boa e que não deixa a Dito de jeito nenhum.\"",
             link: "https://dito.hire.trakstar.com/?team_id=8496&team_id=5567&q=&limit=25#content",
@@ -74,7 +74,7 @@ const Testimonials = () => {
             area: Area.GENTEEGESTAO,
             name: "Luiza Rezende",
             image: "./images/feras/luiza-rezende.jpg",
-            video: "https://player.vimeo.com/video/640153879?h=69e193e966",
+            video: "akN-n6ZPe-g",
             profession: "Analista de gestão de pessoas",
             testimonial: "\"O trabalho remoto trouxe pra gente pessoas dos mais diversos panoramas, experiências profissionais. E isso é muito rico, isso traz ideias mais interessantes, mais completas, com muito mais potencial.\"",
             link: "https://dito.hire.trakstar.com/?team_id=26339&team_id=27867&q=&limit=25#content",
@@ -83,7 +83,7 @@ const Testimonials = () => {
             area: Area.TECNOLOGIA,
             name: "Pedro Rezende",
             image: "./images/feras/pedro-rezende.jpg",
-            video: "https://player.vimeo.com/video/640173575?h=62716d8b85",
+            video: "3AlSFC-mPWU",
             profession: "Desenvolvedor",
             testimonial: "\"Aprendi muita coisa com pessoas que não têm nada a ver com a área. Não importa a área, todas elas se comunicam muito bem e ensinam coisas umas para as outras.\"",
             link: "https://dito.hire.trakstar.com/?team_id=8496&team_id=5567&q=&limit=25#content",
@@ -92,7 +92,13 @@ const Testimonials = () => {
 
     const SwiperItens = slideItens.map((slide: Slide, index: number) => (
         <SwiperSlide key={index}>
-            <MidiaContainer image={slide.image} />
+            <MidiaContainer
+                image={slide.image}
+                onClick={() => {
+                    setModalOpen(!modalOpen);
+                    setVideoId(slide.video);
+                }}
+            />
             <Wrapper>
                 <div>
                     <Name>{slide.name}</Name>
@@ -103,7 +109,7 @@ const Testimonials = () => {
                     <ButtonVideo
                         onClick={() => {
                             setModalOpen(!modalOpen);
-                            setIframeVideo(slide.video);
+                            setVideoId(slide.video);
                         }}
                     >
                         Assista o vídeo
@@ -140,10 +146,18 @@ const Testimonials = () => {
                 open={modalOpen}
                 onClick={() => {
                     setModalOpen(!modalOpen)
-                    setIframeVideo("");
+                    setVideoId("");
                 }}
             >
-                <iframe title="vimeo-player" src={iframeVideo} frameBorder="0" allowFullScreen></iframe>
+                {videoId && <iframe
+                    src={"http://www.youtube.com/embed/" + videoId + "?autoplay=1&rel=0"}
+                    width="720"
+                    title="Depoimentos dos FERAs"
+                    allow="autoplay"
+                    height="405"
+                    frameBorder="0"
+                    allowFullScreen
+                ></iframe>}
             </ModalEmbed>
         </Section >
     )
@@ -266,7 +280,10 @@ const MidiaContainer = styled.div<{ image: string }>`
     width: 100%;
     cursor: pointer;
     height: ${GRID(17)};
+    display: flex;
+    align-items: center;
     background-size: cover;
+    justify-content: center;
     background-image: url(${props => props.image});
     background-position-y: -${GRID(2.5)};
 
@@ -276,6 +293,14 @@ const MidiaContainer = styled.div<{ image: string }>`
         background-position-y: 0;
         border-top-left-radius: ${GRID(3)};
         border-bottom-left-radius: ${GRID(3)};
+    }
+
+    &::before {
+        width: ${GRID(11.625)};
+        height: ${GRID(11.625)};
+        content: '';
+        background-size: cover;
+        background-image: url('./icons/play.svg');
     }
 `
 
