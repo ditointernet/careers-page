@@ -236,7 +236,7 @@ const InitiativeImg = styled.div<{ image: string }>`
     width: ${GRID(17.5)};
     filter: grayscale(1);
     height: ${GRID(17.5)};
-    box-shadow: 0px 3px 7px rgba(65, 65, 65, 0.1);
+    box-shadow: 0 ${GRID(0.375)} ${GRID(0.875)} rgba(65, 65, 65, 0.1);
     border-radius: 100%;
     margin-bottom: ${GRID(3)};
     background-size: cover;
