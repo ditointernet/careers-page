@@ -23,7 +23,7 @@ const Benefits = () => {
         },
         {
             img: "./icons/licenca-maternidade.svg",
-            title: "Licença maternidade",
+            title: "Licenças estendidas",
             description: "São 180 dias para mamães e 20 dias para papais, que valem também para casos de adoção e guarda judicial. Durante esse período, os créditos do Caju são mantidos.",
         },
         {
