@@ -63,8 +63,8 @@ const Testimonials = () => {
         },
         {
             area: Area.TECNOLOGIA,
-            name: "Victória Villas Boas",
-            image: "./images/feras/victoria-villas-boas.jpg",
+            name: "Victória Vilas Boas",
+            image: "./images/feras/victoria-vilas-boas.jpg",
             video: "Va6ueXpxNb0",
             profession: "Desenvolvedora",
             testimonial: "\"A Dito tem muita gente que está aqui há anos e é muito difícil você encontrar isso em outras empresas de tecnologia. Isso que encontrei aqui: muita gente muito boa e que não deixa a Dito de jeito nenhum.\"",
