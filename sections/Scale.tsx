@@ -106,6 +106,8 @@ const Blocks = styled.div`
 
   @media (min-width: 1024px) {
     gap: inherit;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
   }
 
   @media (min-width: 768px) {
