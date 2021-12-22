@@ -7,7 +7,7 @@ const Tech = () => (
         <SectionWrapper>
             <Title>Já somos uma grande martech* e não paramos de crescer.</Title>
             <Container>
-                <Description marginBottomMobile={71} marginBottomDesktop={48} maxWidth={694} className="arrowRight">A plataforma Dito foi toda desenvolvida internamente, com <b>~/tecnologia própria/~</b>, e impacta <b>~/milhões de consumidores/~</b> por mês, de forma inteligente e multicanal.</Description>
+                <Description marginBottomMobile={71} marginBottomDesktop={48} maxWidth={694} className="arrowRight">A plataforma Dito foi toda desenvolvida internamente, com <b>tecnologia própria</b>, e impacta <b>milhões de consumidores</b> por mês, de forma inteligente e multicanal.</Description>
                 <MainWrapper>
                     <BoxesWrapper>
                         <Description marginBottomMobile={25} marginBottomDesktop={36}>Hoje usamos tecnologias como:</Description>
@@ -172,7 +172,7 @@ const Description = styled.p<{
     }
 
     b {
-        color: ${COLORS.GREEN_MAIN};
+        color:  #00FFF0;
         font-weight: 600;
     }
 

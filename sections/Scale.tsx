@@ -55,6 +55,7 @@ const SectionWrapper = styled.div`
   padding: ${GRID(8)} ${GRID(2)};
   max-width: ${GRID(180)};
   flex-direction: column;
+  align-items: center;
   
   @media only screen and (min-width: 1024px) {
     padding: ${GRID(10)} ${GRID(9)};
@@ -98,9 +99,11 @@ const Content = styled.p`
 
 const Blocks = styled.div`
   gap: ${GRID(3)};
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   flex-wrap: wrap;
   justify-content: space-evenly;
+
 
   @media (min-width: 1024px) {
     gap: inherit;
@@ -109,7 +112,7 @@ const Blocks = styled.div`
 
 const Block = styled.div<{ minWidth: number }>`
   width: 100%;
-  display: flex;
+  display: inline-grid;
   padding: ${GRID(4.5)} ${GRID(4)};
   flex-direction: column;
   background-color: ${COLORS.WHITE};
