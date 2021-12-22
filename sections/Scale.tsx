@@ -100,13 +100,17 @@ const Content = styled.p`
 const Blocks = styled.div`
   gap: ${GRID(3)};
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
   flex-wrap: wrap;
   justify-content: space-evenly;
 
 
   @media (min-width: 1024px) {
     gap: inherit;
+  }
+
+  @media (min-width: 768px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
   }
 `;
 
@@ -117,13 +121,13 @@ const Block = styled.div<{ minWidth: number }>`
   flex-direction: column;
   background-color: ${COLORS.WHITE};
   
-  @media (min-width: 1024px) {
-    width: ${({ minWidth }) => GRID(minWidth / 8)};
-  }
-
   &:hover {
     box-shadow: 0 ${GRID(0.375)} ${GRID(2)} ${GRID(0.5)} rgba(0, 0, 0, 0.05);
     border-radius: ${GRID(3)};
+  }
+
+  @media (min-width: 1024px) {
+    width: ${({ minWidth }) => GRID(minWidth / 8)};
   }
 `;
 
