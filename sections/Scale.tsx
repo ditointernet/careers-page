@@ -102,17 +102,16 @@ const Blocks = styled.div`
   display: grid;
   flex-wrap: wrap;
   justify-content: space-evenly;
-
-
-  @media (min-width: 1024px) {
-    gap: inherit;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-  }
-
+  
   @media (min-width: 768px) {
     display: grid;
     grid-template-columns: 1fr 1fr;
+  }
+
+  @media (min-width: 1440px) {
+    gap: 15px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
   }
 `;
 
