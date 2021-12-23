@@ -121,14 +121,14 @@ const Block = styled.div<{ minWidth: number }>`
   padding: ${GRID(4.5)} ${GRID(4)};
   flex-direction: column;
   background-color: ${COLORS.WHITE};
+
+  @media (min-width: 1024px) {
+    width: ${({ minWidth }) => GRID(minWidth / 8)};
+  }
   
   &:hover {
     box-shadow: 0 ${GRID(0.375)} ${GRID(2)} ${GRID(0.5)} rgba(0, 0, 0, 0.05);
     border-radius: ${GRID(3)};
-  }
-
-  @media (min-width: 1024px) {
-    width: ${({ minWidth }) => GRID(minWidth / 8)};
   }
 `;
 
