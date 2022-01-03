@@ -24,7 +24,7 @@ const Hero: NextPage = () => (
       </Content>
       <ImageWrapper src="./images/people.svg" />
       <Footer>
-          <img src="/images/chevron-down.svg" alt="" onClick={pageDown} />
+        <img src="/images/chevron-down.svg" alt="" onClick={pageDown} />
         <p>Deslize a página para descobrir mais sobre nós</p>
       </Footer>
     </SectionWrapper>
@@ -136,10 +136,6 @@ const Footer = styled.footer`
     position: absolute;
     flex-flow: column wrap;
     align-items: center;
-  }
-
-  button {
-    text-decoration: none;
   }
   
   p {
