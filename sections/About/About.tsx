@@ -126,8 +126,6 @@ const FrameWrap = styled.div`
   }
 `;
 
-
-
 const Frame = styled.img`
   width: 100%;
 `;
