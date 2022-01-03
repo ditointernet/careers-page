@@ -5,9 +5,9 @@ import { COLORS, GRID } from "@ditointernet/uai-foundation";
 const About: NextPage = () => (
   <Section id="sobre-a-dito">
     <SectionWrapper>
+      <TextWrap>
       <Subtitle>Sabemos onde queremos chegar:</Subtitle>
       <Title>Ser a maior autoridade em CRM no Brasil com atuação global.</Title>
-      <TextWrap>
         <Text>
           A plataforma Dito nasceu em 2008 para ajudar{" "}
           <strong>grandes marcas do varejo</strong> no relacionamento e
@@ -29,12 +29,12 @@ const About: NextPage = () => (
           gente.
         </Text>
       </TextWrap>
-      <FrameWrap>
+      <div>
         <Frame
           alt="imagem de um homem andando sob um gráfico"
           src="/images/about.svg"
         />
-      </FrameWrap>
+      </div>
     </SectionWrapper>
   </Section>
 );
@@ -51,6 +51,13 @@ const SectionWrapper = styled.div`
   margin: 0 auto;
   padding: ${GRID(8)} ${GRID(2)};
   max-width: ${GRID(180)};
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media only screen and (min-width: 1240px) {
+    flex-direction: row;
+  }
   
   @media only screen and (min-width: 1024px) {
       padding: ${GRID(10)} ${GRID(9)};
@@ -119,14 +126,10 @@ const FrameWrap = styled.div`
   }
 `;
 
+
+
 const Frame = styled.img`
-  right: 0;
-  bottom: 0;
-  position: absolute;
-  @media (max-width: 768px) {
-    position: static;
-    height: 100%;
-  }
+  width: 100%;
 `;
 
 export default About;
