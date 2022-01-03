@@ -81,12 +81,12 @@ const Title = styled.h2`
   font-size: ${GRID(4.5)};
   font-weight: 700;
   line-height: ${GRID(6.75)};
-  margin: ${GRID(2.375)} 0px 0px;
+  margin: ${GRID(2.375)} 0px ${GRID(3)};
   width: ${GRID(74.75)};
   @media (max-width: 768px) {
     font-size: ${GRID(2.75)};
     line-height: ${GRID(4.125)};
-    margin: ${GRID(2)} 0px 0px;
+    margin: ${GRID(2)} 0px ${GRID(3)};
     width: 100%;
   }
 `;
@@ -104,11 +104,12 @@ const Text = styled.p`
 `;
 
 const TextWrap = styled.div`
-  margin: ${GRID(5)} 0px 0px;
-  width: ${GRID(65)};
-  @media (max-width: 768px) {
-    margin: ${GRID(3)} 0px 0px;
-    width: 100%;
+  margin: ${GRID(3)} 0px 0px;
+  width: 100%;
+  
+  @media (min-width: 1240px) {
+    margin: ${GRID(5)} 0px 0px;
+    width: ${GRID(65)};
   }
 `;
 
