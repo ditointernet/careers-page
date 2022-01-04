@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import styled from "styled-components"
 import ButtonSecondary from "@/components/ButtonSecondary";
-import { COLORS, GRID } from "@ditointernet/uai-foundation";
+import { COLORS, GRID, RADII } from "@ditointernet/uai-foundation";
 import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, { Pagination, Navigation, EffectCards } from "swiper";
 
@@ -245,23 +245,39 @@ const SwiperDesktop = styled(Swiper)`
 
     .swiper-button-prev {
         left: 0;
-        width: ${GRID(4)};
-        height: ${GRID(4.125)};
-
+        width: 36px;
+        height: 36px;
+        border-radius: ${RADII.PILL};
+        border: 1px solid #D7DAE0;
+        
         &::after {
-            content: url('./icons/arrow-left.svg');
-            line-height: ${GRID(4)};
+            content: '';
+            height: 24px;
+            width: 24px;
+            background-image: url('./icons/chevron-left-green.svg');
+        }
+        
+        &:hover {
+            background-color: ${COLORS.GREEN_LIGHT};
         }
     }
 
     .swiper-button-next {
         right: 0;
-        width: ${GRID(4)};
-        height: ${GRID(4.125)};
-
+        width: 36px;
+        height: 36px;
+        border-radius: ${RADII.PILL};
+        border: 1px solid #D7DAE0;
+        
         &::after {
-            content: url('./icons/arrow-right.svg');
-            line-height: ${GRID(4)};
+            content: '';
+            height: 24px;
+            width: 24px;
+            background-image: url('./icons/chevron-right-green.svg');
+        }
+        
+        &:hover {
+            background-color: ${COLORS.GREEN_LIGHT};
         }
     }
 
@@ -366,6 +382,11 @@ const ButtonVideo = styled.div`
         background-size: cover;
         background-image: url("./icons/video.svg");
         background-repeat: no-repeat;
+    }
+
+    &:hover {
+        background-color: ${COLORS.GREEN_LIGHT};
+        border-radius: ${RADII.DEFAULT};
     }
 `
 
