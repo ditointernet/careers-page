@@ -29,12 +29,12 @@ const About: NextPage = () => (
           gente.
         </Text>
       </TextWrap>
-      <div>
+      <FrameWrap>
         <Frame
           alt="imagem de um homem andando sob um gráfico"
           src="/images/about.svg"
         />
-      </div>
+      </FrameWrap>
     </SectionWrapper>
   </Section>
 );
@@ -114,16 +114,10 @@ const TextWrap = styled.div`
 `;
 
 const FrameWrap = styled.div`
-  display: flex;
-  height: ${GRID(30)};
-  justify-content: center;
-  position: relative;
-  width: 100%;
-  @media (max-width: 1366px) {
-    height: ${GRID(65)};
-  }
-  @media (max-width: 768px) {
-    height: ${GRID(24.25)};
+  align-self: center;
+
+  @media (min-width: 1240px) {
+    align-self: end;
   }
 `;
 
