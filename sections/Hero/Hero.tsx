@@ -138,12 +138,17 @@ const Footer = styled.footer`
     align-items: center;
   }
   
+  img {
+    cursor: pointer;
+  }
+
   p {
     color: ${COLORS.GRAY_4};
     font-size: ${GRID(2)};
     font-weight: 600;
     line-height: ${GRID(3)};
   }
+
 `;
 
 export default Hero;
