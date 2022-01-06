@@ -224,7 +224,7 @@ const Circle = styled.div<CircleProps>`
   left: ${(props) => props.left || "initial"};
   right: ${(props) => props.right || "initial"};
   bottom: ${(props) => props.bottom || "initial"};
-  z-index: 10;
+  z-index: 2;
 
   @media (max-width: 768px) {
     width: ${(props) => (props.size ? GRID(3) : GRID(10))};
