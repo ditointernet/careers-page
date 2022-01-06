@@ -241,7 +241,7 @@ const Retangle = styled.div`
   position: absolute;
   bottom: ${GRID(-4)};
   left: 20%;
-  z-index: 5;
+  z-index: 2;
 
   @media (max-width: 768px) {
     width: ${GRID(16)};
