@@ -7,7 +7,7 @@ type Props = {
 };
 
 const Menu = ({ open }: Props) => {
-  const [hash, setHash] = useState<string>("#sobre-a-dito");
+  const [hash, setHash] = useState<string>("");
 
   useEffect(() => {
     if (window.location.hash) {
@@ -18,36 +18,49 @@ const Menu = ({ open }: Props) => {
 
   const isActive = (value: string) => value == hash && "active";
 
+  const clickNavigation = (section: string) => {
+    localStorage.setItem("navigation", "enabled")
+    window.location.href = `${window.location.origin}${section}`
+  }
+
   return (
     <MenuWrapper className={`${open && "open"}`}>
       <List>
-        <a tabIndex={1} href="#sobre-a-dito" title="Dito - Sobre a Dito">
-          <Item className={`${isActive("#sobre-a-dito")}`}>Sobre a Dito</Item>
-        </a>
-        <a
+        <Item
+          tabIndex={1}
+          title="Dito - Sobre a Dito"
+          onClick={() => clickNavigation("#sobre-a-dito")}
+          className={`${isActive("#sobre-a-dito")}`}
+        >Sobre a Dito</Item>
+
+        <Item
           tabIndex={2}
-          href="#nossas-tecnologias"
           title="Dito - Nossas tecnologias"
-        >
-          <Item className={`${isActive("#nossas-tecnologias")}`}>
-            Nossas tecnologias
-          </Item>
-        </a>
-        <a tabIndex={3} href="#nosso-time" title="Dito - Nosso time">
-          <Item className={`${isActive("#nosso-time")}`}>Nosso time</Item>
-        </a>
-        <a tabIndex={4} href="#beneficios" title="Dito - Benefícios">
-          <Item className={`${isActive("#beneficios")}`}>Benefícios</Item>
-        </a>
-        <a
+          onClick={() => clickNavigation("#nossas-tecnologias")}
+          className={`${isActive("#nossas-tecnologias")}`}
+        >Nossas tecnologias</Item>
+
+        <Item
+          tabIndex={3}
+          title="Dito - Nosso time"
+          onClick={() => clickNavigation("#nosso-time")}
+          className={`${isActive("#nosso-time")}`}
+        >Nosso time</Item>
+
+        <Item
+          tabIndex={4}
+          title="Dito - Benefícios"
+          onClick={() => clickNavigation("#beneficios")}
+          className={`${isActive("#beneficios")}`}
+        >Benefícios</Item>
+
+        <Item
           tabIndex={5}
-          href="#nosso-processo-seletivo"
           title="Dito - Nosso processo seletivo"
-        >
-          <Item className={`${isActive("#nosso-processo-seletivo")}`}>
-            Nosso processo seletivo
-          </Item>
-        </a>
+          onClick={() => clickNavigation("#nosso-processo-seletivo")}
+          className={`${isActive("#nosso-processo-seletivo")}`}
+        >Nosso processo seletivo</Item>
+
         <a href="#back">
           <Item>
             <svg
@@ -122,10 +135,11 @@ const List = styled.ul`
 
 const Item = styled.li`
   color: ${COLORS.NAVY_DARK};
+  cursor: pointer;
+  padding: ${GRID(1.5)} ${GRID(3)};
   font-size: ${GRID(2)};
   font-weight: 500;
   line-height: ${GRID(3)};
-  padding: ${GRID(1.5)} ${GRID(3)};
 
   &.active {
     color: ${COLORS.GREEN_MAIN};

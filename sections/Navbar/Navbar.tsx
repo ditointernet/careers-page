@@ -12,11 +12,30 @@ const Navbar = () => {
   useEffect(() => {
     let lastScroll = 0;
 
+    if (window.location.hash != "") {
+      localStorage.setItem("navigation", "enabled")
+    }
+
     window.addEventListener("scroll", () => {
+      const navbar = document.getElementById("navbar");
       const scrollUp = "scroll-up";
       const scrollDown = "scroll-down";
       const currentScroll = window.pageYOffset;
-      const navbar = document.getElementById("navbar");
+      const scrollPosition = currentScroll - window.innerHeight;
+
+      if (localStorage.getItem("navigation") === "enabled") {
+        if ((window.location.hash === "#sobre-a-dito") && (scrollPosition > 0 && scrollPosition <= 744)) { localStorage.setItem("navigation", "disabled") }
+        else if ((window.location.hash === "#nossas-tecnologias") && (scrollPosition > 1700 && scrollPosition <= 2800)) { localStorage.setItem("navigation", "disabled") }
+        else if ((window.location.hash === "#nosso-time") && (scrollPosition > 2841 && scrollPosition <= 3800)) { localStorage.setItem("navigation", "disabled") }
+        else if ((window.location.hash === "#beneficios") && (scrollPosition > 10675 && scrollPosition <= 12200)) { localStorage.setItem("navigation", "disabled") }
+        else if ((window.location.hash === "#nosso-processo-seletivo") && (scrollPosition > 12201)) { localStorage.setItem("navigation", "disabled") }
+      } else if (localStorage.getItem("navigation") === "disabled") {
+        if ((window.location.hash != "#sobre-a-dito") && (scrollPosition > 0 && scrollPosition <= 744)) { window.location.href = `${window.location.origin}#sobre-a-dito` }
+        else if ((window.location.hash != "#nossas-tecnologias") && (scrollPosition > 1700 && scrollPosition <= 2800)) { window.location.href = `${window.location.origin}#nossas-tecnologias` }
+        else if ((window.location.hash != "#nosso-time") && (scrollPosition > 2841 && scrollPosition <= 3800)) { window.location.href = `${window.location.origin}#nosso-time` }
+        else if ((window.location.hash != "#beneficios") && (scrollPosition > 10675 && scrollPosition <= 12200)) { window.location.href = `${window.location.origin}#beneficios` }
+        else if ((window.location.hash != "#nosso-processo-seletivo") && (scrollPosition > 12201)) { window.location.href = `${window.location.origin}#nosso-processo-seletivo` }
+      }
 
       if (currentScroll < window.innerHeight) {
         navbar?.classList.remove(scrollUp);
