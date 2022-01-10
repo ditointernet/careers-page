@@ -88,6 +88,7 @@ const Navbar = () => {
 };
 
 const Header = styled.header`
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.08);
   background-color: ${COLORS.WHITE};
   height: ${GRID(8)};
   display: flex;
