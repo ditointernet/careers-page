@@ -8,6 +8,7 @@ import ButtonPrimary from "@/components/ButtonPrimary";
 
 const Navbar = () => {
   const [isOpenMenu, toggleMenu] = useState(false);
+  const [currentPosition, setCurrentPosition] = useState(window.pageYOffset);
 
   useEffect(() => {
     let lastScroll = 0;
@@ -22,6 +23,8 @@ const Navbar = () => {
       const scrollDown = "scroll-down";
       const currentScroll = window.pageYOffset;
       const scrollPosition = currentScroll - window.innerHeight;
+
+      setCurrentPosition(currentScroll)
 
       if (localStorage.getItem("navigation") === "enabled") {
         if ((window.location.hash === "#sobre-a-dito") && (scrollPosition > 0 && scrollPosition <= 744)) { localStorage.setItem("navigation", "disabled") }
@@ -62,7 +65,7 @@ const Navbar = () => {
   });
 
   return (
-    <Header id="navbar">
+    <Header id="navbar" className={currentPosition < 10 ? "top-position" : ""}>
       <ButtonBackPage href="https://www.dito.com.br/">
         <svg
           width="24"
@@ -88,7 +91,7 @@ const Navbar = () => {
 };
 
 const Header = styled.header`
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.08);
+  box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.08);
   background-color: ${COLORS.WHITE};
   height: ${GRID(8)};
   display: flex;
@@ -101,6 +104,11 @@ const Header = styled.header`
   left: 0;
   z-index: 3;
   transition: transform 0.2s;
+
+  &:not(.top-position) {
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.08);
+    transition: box-shadow .3s ease-in-out;
+  }
 
   &.scroll-up {
     transform: none;
