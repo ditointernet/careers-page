@@ -32,8 +32,8 @@ const Navbar = () => {
 
       if (localStorage.getItem("navigation") === "enabled") {
         if ((window.location.hash === "#sobre-a-dito") && (scrollPosition > 0 && scrollPosition <= 800)) { localStorage.setItem("navigation", "disabled") }
-        else if ((window.location.hash === "#nossas-tecnologias") && (scrollPosition > 1670 && scrollPosition <= 2886)) { console.log("ENTROU1"); localStorage.setItem("navigation", "disabled") }
-        else if ((window.location.hash === "#nosso-time") && (scrollPosition > 2887 && scrollPosition <= 3809)) { console.log("ENTROU2"); localStorage.setItem("navigation", "disabled") }
+        else if ((window.location.hash === "#nossas-tecnologias") && (scrollPosition > 1670 && scrollPosition <= 2886)) { localStorage.setItem("navigation", "disabled") }
+        else if ((window.location.hash === "#nosso-time") && (scrollPosition > 2887 && scrollPosition <= 3809)) { localStorage.setItem("navigation", "disabled") }
         else if ((window.location.hash === "#beneficios") && (scrollPosition > 10675 && scrollPosition <= 12150)) { localStorage.setItem("navigation", "disabled") }
         else if ((window.location.hash === "#nosso-processo-seletivo") && (scrollPosition > 12151)) { localStorage.setItem("navigation", "disabled") }
       } else if (localStorage.getItem("navigation") === "disabled") {
