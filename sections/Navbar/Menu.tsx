@@ -20,7 +20,7 @@ const Menu = ({ open }: Props) => {
 
   const clickNavigation = (section: string) => {
     localStorage.setItem("navigation", "enabled")
-    window.location.href = `${window.location.origin}${section}`
+    setTimeout(() => window.location.href = `${window.location.origin}${section}`, 100)
   }
 
   return (

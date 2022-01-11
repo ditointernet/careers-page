@@ -8,7 +8,7 @@ import ButtonPrimary from "@/components/ButtonPrimary";
 
 const Navbar = () => {
   const [isOpenMenu, toggleMenu] = useState(false);
-  const [currentPosition, setCurrentPosition] = useState(window.pageYOffset);
+  const [navbarIsTop, setNavbarIsTop] = useState(true);
 
   useEffect(() => {
     let lastScroll = 0;
@@ -17,27 +17,31 @@ const Navbar = () => {
       localStorage.setItem("navigation", "enabled")
     }
 
-    window.addEventListener("scroll", () => {
+    document.addEventListener("scroll", () => {
       const navbar = document.getElementById("navbar");
       const scrollUp = "scroll-up";
       const scrollDown = "scroll-down";
       const currentScroll = window.pageYOffset;
       const scrollPosition = currentScroll - window.innerHeight;
 
-      setCurrentPosition(currentScroll)
+      if (currentScroll < 10) {
+        setNavbarIsTop(true)
+      } else {
+        setNavbarIsTop(false)
+      }
 
       if (localStorage.getItem("navigation") === "enabled") {
-        if ((window.location.hash === "#sobre-a-dito") && (scrollPosition > 0 && scrollPosition <= 744)) { localStorage.setItem("navigation", "disabled") }
-        else if ((window.location.hash === "#nossas-tecnologias") && (scrollPosition > 1700 && scrollPosition <= 2800)) { localStorage.setItem("navigation", "disabled") }
-        else if ((window.location.hash === "#nosso-time") && (scrollPosition > 2841 && scrollPosition <= 3800)) { localStorage.setItem("navigation", "disabled") }
-        else if ((window.location.hash === "#beneficios") && (scrollPosition > 10675 && scrollPosition <= 12200)) { localStorage.setItem("navigation", "disabled") }
-        else if ((window.location.hash === "#nosso-processo-seletivo") && (scrollPosition > 12201)) { localStorage.setItem("navigation", "disabled") }
+        if ((window.location.hash === "#sobre-a-dito") && (scrollPosition > 0 && scrollPosition <= 800)) { localStorage.setItem("navigation", "disabled") }
+        else if ((window.location.hash === "#nossas-tecnologias") && (scrollPosition > 1670 && scrollPosition <= 2886)) { console.log("ENTROU1"); localStorage.setItem("navigation", "disabled") }
+        else if ((window.location.hash === "#nosso-time") && (scrollPosition > 2887 && scrollPosition <= 3809)) { console.log("ENTROU2"); localStorage.setItem("navigation", "disabled") }
+        else if ((window.location.hash === "#beneficios") && (scrollPosition > 10675 && scrollPosition <= 12150)) { localStorage.setItem("navigation", "disabled") }
+        else if ((window.location.hash === "#nosso-processo-seletivo") && (scrollPosition > 12151)) { localStorage.setItem("navigation", "disabled") }
       } else if (localStorage.getItem("navigation") === "disabled") {
-        if ((window.location.hash != "#sobre-a-dito") && (scrollPosition > 0 && scrollPosition <= 744)) { window.location.href = `${window.location.origin}#sobre-a-dito` }
-        else if ((window.location.hash != "#nossas-tecnologias") && (scrollPosition > 1700 && scrollPosition <= 2800)) { window.location.href = `${window.location.origin}#nossas-tecnologias` }
-        else if ((window.location.hash != "#nosso-time") && (scrollPosition > 2841 && scrollPosition <= 3800)) { window.location.href = `${window.location.origin}#nosso-time` }
-        else if ((window.location.hash != "#beneficios") && (scrollPosition > 10675 && scrollPosition <= 12200)) { window.location.href = `${window.location.origin}#beneficios` }
-        else if ((window.location.hash != "#nosso-processo-seletivo") && (scrollPosition > 12201)) { window.location.href = `${window.location.origin}#nosso-processo-seletivo` }
+        if ((window.location.hash != "#sobre-a-dito") && (scrollPosition > 0 && scrollPosition <= 800)) { window.location.href = `${window.location.origin}#sobre-a-dito` }
+        else if ((window.location.hash != "#nossas-tecnologias") && (scrollPosition > 1670 && scrollPosition <= 2886)) { window.location.href = `${window.location.origin}#nossas-tecnologias` }
+        else if ((window.location.hash != "#nosso-time") && (scrollPosition > 2887 && scrollPosition <= 3809)) { window.location.href = `${window.location.origin}#nosso-time` }
+        else if ((window.location.hash != "#beneficios") && (scrollPosition > 10675 && scrollPosition <= 12150)) { window.location.href = `${window.location.origin}#beneficios` }
+        else if ((window.location.hash != "#nosso-processo-seletivo") && (scrollPosition > 12151)) { window.location.href = `${window.location.origin}#nosso-processo-seletivo` }
       }
 
       if (currentScroll < window.innerHeight) {
@@ -60,12 +64,11 @@ const Navbar = () => {
       }
 
       lastScroll = currentScroll;
-      toggleMenu(false);
     });
-  });
+  }, []);
 
   return (
-    <Header id="navbar" className={currentPosition < 10 ? "top-position" : ""}>
+    <Header id="navbar" className={navbarIsTop ? "top-position" : ""}>
       <ButtonBackPage href="https://www.dito.com.br/">
         <svg
           width="24"
@@ -103,11 +106,10 @@ const Header = styled.header`
   top: 0;
   left: 0;
   z-index: 3;
-  transition: transform 0.2s;
+  transition: transform 0.2s, box-shadow .3s ease-in-out;
 
   &:not(.top-position) {
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.08);
-    transition: box-shadow .3s ease-in-out;
   }
 
   &.scroll-up {
