@@ -20,7 +20,7 @@ const Areas = () => (
                     <AreaContent>
                         <AreaTitle>Tecnologia</AreaTitle>
                         <Description marginBottomMobile={32} marginBottomDesktop={36}>É a nossa maior área, responsável por <b>dinamizar a plataforma</b> através das linguagens de programação (front e back-end) e por cuidar da <b>arquitetura e da infraestrutura</b> dos nossos produtos. Além disso, se encarregam de <b>manter</b> e <b>melhorar</b> os produtos, mapear e garantir o desenvolvimento de <b>novas funcionalidades</b> e assegurar uma <b>boa experiência</b> para as pessoas usuárias.</Description>
-                        <ButtonSecondary target="_black" href="https://dito.hire.trakstar.com/?team_id=5567">Ver vagas de Tecnologia</ButtonSecondary>
+                        <ButtonSecondary target="_black" href="https://dito.hire.trakstar.com/?team_id=5567&team_id=6345">Ver vagas de Tecnologia</ButtonSecondary>
                     </AreaContent>
                 </Area>
                 <Area maxWidth={957} margin="0 53px 0 0">
