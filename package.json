@@ -14,7 +14,7 @@
   "dependencies": {
     "@ditointernet/uai-foundation": "1.0.0",
     "@ditointernet/uai-icons": "^1.0.0",
-    "next": "11.1.2",
+    "next": "12.1.0",
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "react-responsive-carousel": "3.2.21",
