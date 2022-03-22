@@ -26,9 +26,9 @@ const Areas = () => (
                 <Area maxWidth={957} margin="0 53px 0 0">
                     <AreaImg image="./images/area-comercial.svg" />
                     <AreaContent>
-                        <AreaTitle>Comercial</AreaTitle>
+                        <AreaTitle>Comercial & Marketing</AreaTitle>
                         <Description marginBottomMobile={32} marginBottomDesktop={36}>O Comercial é a ponte entre nosso produto e o mundo, responsável por promover ações que visam <b>difundir nossa marca</b> e nos conectar com <b>potenciais clientes</b>. Essa área é composta por <b>Vendas</b>, <b>Customer Success (CS)</b>, <b>Marketing</b> e <b>Suporte ao Cliente</b>.</Description>
-                        <ButtonSecondary target="_black" href="https://dito.hire.trakstar.com/?team_id=5436&team_id=17072&team_id=8496">Ver vagas de Comercial</ButtonSecondary>
+                        <ButtonSecondary target="_black" href="https://dito.hire.trakstar.com/?team_id=5436&team_id=17072&team_id=8496">Ver vagas de Comercial & Marketing</ButtonSecondary>
                     </AreaContent>
                 </Area>
                 <Area maxWidth={972} margin="0 0 0 127px">
