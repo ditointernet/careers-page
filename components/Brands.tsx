@@ -8,7 +8,7 @@ const Brands = () => {
     <ImageBox src="/images/acer.jpg" key="acter" />,
     <ImageBox src="/images/lego.jpg" key="lego" />,
     <ImageBox src="/images/animale.jpg" key="animale" />,
-    <ImageBox src="/images/cea.jpg" key="cea" />,
+    <ImageBox src="/images/tokstok.jpg" key="tokstok" />,
     <ImageBox src="/images/polishop.jpg" key="polishop" />,
     <ImageBox src="/images/tef.jpg" key="trackandfield" />,
     <ImageBox src="/images/ingresso.jpg" key="ingresso" />,
