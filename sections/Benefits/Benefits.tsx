@@ -19,7 +19,7 @@ const Benefits = () => {
         {
             img: "./icons/cartao-caju.svg",
             title: "Cartão Caju",
-            description: "Crédito no valor de R$30,00/dia em cartão com bandeira Visa™ para você usar como e onde quiser, inclusive como refeição e alimentação.",
+            description: "Crédito no valor de R$33,00/dia em cartão com bandeira Visa™ para você usar como e onde quiser, inclusive como refeição e alimentação.",
         },
         {
             img: "./icons/licenca-maternidade.svg",
@@ -45,6 +45,11 @@ const Benefits = () => {
             img: "./icons/bonus-anual.svg",
             title: "Bônus anual",
             description: "Bônus anual por atingimento de metas, afinal, esses são os resultados do seu trabalho.",
+        },
+        {
+            img: "./icons/auxilio-ho.svg",
+            title: "Auxílio escritório",
+            description: "Crédito no valor de R$ 100,00/mês, direto no cartão Caju, para ajudar a custear parte dos gastos gerados pelo trabalho remoto.",
         },
     ];
 

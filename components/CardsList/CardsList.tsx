@@ -106,6 +106,11 @@ const SwiperMobile = styled(Swiper) <{ minheight: number }>`
 
 const WrapperCards = styled.div`
     display: none;
+
+    &::after {
+    content: "";
+    flex: auto;
+    }
     
     @media only screen and (min-width: 1024px) {
         gap: ${GRID(3)};
