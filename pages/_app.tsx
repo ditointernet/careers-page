@@ -1,7 +1,8 @@
-import Head from "next/head"
+import Head from "next/head";
 import type { AppProps } from "next/app";
 import { createGlobalStyle } from "styled-components";
 import { COLORS, GRID, TYPOGRAPHY } from "@ditointernet/uai-foundation";
+import Script from "next/script";
 
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 
@@ -71,6 +72,14 @@ function MyApp({ Component, pageProps }: AppProps) {
       </Head>
       <GlobalStyle />
       <Component {...pageProps} />
+      <div vw="true" className="enabled">
+        <div vw-access-button="true" className="active"></div>
+        <div vw-plugin-wrapper="true">
+          <div className="vw-plugin-top-wrapper"></div>
+        </div>
+      </div>
+      <Script strategy="beforeInteractive" src="https://vlibras.gov.br/app/vlibras-plugin.js"></Script>
+      <Script id="init-vlibras">{"new window.VLibras.Widget(\"https://vlibras.gov.br/app\");"}</Script>
     </>
   );
 }
