@@ -93,6 +93,7 @@ const Title = styled.h2`
   text-align: center;
   line-height: 1.2;
   font-weight: 600;
+  z-index: 1;
 
   @media (max-width: 768px) {
     font-size: ${GRID(2.75)};
@@ -105,6 +106,7 @@ const SubTitle = styled.p`
   margin: 0 auto;
   max-width: ${GRID(120)};
   text-align: center;
+  z-index: 1;
 
   @media (max-width: 768px) {
     font-size: ${GRID(2)};
