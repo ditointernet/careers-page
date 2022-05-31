@@ -72,6 +72,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       </Head>
       <GlobalStyle />
       <Component {...pageProps} />
+      {/* @ts-ignore */}
       <div vw="true" className="enabled">
         <div vw-access-button="true" className="active"></div>
         <div vw-plugin-wrapper="true">
