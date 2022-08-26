@@ -35,13 +35,15 @@ const Navbar = () => {
         else if ((window.location.hash === "#nossas-tecnologias") && (scrollPosition > 1670 && scrollPosition <= 2886)) { localStorage.setItem("navigation", "disabled") }
         else if ((window.location.hash === "#nosso-time") && (scrollPosition > 2887 && scrollPosition <= 3809)) { localStorage.setItem("navigation", "disabled") }
         else if ((window.location.hash === "#beneficios") && (scrollPosition > 10675 && scrollPosition <= 12150)) { localStorage.setItem("navigation", "disabled") }
-        else if ((window.location.hash === "#nosso-processo-seletivo") && (scrollPosition > 12151)) { localStorage.setItem("navigation", "disabled") }
+        else if ((window.location.hash === "#nosso-processo-seletivo") && (scrollPosition > 12151 && scrollPosition <= 13380)) { localStorage.setItem("navigation", "disabled") }
+        else if ((window.location.hash === "#nossas-vagas") && (scrollPosition > 13381)) { localStorage.setItem("navigation", "disabled") }
       } else if (localStorage.getItem("navigation") === "disabled") {
         if ((window.location.hash != "#sobre-a-dito") && (scrollPosition > 0 && scrollPosition <= 800)) { window.location.href = `${window.location.origin}#sobre-a-dito` }
         else if ((window.location.hash != "#nossas-tecnologias") && (scrollPosition > 1670 && scrollPosition <= 2886)) { window.location.href = `${window.location.origin}#nossas-tecnologias` }
         else if ((window.location.hash != "#nosso-time") && (scrollPosition > 2887 && scrollPosition <= 3809)) { window.location.href = `${window.location.origin}#nosso-time` }
         else if ((window.location.hash != "#beneficios") && (scrollPosition > 10675 && scrollPosition <= 12150)) { window.location.href = `${window.location.origin}#beneficios` }
-        else if ((window.location.hash != "#nosso-processo-seletivo") && (scrollPosition > 12151)) { window.location.href = `${window.location.origin}#nosso-processo-seletivo` }
+        else if ((window.location.hash != "#nosso-processo-seletivo") && (scrollPosition > 12151 && scrollPosition <= 13380)) { window.location.href = `${window.location.origin}#nosso-processo-seletivo` }
+        else if ((window.location.hash != "#nossas-vagas") && (scrollPosition > 13381)) { window.location.href = `${window.location.origin}#nossas-vagas` }
       }
 
       if (currentScroll < window.innerHeight) {
@@ -86,7 +88,10 @@ const Navbar = () => {
       </ButtonBackPage>
       <BurgerIcon onClick={() => toggleMenu(!isOpenMenu)} active={isOpenMenu} />
       <Menu open={isOpenMenu} />
-      <ButtonPrimary style={{ marginLeft: "20px" }} href="#nossas-vagas">
+      <ButtonPrimary style={{ marginLeft: "20px" }} onClick={() => {
+        localStorage.setItem("navigation", "enabled")
+        setTimeout(() => window.location.href = `${window.location.origin}#nossas-vagas`, 100)
+      }}>
         Ver nossas vagas
       </ButtonPrimary>
     </Header>
