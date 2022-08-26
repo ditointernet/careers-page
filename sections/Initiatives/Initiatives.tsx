@@ -14,19 +14,23 @@ const Initiatives = () => {
 
     const principalInitiatives: any = [
         {
-            name: "AfroDito",
+            name: "Afro Dito",
             img: "./images/afro.png",
         },
         {
-            name: "DitoPride",
+            name: "Dito Pride",
             img: "./images/pride.png",
         },
         {
-            name: "DitoGirls",
+            name: "PCDito",
+            img: "./images/pcd.png",
+        },
+        {
+            name: "Dito Girls",
             img: "./images/girls.png",
         },
         {
-            name: "DitoParents",
+            name: "Dito Parents",
             img: "./images/parents.png",
         }
     ]
@@ -233,13 +237,13 @@ const InitiativeSlide = styled.div`
 `
 
 const InitiativeImg = styled.div<{ image: string }>`
-    width: ${GRID(17.5)};
+    width: 220px;
+    height: 170px;
     filter: grayscale(1);
-    height: ${GRID(17.5)};
-    box-shadow: 0 ${GRID(0.375)} ${GRID(0.875)} rgba(65, 65, 65, 0.1);
-    border-radius: 100%;
+    /* box-shadow: 0 ${GRID(0.375)} ${GRID(0.875)} rgba(65, 65, 65, 0.1); */
+    /* border-radius: 100%; */
     margin-bottom: ${GRID(3)};
-    background-size: cover;
+    background-size: contain;
     background-image: url(${props => props.image});
     background-position: center;
 
