@@ -41,7 +41,7 @@ const Jobs = () => (
                         </BoxLink>
                     </Box>
                 </a>
-                <a title="Banco de talentos" href="#" target="_blank" rel="noreferrer">
+                {/* <a title="Banco de talentos" href="#" target="_blank" rel="noreferrer">
                     <Box>
                         <BoxTitle>Banco de talentos</BoxTitle>
                         <BoxLink>
@@ -51,7 +51,7 @@ const Jobs = () => (
                             </svg>
                         </BoxLink>
                     </Box>
-                </a>
+                </a> */}
             </Boxes>
         </SectionWrapper>
     </Section>
