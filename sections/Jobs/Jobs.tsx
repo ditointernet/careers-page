@@ -97,7 +97,7 @@ const Jobs = () => (
           rel="noreferrer"
         >
           <Box>
-            <BoxTitle>Banco de Talentos - DEI</BoxTitle>
+            <BoxTitle>Diversidade e Inclusão</BoxTitle>
             <BoxLink>
               <span>Ver vagas</span>
               <svg
