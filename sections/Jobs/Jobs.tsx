@@ -91,13 +91,13 @@ const Jobs = () => (
           </Box>
         </a>
         <a
-          title="Banco de talentos"
+          title="Banco de Talentos - Diversidade, Equidade e Inclusão"
           href="https://dito.hire.trakstar.com/?team_id=41867"
           target="_blank"
           rel="noreferrer"
         >
           <Box>
-            <BoxTitle>Banco de talentos</BoxTitle>
+            <BoxTitle>Banco de Talentos - DEI</BoxTitle>
             <BoxLink>
               <span>Ver vagas</span>
               <svg
