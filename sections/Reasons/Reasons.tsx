@@ -24,10 +24,6 @@ const Reasons = () => {
 
     const reasonsBlocks = [
         {
-            img: "./images/gptw.jpg",
-            description: "Desde 2017, estamos entre as melhores empresas para trabalhar (GPTW).",
-        },
-        {
             img: "./images/time.svg",
             description: "Time formado por mais de 100 FERAS de todo o Brasil.",
         },
