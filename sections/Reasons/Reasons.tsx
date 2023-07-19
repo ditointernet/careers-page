@@ -77,19 +77,6 @@ const Reasons = () => {
         <CardsList cards={reasonsBlocks} minMobileHeight={260} />
         <Container>
           <Box>
-            <RemoteJob viewBox="0 0 237 244" />
-            <Content maxWidth={653}>
-              <h3>Trabalho remoto como padrão</h3>
-              <p>
-                Você pode trabalhar de <b>qualquer lugar do país</b> e
-                aproveitar toda a flexibilidade desse modelo para ter mais{" "}
-                <b>qualidade de vida.</b> É você quem escolhe se prefere viver
-                na praia, no campo, no interior, onde for.
-              </p>
-            </Content>
-          </Box>
-
-          <Box>
             <Location viewBox="0 0 235 219" />
             <Content maxWidth={555}>
               <h3>Sede localizada no coração de Belo Horizonte</h3>
