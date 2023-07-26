@@ -47,12 +47,6 @@ const Benefits = () => {
         "Participação em cursos, eventos, talks e meetups, compra de livros, biblioteca interna, entre outros.",
     },
     {
-      img: "./icons/bonus-anual.svg",
-      title: "Bônus anual",
-      description:
-        "Bônus anual por atingimento de metas, afinal, esses são os resultados do seu trabalho.",
-    },
-    {
       img: "./icons/auxilio-ho.svg",
       title: "Auxílio escritório",
       description:
