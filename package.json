@@ -13,7 +13,7 @@
     "firebase": "firebase"
   },
   "dependencies": {
-    "@ditointernet/uai-foundation": "1.0.0",
+    "@ditointernet/uai-foundation": "1.6.0",
     "@ditointernet/uai-icons": "^1.0.0",
     "next": "11.1.2",
     "react": "17.0.2",
