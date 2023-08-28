@@ -249,7 +249,7 @@ const SwiperDesktop = styled(Swiper)`
         width: 36px;
         height: 36px;
         border-radius: ${RADII.PILL};
-        border: 1px solid #D7DAE0;
+        border: 1px solid ${COLORS_NEXT.NEUTRAL_200};
         
         &::after {
             content: '';
@@ -268,7 +268,7 @@ const SwiperDesktop = styled(Swiper)`
         width: 36px;
         height: 36px;
         border-radius: ${RADII.PILL};
-        border: 1px solid #D7DAE0;
+        border: 1px solid ${COLORS_NEXT.NEUTRAL_200};
         
         &::after {
             content: '';

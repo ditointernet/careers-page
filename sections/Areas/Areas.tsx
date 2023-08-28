@@ -127,7 +127,7 @@ const Area = styled.div<{ maxWidth: number, margin: string }>`
     
     @media only screen and (min-width: 1024px) {
         gap: ${GRID(7.5)};
-        border: ${GRID(0.125)} solid #EFF0F2;
+        border: ${GRID(0.125)} solid ${COLORS_NEXT.NEUTRAL_100};
         margin: ${({ margin }) => margin};
         padding: ${GRID(4)} ${GRID(6.75)};
         max-width: ${({ maxWidth }) => GRID(maxWidth / 8)};

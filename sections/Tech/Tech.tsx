@@ -90,9 +90,9 @@ const Title = styled.h2`
 const Container = styled.div`
     padding: 0 0 0 ${GRID(2.75)};
     position: relative;
-    border-left: ${GRID(0.125)} solid #6A7486;
+    border-left: ${GRID(0.125)} solid ${COLORS_NEXT.NEUTRAL_500};
     border-style: solid;
-    border-image: linear-gradient(to bottom, #121A2D ${GRID(2.75)}, #6A7486 0,#6A7486 calc(100% - ${GRID(2.75)}),#121A2D 0);
+    border-image: linear-gradient(to bottom, #121A2D ${GRID(2.75)}, ${COLORS_NEXT.NEUTRAL_500} 0,${COLORS_NEXT.NEUTRAL_500} calc(100% - ${GRID(2.75)}),#121A2D 0);
     border-image-slice: 1;
     border-image-width: 0 0 0 1px;
     border-image-repeat: unset;
@@ -107,7 +107,7 @@ const Container = styled.div`
         left: -${GRID(0.75)};
         width: ${GRID(1.125)};
         height: ${GRID(1.125)};
-        border: ${GRID(0.125)} solid #6A7486;
+        border: ${GRID(0.125)} solid ${COLORS_NEXT.NEUTRAL_500};
         content: '';
         position: absolute;
         border-radius: 100%;
@@ -118,7 +118,7 @@ const Container = styled.div`
         width: ${GRID(1.125)};
         bottom: ${GRID(0.75)};
         height: ${GRID(1.125)};
-        border: ${GRID(0.125)} solid #6A7486;
+        border: ${GRID(0.125)} solid ${COLORS_NEXT.NEUTRAL_500};
         content: '';
         position: absolute;
         border-radius: 100%;
@@ -219,7 +219,7 @@ const Description = styled.p<{
                 height: ${GRID(0.125)};
                 content: '';
                 position: absolute;
-                border-top: ${GRID(0.125)} solid #6A7486;
+                border-top: ${GRID(0.125)} solid ${COLORS_NEXT.NEUTRAL_500};
             }
 
             &::after {
@@ -227,7 +227,7 @@ const Description = styled.p<{
                 left: ${GRID(63)};
                 width: ${GRID(1)};
                 height: ${GRID(1)};
-                border: ${GRID(0.125)} solid #6A7486;
+                border: ${GRID(0.125)} solid ${COLORS_NEXT.NEUTRAL_500};
                 content: '';
                 position: absolute;
                 border-radius: 100%;
@@ -295,8 +295,8 @@ const Box = styled.div`
 
 const BoxContent = styled.div`
     position: relative;
-    border-left: ${GRID(0.125)} solid #6A7486;
-    border-image: linear-gradient(to bottom, #121A2D ${GRID(2.75)}, #6A7486 0,#6A7486 calc(100% - ${GRID(2.75)}),#121A2D 0);
+    border-left: ${GRID(0.125)} solid ${COLORS_NEXT.NEUTRAL_500};
+    border-image: linear-gradient(to bottom, #121A2D ${GRID(2.75)}, ${COLORS_NEXT.NEUTRAL_500} 0,${COLORS_NEXT.NEUTRAL_500} calc(100% - ${GRID(2.75)}),#121A2D 0);
     border-style: solid;
     border-image-slice: 1;
     border-image-width: 0 0 0 1px;
@@ -347,7 +347,7 @@ const BoxItem = styled.p`
         &::before {
             top: ${GRID(0.125)};
             left: -${GRID(0.125)};
-            color: #6A7486;
+            color: ${COLORS_NEXT.NEUTRAL_500};
             content: '-';
             position: absolute;
         }

@@ -105,7 +105,7 @@ const WrapperSocials = styled.div`
 const ImageBox = styled.a`
     width: ${GRID(42.125)};
     height: ${GRID(21.125)};
-    border: ${GRID(0.125)} solid #EFF0F2;
+    border: ${GRID(0.125)} solid ${COLORS_NEXT.NEUTRAL_100};
     box-sizing: border-box;
     border-radius: ${GRID(3)};
 
