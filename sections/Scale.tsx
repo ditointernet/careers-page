@@ -1,6 +1,7 @@
 import dynamic from "next/dynamic";
 import styled from "styled-components";
 import { COLORS_NEXT, GRID } from "@ditointernet/uai-foundation";
+import { transparentize } from "utils/colors-utils";
 
 const Brands = dynamic(() => import("../components/Brands"), {
   ssr: false,
@@ -127,7 +128,7 @@ const Block = styled.div<{ minWidth: number }>`
   }
   
   &:hover {
-    box-shadow: 0 ${GRID(0.375)} ${GRID(2)} ${GRID(0.5)} rgba(0, 0, 0, 0.05);
+    box-shadow: 0 ${GRID(0.375)} ${GRID(2)} ${GRID(0.5)} ${transparentize(COLORS_NEXT.BLACK, "0.05")};
     border-radius: ${GRID(3)};
   }
 `;

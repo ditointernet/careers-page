@@ -10,6 +10,7 @@ import SwiperCore, { Autoplay, Navigation, EffectCards } from "swiper";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/effect-cards";
+import { transparentize } from "utils/colors-utils";
 
 type Slide = {
   url: string;
@@ -165,7 +166,7 @@ const SwiperCustom = styled(Swiper)`
       }
 
       &.swiper-slide-active {
-        box-shadow: 0px 0px ${GRID(6)} rgba(0, 0, 0, 0.1);
+        box-shadow: 0px 0px ${GRID(6)} ${transparentize(COLORS_NEXT.BLACK, "0.1")};
       }
     }
   }
