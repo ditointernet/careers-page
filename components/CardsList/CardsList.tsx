@@ -145,7 +145,7 @@ const CardImg = styled.div`
 `
 
 const CardTitle = styled.h3`
-    color: #223154;
+    color: ${COLORS_NEXT.BRAND.NAVY_900};
     margin: 0 0 ${GRID(2.5)};
     font-size: ${GRID(2.75)};
     font-weight: 700;
@@ -153,7 +153,7 @@ const CardTitle = styled.h3`
 `
 
 const CardDescription = styled.div`
-    color: #8D95A7;
+    color: ${COLORS_NEXT.NEUTRAL_400};
     font-size: ${GRID(2)};
     font-weight: 500;
     line-height: ${GRID(3)};
