@@ -1,6 +1,6 @@
 import dynamic from "next/dynamic";
 import styled from "styled-components";
-import { COLORS, GRID } from "@ditointernet/uai-foundation";
+import { COLORS_NEXT, GRID } from "@ditointernet/uai-foundation";
 
 const Brands = dynamic(() => import("../components/Brands"), {
   ssr: false,
@@ -63,7 +63,7 @@ const SectionWrapper = styled.div`
 `
 
 const Title = styled.h2`
-  color: ${COLORS.NAVY_DARK};
+  color: ${COLORS_NEXT.BRAND.NAVY_900};
   font-size: ${GRID(4.5)};
   margin-bottom: ${GRID(12.5)};
   line-height: ${GRID(4.1)};
@@ -80,7 +80,7 @@ const Title = styled.h2`
 `;
 
 const Content = styled.p`
-  color: ${COLORS.GRAY_4};
+  color: ${COLORS_NEXT.NEUTRAL_400};
   margin: ${GRID(6.75)} auto;
   display: inline-block;
   font-size: ${GRID(2.75)};
@@ -93,7 +93,7 @@ const Content = styled.p`
 
   b {
     font-weight: 700;
-    color: ${COLORS.NAVY_DARK};
+    color: ${COLORS_NEXT.BRAND.NAVY_900};
   }
 `;
 
@@ -120,7 +120,7 @@ const Block = styled.div<{ minWidth: number }>`
   display: inline-grid;
   padding: ${GRID(4.5)} ${GRID(4)};
   flex-direction: column;
-  background-color: ${COLORS.WHITE};
+  background-color: ${COLORS_NEXT.WHITE};
 
   @media (min-width: 1024px) {
     width: ${({ minWidth }) => GRID(minWidth / 8)};
@@ -133,7 +133,7 @@ const Block = styled.div<{ minWidth: number }>`
 `;
 
 const BlockTitle = styled.h3`
-  color: ${COLORS.GREEN_MAIN};
+  color: ${COLORS_NEXT.BRAND.GREEN_600};
   margin: 0 0 ${GRID(0.25)} 0;
   font-size: ${GRID(3.5)};
   font-weight: 700;
@@ -141,7 +141,7 @@ const BlockTitle = styled.h3`
 `;
 
 const BlockContent = styled.p`
-  color: ${COLORS.NAVY_DARK};
+  color: ${COLORS_NEXT.BRAND.NAVY_900};
   margin: 0;
   font-size: ${GRID(2.75)};
   font-weight: 700;

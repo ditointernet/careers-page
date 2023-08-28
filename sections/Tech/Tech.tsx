@@ -1,6 +1,5 @@
-import React from "react";
-import styled from "styled-components"
-import { COLORS, GRID } from "@ditointernet/uai-foundation";
+import styled from "styled-components";
+import { COLORS_NEXT, GRID } from "@ditointernet/uai-foundation";
 
 const Tech = () => (
     <Section id="nossas-tecnologias">
@@ -159,7 +158,7 @@ const Description = styled.p<{
     marginBottomMobile?: number,
     marginBottomDesktop?: number
 }>`
-    color: ${COLORS.GRAY_1};
+    color: ${COLORS_NEXT.NEUTRAL_100};
     margin: 0 0 ${({ marginBottomMobile }) => marginBottomMobile ? GRID(marginBottomMobile / 8) : 0} 0;
     position: relative;
     font-size: ${GRID(2)};
@@ -335,7 +334,7 @@ const BoxContent = styled.div`
 `
 
 const BoxItem = styled.p`
-    color: ${COLORS.GRAY_2};
+    color: ${COLORS_NEXT.NEUTRAL_200};
     padding: 0 0 0 ${GRID(1.5)};
     margin: 0 0 ${GRID(3)} 0;
     position: relative;

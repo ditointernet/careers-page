@@ -1,12 +1,12 @@
 import type { NextPage } from "next";
 import styled from "styled-components";
-import { COLORS, GRID } from "@ditointernet/uai-foundation";
+import { COLORS_NEXT, GRID } from "@ditointernet/uai-foundation";
 import ButtonPrimary from "@/components/ButtonPrimary";
 
 const pageDown = () => {
   const pageTwo = document.getElementById("sobre-a-dito");
   if (pageTwo) pageTwo.scrollIntoView({
-    behavior: 'smooth'
+    behavior: "smooth"
   });
 }
 
@@ -98,7 +98,7 @@ const Logo = styled.img`
 `;
 
 const Title = styled.h1`
-  color: ${COLORS.NAVY_DARK};
+  color: ${COLORS_NEXT.BRAND.NAVY_900};
   margin: 0 0 ${GRID(1)} 0;
   max-width: ${GRID(33)};
   font-size: ${GRID(2)};
@@ -113,7 +113,7 @@ const Title = styled.h1`
 `;
 
 const Subtitle = styled.h2`
-  color: ${COLORS.NAVY_DARK};
+  color: ${COLORS_NEXT.BRAND.NAVY_900};
   margin: 0 0 ${GRID(4.625)} 0;
   font-size: ${GRID(2.75)};
   font-weight: 700;
@@ -143,7 +143,7 @@ const Footer = styled.footer`
   }
 
   p {
-    color: ${COLORS.GRAY_4};
+    color: ${COLORS_NEXT.NEUTRAL_400};
     font-size: ${GRID(2)};
     font-weight: 600;
     line-height: ${GRID(3)};

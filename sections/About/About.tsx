@@ -1,6 +1,6 @@
 import type { NextPage } from "next";
 import styled from "styled-components";
-import { COLORS, GRID } from "@ditointernet/uai-foundation";
+import { COLORS_NEXT, GRID } from "@ditointernet/uai-foundation";
 
 const About: NextPage = () => (
   <Section id="sobre-a-dito">
@@ -65,7 +65,7 @@ const SectionWrapper = styled.div`
 `
 
 const Subtitle = styled.h3`
-  color: ${COLORS.GREEN_MAIN};
+  color: ${COLORS_NEXT.BRAND.GREEN_600};
   font-size: ${GRID(2.75)};
   font-weight: 600;
   height: ${GRID(4.125)};
@@ -77,7 +77,7 @@ const Subtitle = styled.h3`
 `;
 
 const Title = styled.h2`
-  color: ${COLORS.NAVY_DARK};
+  color: ${COLORS_NEXT.BRAND.NAVY_900};
   font-size: ${GRID(4.5)};
   font-weight: 700;
   line-height: ${GRID(6.75)};
@@ -92,14 +92,14 @@ const Title = styled.h2`
 `;
 
 const Text = styled.p`
-  color: ${COLORS.GRAY_4};
+  color: ${COLORS_NEXT.NEUTRAL_400};
   font-size: ${GRID(2)};
   font-weight: 500;
   line-height: ${GRID(3)};
   margin-top: 0px;
   margin-bottom: ${GRID(3)};
   > strong {
-    color: ${COLORS.NAVY_DARK};
+    color: ${COLORS_NEXT.BRAND.NAVY_900};
   }
 `;
 

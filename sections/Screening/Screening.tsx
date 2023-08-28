@@ -1,6 +1,5 @@
-import React from "react";
 import styled from "styled-components";
-import { COLORS, GRID } from "@ditointernet/uai-foundation";
+import { COLORS_NEXT, GRID } from "@ditointernet/uai-foundation";
 
 const Screening = () => {
     return (
@@ -121,7 +120,7 @@ const Content = styled.div<{ maxWidth: number }>`
 `
 
 const Title = styled.h2`
-    color: ${COLORS.NAVY_DARK};
+    color: ${COLORS_NEXT.BRAND.NAVY_900};
     margin: 0 0 ${GRID(2)};
     font-size: ${GRID(2.75)};
     font-weight: 700;
@@ -135,7 +134,7 @@ const Title = styled.h2`
 `
 
 const SubTitle = styled.h3<{ number: string }>`
-    color: ${COLORS.GREEN_MAIN};
+    color: ${COLORS_NEXT.BRAND.GREEN_600};
     margin: 0 0 ${GRID(2)};
     padding: ${GRID(3.375)} 0 0 ${GRID(2)};
     position: relative;
@@ -152,7 +151,7 @@ const SubTitle = styled.h3<{ number: string }>`
     ::before {
         top: 0;
         left: 0;
-        color: ${COLORS.NAVY_LIGHT};
+        color: ${COLORS_NEXT.BRAND.NAVY_100};
         z-index: -1;
         content: "${({ number }) => number}";
         position: absolute;
@@ -168,14 +167,14 @@ const SubTitle = styled.h3<{ number: string }>`
 `
 
 const Description = styled.p`
-    color: ${COLORS.GRAY_4};
+    color: ${COLORS_NEXT.NEUTRAL_400};
     margin: 0;
     font-size: ${GRID(2)};
     font-weight: 500;
     line-height: ${GRID(3)};
 
     b {
-        color: ${COLORS.NAVY_DARK};
+        color: ${COLORS_NEXT.BRAND.NAVY_900};
         font-weight: 700;
     }
 

@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import styled from "styled-components";
-import { COLORS, GRID } from "@ditointernet/uai-foundation";
+import { COLORS_NEXT, GRID } from "@ditointernet/uai-foundation";
 
 type Props = {
   open: boolean;
@@ -87,7 +87,7 @@ const MenuWrapper = styled.div`
   box-shadow: 0 ${GRID(0.25)} ${GRID(1)} 0 rgb(0 0 0 / 15%);
   position: absolute;
   top: ${GRID(10.625)};
-  background-color: ${COLORS.WHITE};
+  background-color: ${COLORS_NEXT.WHITE};
   width: calc(100% - ${GRID(4)});
   border-radius: ${GRID(2)};
   max-height: 0;
@@ -134,7 +134,7 @@ const List = styled.ul`
 `;
 
 const Item = styled.li`
-  color: ${COLORS.NAVY_DARK};
+  color: ${COLORS_NEXT.BRAND.NAVY_900};
   cursor: pointer;
   padding: ${GRID(1.5)} ${GRID(3)};
   font-size: ${GRID(2)};
@@ -142,7 +142,7 @@ const Item = styled.li`
   line-height: ${GRID(3)};
 
   &.active {
-    color: ${COLORS.GREEN_MAIN};
+    color: ${COLORS_NEXT.BRAND.GREEN_600};
 
     &::after {
       width: 80%;
@@ -150,12 +150,12 @@ const Item = styled.li`
   }
 
   &:active {
-    background: ${COLORS.GREEN_MAIN};
-    color: ${COLORS.WHITE};
+    background: ${COLORS_NEXT.BRAND.GREEN_600};
+    color: ${COLORS_NEXT.WHITE};
 
     &.active {
-      color: ${COLORS.WHITE};
-      background-color: ${COLORS.GREEN_MAIN};
+      color: ${COLORS_NEXT.WHITE};
+      background-color: ${COLORS_NEXT.BRAND.GREEN_600};
     }
   }
 
@@ -172,27 +172,27 @@ const Item = styled.li`
       height: ${GRID(0.25)};
       width: 0%;
       right: 0;
-      background-color: ${COLORS.GREEN_MAIN};
+      background-color: ${COLORS_NEXT.BRAND.GREEN_600};
       transition: 0.5s ease all 0.1s;
     }
 
     &:hover {
       background: transparent;
-      color: ${COLORS.NAVY_DARK};
+      color: ${COLORS_NEXT.BRAND.NAVY_900};
 
       &.active {
-        color: ${COLORS.GREEN_MAIN};
+        color: ${COLORS_NEXT.BRAND.GREEN_600};
         background: transparent;
 
         &::after {
-          background-color: ${COLORS.GREEN_MAIN};
+          background-color: ${COLORS_NEXT.BRAND.GREEN_600};
         }
       }
 
       &::after {
         width: 80%;
         transition: 0.3s ease all;
-        background-color: ${COLORS.NAVY_DARK};
+        background-color: ${COLORS_NEXT.BRAND.NAVY_900};
       }
     }
   }

@@ -1,7 +1,6 @@
-import React from "react";
 import styled from "styled-components";
 import CardsList from "@/components/CardsList";
-import { COLORS, GRID } from "@ditointernet/uai-foundation";
+import { COLORS_NEXT, GRID } from "@ditointernet/uai-foundation";
 
 type Card = {
   img: string;
@@ -91,7 +90,7 @@ const SectionWrapper = styled.div`
 `;
 
 const Title = styled.h2`
-  color: ${COLORS.NAVY_DARK};
+  color: ${COLORS_NEXT.BRAND.NAVY_900};
   margin: 0 0 ${GRID(5)};
   font-size: ${GRID(2.75)};
   font-weight: 700;

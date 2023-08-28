@@ -1,13 +1,12 @@
-import React from "react";
 import styled from "styled-components";
 import CardsList from "@/components/CardsList";
-import { COLORS, GRID } from "@ditointernet/uai-foundation";
+import { COLORS_NEXT, GRID } from "@ditointernet/uai-foundation";
 import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, { Autoplay, Navigation, Pagination } from "swiper";
 
 import "swiper/css";
-import "swiper/css/navigation"
-import "swiper/css/pagination"
+import "swiper/css/navigation";
+import "swiper/css/pagination";
 
 const Initiatives = () => {
     SwiperCore.use([Autoplay, Navigation, Pagination]);
@@ -128,7 +127,7 @@ const SectionWrapper = styled.div`
 `
 
 const Title = styled.h2`
-    color: ${COLORS.NAVY_DARK};
+    color: ${COLORS_NEXT.BRAND.NAVY_900};
     margin: 0 0 ${GRID(4)};
     font-size: ${GRID(2.75)};
     text-align: center;
@@ -143,7 +142,7 @@ const Title = styled.h2`
 `
 
 const SubTitle = styled.h3`
-    color: ${COLORS.NAVY_DARK};
+    color: ${COLORS_NEXT.BRAND.NAVY_900};
     margin: 0 0 ${GRID(2)};
     font-size: ${GRID(2)};
     text-align: center;
@@ -158,7 +157,7 @@ const SubTitle = styled.h3`
 `
 
 const Description = styled.p`
-    color: ${COLORS.GRAY_4};
+    color: ${COLORS_NEXT.NEUTRAL_400};
     margin: 0 auto ${GRID(10)};
     font-size: ${GRID(2)};
     max-width: ${GRID(100)};
@@ -190,7 +189,7 @@ const InitiativeSwiperMobile = styled(Swiper)`
             }
             
             .initiativeName {
-                color: ${COLORS.NAVY_DARK};
+                color: ${COLORS_NEXT.BRAND.NAVY_900};
             }
         }
     }
@@ -253,14 +252,14 @@ const InitiativeImg = styled.div<{ image: string }>`
 `
 
 const InitiativeTitle = styled.p`
-    color: ${COLORS.GRAY_2};
+    color: ${COLORS_NEXT.NEUTRAL_200};
     margin: 0;
     font-size: ${GRID(2.75)};
     font-weight: 600;
     line-height: ${GRID(4.125)};
 
     @media only screen and (min-width: 768px) {
-        color: ${COLORS.NAVY_DARK};
+        color: ${COLORS_NEXT.BRAND.NAVY_900};
     }
 `
 

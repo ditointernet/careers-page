@@ -1,6 +1,5 @@
-import React from "react"
-import styled from "styled-components"
-import { COLORS, GRID } from "@ditointernet/uai-foundation";
+import styled from "styled-components";
+import { COLORS_NEXT, GRID } from "@ditointernet/uai-foundation";
 
 const Socials = () => (
     <Section id="socials">
@@ -68,7 +67,7 @@ const SectionWrapper = styled.div`
 `
 
 const Title = styled.h2`
-    color: ${COLORS.NAVY_DARK};
+    color: ${COLORS_NEXT.BRAND.NAVY_900};
     margin: 0 0 ${GRID(2)};
     font-size: ${GRID(2.75)};
     font-weight: 700;
@@ -83,7 +82,7 @@ const Title = styled.h2`
 
 
 const Description = styled.p`
-    color: ${COLORS.GRAY_4};
+    color: ${COLORS_NEXT.NEUTRAL_400};
     margin: 0 0 ${GRID(5)};
     font-size: ${GRID(2)};
     text-align: center;

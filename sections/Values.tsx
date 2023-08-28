@@ -1,6 +1,6 @@
-import React, { useState, useCallback } from "react";
+import { useState, useCallback } from "react";
 
-import { COLORS, GRID } from "@ditointernet/uai-foundation";
+import { COLORS_NEXT, GRID } from "@ditointernet/uai-foundation";
 import styled from "styled-components";
 import Ztext from "react-ztext";
 
@@ -88,7 +88,7 @@ const ParticleWrapper = styled.div`
 `;
 
 const Title = styled.h2`
-  color: ${COLORS.WHITE};
+  color: ${COLORS_NEXT.WHITE};
   font-size: ${GRID(4.75)};
   text-align: center;
   line-height: 1.2;
@@ -101,7 +101,7 @@ const Title = styled.h2`
 `;
 
 const SubTitle = styled.p`
-  color: ${COLORS.WHITE};
+  color: ${COLORS_NEXT.WHITE};
   font-size: ${GRID(2.75)};
   margin: 0 auto;
   max-width: ${GRID(120)};
@@ -199,7 +199,7 @@ const Content = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: ${COLORS.WHITE};
+  color: ${COLORS_NEXT.WHITE};
   margin: 0 auto;
   text-align: center;
   position: relative;

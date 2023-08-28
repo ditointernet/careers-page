@@ -1,11 +1,10 @@
-import React from "react"
-import styled from "styled-components"
-import { COLORS, GRID } from "@ditointernet/uai-foundation";
+import styled from "styled-components";
+import { COLORS_NEXT, GRID } from "@ditointernet/uai-foundation";
 import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, { Autoplay, Navigation } from "swiper";
 
 import "swiper/css";
-import "swiper/css/navigation"
+import "swiper/css/navigation";
 
 type Card = {
     img?: string,
@@ -69,7 +68,7 @@ const SwiperMobile = styled(Swiper) <{ minheight: number }>`
             max-width: 100%;
             min-height: ${({ minheight }) => minheight ? GRID(minheight / 8) : 0};
             border-radius: ${GRID(3)};
-            background-color: ${COLORS.WHITE};
+            background-color: ${COLORS_NEXT.WHITE};
         }
     }
 
@@ -126,7 +125,7 @@ const Card = styled.div<{ minheight: number }>`
     max-width: ${GRID(42.875)};
     min-height: ${({ minheight }) => minheight ? GRID(minheight / 8) : 0};
     border-radius: ${GRID(3)};
-    background-color: ${COLORS.WHITE};
+    background-color: ${COLORS_NEXT.WHITE};
 
     @media only screen and (min-width: 1024px) {
         max-width: calc(33% - ${GRID(1.75)});
