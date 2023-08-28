@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { COLORS_NEXT, GRID } from "@ditointernet/uai-foundation";
+//exceção de cor
 
 const Socials = () => (
     <Section id="socials">
