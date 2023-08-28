@@ -24,14 +24,14 @@ const GlobalStyle = createGlobalStyle`
   * { box-sizing: border-box; margin: 0; padding: 0 }
 
   .w-400 { font-weight: 400 }
-  .w-500 { font-weight: ${TYPOGRAPHY.WEIGHTS.MEDIUM} }
-  .w-600 { font-weight: ${TYPOGRAPHY.WEIGHTS.SEMI_BOLD} }
-  .w-700 { font-weight: ${TYPOGRAPHY.WEIGHTS.BOLD} }
+  .w-500 { font-weight: ${TYPOGRAPHY.FontWeight.MEDIUM} }
+  .w-600 { font-weight: ${TYPOGRAPHY.FontWeight.SEMI_BOLD} }
+  .w-700 { font-weight: 900 }
 
   h1,
   h3 {
-    font-size: ${TYPOGRAPHY.FONT_SIZE.H1};
-    line-height: ${TYPOGRAPHY.FONT_SIZE.H1};
+    font-size: ${TYPOGRAPHY.FontSize.H1};
+    line-height: ${TYPOGRAPHY.FontSize.H1};
   }
 
   h2 {
@@ -40,18 +40,18 @@ const GlobalStyle = createGlobalStyle`
   }
 
   h4 {
-    font-size: ${TYPOGRAPHY.FONT_SIZE.H2};
-    line-height: ${TYPOGRAPHY.LINE_HEIGHT.H2};
+    font-size: ${TYPOGRAPHY.FontSize.H2};
+    line-height: ${TYPOGRAPHY.LineHeight.H2};
   }
 
   h5 {
-    font-size: ${TYPOGRAPHY.FONT_SIZE.H3};
-    line-height: ${TYPOGRAPHY.LINE_HEIGHT.H3};
+    font-size: ${TYPOGRAPHY.FontSize.H3};
+    line-height: ${TYPOGRAPHY.LineHeight.H3};
   }
 
   p {
-    font-size: ${TYPOGRAPHY.FONT_SIZE.LARGE};
-    line-height: ${TYPOGRAPHY.LINE_HEIGHT.LARGE};
+    font-size: ${TYPOGRAPHY.FontSize.LARGE};
+    line-height: ${TYPOGRAPHY.LineHeight.LARGE};
   }
 
   .c-white { color: ${COLORS_NEXT.WHITE} }
