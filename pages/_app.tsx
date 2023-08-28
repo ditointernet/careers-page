@@ -23,10 +23,10 @@ const GlobalStyle = createGlobalStyle`
   a { color: inherit; text-decoration: none }
   * { box-sizing: border-box; margin: 0; padding: 0 }
 
-  .w-400 { font-weight: 400 }
+  .w-400 { font-weight: ${TYPOGRAPHY.FontWeight.REGULAR} }
   .w-500 { font-weight: ${TYPOGRAPHY.FontWeight.MEDIUM} }
   .w-600 { font-weight: ${TYPOGRAPHY.FontWeight.SEMI_BOLD} }
-  .w-700 { font-weight: 900 }
+  .w-700 { font-weight: 700 }
 
   h1,
   h3 {
