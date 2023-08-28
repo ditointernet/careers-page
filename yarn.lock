@@ -976,10 +976,10 @@
     enabled "2.0.x"
     kuler "^2.0.0"
 
-"@ditointernet/uai-foundation@1.0.0":
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/@ditointernet/uai-foundation/-/uai-foundation-1.0.0.tgz#fb6b11a91850aefed17b369ca73be3b673164abf"
-  integrity sha512-IF/gtvO6h5AmNbl0e4Tiq3xwFpBv8zvKtg9e7uuUBG8wYD8TtLgjSoylt9TYjmUaWfemjD2UpDiM9d6G8RxOMg==
+"@ditointernet/uai-foundation@1.6.0":
+  version "1.6.0"
+  resolved "https://registry.yarnpkg.com/@ditointernet/uai-foundation/-/uai-foundation-1.6.0.tgz#33187c628698c0714571a44b03890bfdd53f818f"
+  integrity sha512-PnI7HjrqbZqs6ZwVn6HA8GN2k5XIuQvRUtb5gsMJkPOQKbkaDuYrMdyE9AbHbvveFv6/LECIV3+ShThMJhPogA==
 
 "@ditointernet/uai-icons@^1.0.0":
   version "1.0.0"
