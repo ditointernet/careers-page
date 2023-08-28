@@ -1,14 +1,14 @@
-import React, { useState } from "react"
-import styled from "styled-components"
+import { useState } from "react";
+import styled from "styled-components";
 import ButtonSecondary from "@/components/ButtonSecondary";
-import { COLORS, GRID, RADII } from "@ditointernet/uai-foundation";
+import { COLORS_NEXT, GRID, RADII } from "@ditointernet/uai-foundation";
 import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, { Pagination, Navigation, EffectCards } from "swiper";
 
 import "swiper/css";
-import "swiper/css/pagination"
-import "swiper/css/navigation"
-import "swiper/css/effect-cards"
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+import "swiper/css/effect-cards";
 
 enum Area {
     TECNOLOGIA = "tecnologia",
@@ -184,7 +184,7 @@ const SectionWrapper = styled.div`
 `
 
 const Title = styled.h2`
-    color: ${COLORS.NAVY_DARK};
+    color: ${COLORS_NEXT.BRAND.NAVY_900};
     margin: 0 0 ${GRID(7)};
     font-size: ${GRID(2.75)};
     line-height: ${GRID(4.125)};
@@ -211,7 +211,7 @@ const SwiperMobile = styled(Swiper)`
             align-items: center;
             justify-content: space-between;
             flex-direction: column;
-            background-color: ${COLORS.WHITE};
+            background-color: ${COLORS_NEXT.WHITE};
             box-shadow: 0 0 ${GRID(10.625)} rgba(0, 0, 0, 0.1);
             border-radius: ${GRID(2)};
         }
@@ -235,7 +235,7 @@ const SwiperDesktop = styled(Swiper)`
         > .swiper-slide {
             display: flex;
             border-radius: ${GRID(3)};
-            background-color: ${COLORS.WHITE};
+            background-color: ${COLORS_NEXT.WHITE};
             
             &.swiper-slide-active {
                 box-shadow: 0px 0px ${GRID(6)} rgba(0, 0, 0, 0.1);
@@ -258,7 +258,7 @@ const SwiperDesktop = styled(Swiper)`
         }
         
         &:hover {
-            background-color: ${COLORS.GREEN_LIGHT};
+            background-color: ${COLORS_NEXT.BRAND.GREEN_100};
         }
     }
 
@@ -277,7 +277,7 @@ const SwiperDesktop = styled(Swiper)`
         }
         
         &:hover {
-            background-color: ${COLORS.GREEN_LIGHT};
+            background-color: ${COLORS_NEXT.BRAND.GREEN_100};
         }
     }
 
@@ -285,7 +285,7 @@ const SwiperDesktop = styled(Swiper)`
         bottom: 0;
 
         .swiper-pagination-bullet-active {
-            background: ${COLORS.GREEN_MAIN};
+            background: ${COLORS_NEXT.BRAND.GREEN_600};
         }
     }
 `
@@ -336,7 +336,7 @@ const Wrapper = styled.div`
 
 const Name = styled.p`
     margin: 0;
-    color: ${COLORS.NAVY_DARK};
+    color: ${COLORS_NEXT.BRAND.NAVY_900};
     font-size: ${GRID(2.75)};
     font-weight: 700;
     line-height: ${GRID(4.125)};
@@ -349,7 +349,7 @@ const Name = styled.p`
 
 const Description = styled.p`
     margin: 0;
-    color: ${COLORS.GRAY_4};
+    color: ${COLORS_NEXT.NEUTRAL_400};
     font-size: ${GRID(2)};
     font-weight: 500;
     line-height: ${GRID(3)};
@@ -363,7 +363,7 @@ const Description = styled.p`
 const ButtonVideo = styled.div`
     gap: ${GRID(1.25)};
     width: ${GRID(18.125)};
-    color: ${COLORS.GREEN_MAIN};
+    color: ${COLORS_NEXT.BRAND.GREEN_600};
     cursor: pointer;
     display: flex;
     padding: ${GRID(1)} ${GRID(1.25)};
@@ -385,7 +385,7 @@ const ButtonVideo = styled.div`
     }
 
     &:hover {
-        background-color: ${COLORS.GREEN_LIGHT};
+        background-color: ${COLORS_NEXT.BRAND.GREEN_100};
         border-radius: ${RADII.DEFAULT};
     }
 `

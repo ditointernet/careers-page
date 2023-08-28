@@ -1,12 +1,12 @@
 import styled from "styled-components";
-import { COLORS, GRID } from "@ditointernet/uai-foundation";
+import { COLORS_NEXT, GRID } from "@ditointernet/uai-foundation";
 import { ParallaxProvider, Parallax } from "react-scroll-parallax";
 
 const BrandLogo = styled.div`
   width: ${GRID(8)};
   height: ${GRID(8)};
   display: inline-block;
-  background-color: ${COLORS.GREEN_MAIN};
+  background-color: ${COLORS_NEXT.BRAND.GREEN_600};
 `;
 
 const Row = styled.div`

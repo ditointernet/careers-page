@@ -1,10 +1,10 @@
 import styled from "styled-components";
-import { COLORS, GRID } from "@ditointernet/uai-foundation";
+import { COLORS_NEXT, GRID } from "@ditointernet/uai-foundation";
 
 const ButtonSecondary = styled.a`
-  color: ${COLORS.GREEN_MAIN};
+  color: ${COLORS_NEXT.BRAND.GREEN_600};
   cursor: pointer;
-  border: ${GRID(0.125)} solid ${COLORS.GREEN_MAIN};
+  border: ${GRID(0.125)} solid ${COLORS_NEXT.BRAND.GREEN_600};
   z-index: 1;
   outline: none;
   padding: ${GRID(0.875)} ${GRID(2)};
@@ -22,7 +22,7 @@ const ButtonSecondary = styled.a`
   }
 
   &:hover {
-    background-color: ${COLORS.GREEN_LIGHT};
+    background-color: ${COLORS_NEXT.BRAND.GREEN_100};
   }
 `;
 

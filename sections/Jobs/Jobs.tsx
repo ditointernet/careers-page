@@ -1,6 +1,5 @@
-import React from "react";
 import styled from "styled-components";
-import { COLORS, GRID } from "@ditointernet/uai-foundation";
+import { COLORS_NEXT, GRID } from "@ditointernet/uai-foundation";
 
 const Jobs = () => (
   <Section id="nossas-vagas">
@@ -143,7 +142,7 @@ const SectionWrapper = styled.div`
 `;
 
 const Title = styled.h2`
-  color: ${COLORS.NAVY_DARK};
+  color: ${COLORS_NEXT.BRAND.NAVY_900};
   margin: 0 0 ${GRID(2)};
   font-size: ${GRID(2.75)};
   text-align: center;
@@ -158,7 +157,7 @@ const Title = styled.h2`
 `;
 
 const Description = styled.p`
-  color: ${COLORS.GRAY_4};
+  color: ${COLORS_NEXT.NEUTRAL_400};
   margin: 0 auto ${GRID(7)};
   font-size: ${GRID(2)};
   max-width: ${GRID(109)};
@@ -192,24 +191,24 @@ const Boxes = styled.div`
 const Box = styled.div`
   width: ${GRID(39.5)};
   margin: auto;
-  border: 1px solid ${COLORS.GRAY_2};
+  border: 1px solid ${COLORS_NEXT.NEUTRAL_200};
   padding: ${GRID(3)};
   max-width: 100%;
   border-radius: ${GRID(3)};
-  background-color: ${COLORS.WHITE};
+  background-color: ${COLORS_NEXT.WHITE};
 
   @media only screen and (min-width: 768px) {
     margin: 0;
 
     &:hover {
-      border: 1px solid ${COLORS.GRAY_1};
+      border: 1px solid ${COLORS_NEXT.NEUTRAL_100};
       box-shadow: 0 ${GRID(0.5)} ${GRID(1)} rgba(0, 0, 0, 0.08);
     }
   }
 `;
 
 const BoxTitle = styled.p`
-  color: ${COLORS.NAVY_DARK};
+  color: ${COLORS_NEXT.BRAND.NAVY_900};
   margin: 0 0 ${GRID(2)};
   font-size: ${GRID(2.75)};
   font-weight: 700;
@@ -222,7 +221,7 @@ const BoxLink = styled.div`
   justify-content: space-between;
 
   span {
-    color: ${COLORS.GREEN_MAIN};
+    color: ${COLORS_NEXT.BRAND.GREEN_600};
     margin: 0;
     font-size: ${GRID(2)};
     font-weight: 500;

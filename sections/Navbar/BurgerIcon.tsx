@@ -1,6 +1,5 @@
-import React from 'react'
-import styled from 'styled-components'
-import { COLORS, GRID } from "@ditointernet/uai-foundation";
+import styled from "styled-components";
+import { COLORS_NEXT, GRID } from "@ditointernet/uai-foundation";
 
 type Props = {
     active: boolean
@@ -24,7 +23,7 @@ const Burger = styled.div`
     & .line{
         width: ${GRID(3.25)};
         height: ${GRID(0.375)};
-        background-color: ${COLORS.NAVY_DARK};
+        background-color: ${COLORS_NEXT.BRAND.NAVY_900};
         display: block;
         margin: ${GRID(0.5)} ${GRID(0.125)};
         border-radius: ${GRID(0.625)};

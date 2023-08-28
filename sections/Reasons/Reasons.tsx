@@ -1,8 +1,6 @@
-import React from "react";
 import styled from "styled-components";
-import { COLORS, GRID } from "@ditointernet/uai-foundation";
+import { COLORS_NEXT, GRID } from "@ditointernet/uai-foundation";
 
-import RemoteJob from "../../public/images/remote-job.svg";
 import Location from "../../public/images/location.svg";
 import CardsList from "@/components/CardsList";
 
@@ -129,7 +127,7 @@ const SectionWrapper = styled.div`
 `;
 
 const Title = styled.h2`
-  color: ${COLORS.NAVY_DARK};
+  color: ${COLORS_NEXT.BRAND.NAVY_900};
   margin: 0 0 ${GRID(4)} 0;
   font-size: ${GRID(2.75)};
   line-height: ${GRID(4.125)};
@@ -160,7 +158,7 @@ const SwiperCustom = styled(Swiper)`
     > .swiper-slide {
       display: flex;
       border-bottom-left-radius: ${GRID(11.125)};
-      background-color: ${COLORS.WHITE};
+      background-color: ${COLORS_NEXT.WHITE};
 
       &:not(.swiper-slide-active) {
         filter: grayscale(0.8);
@@ -258,7 +256,7 @@ const Content = styled.div<{ maxWidth?: number }>`
 
   > h3 {
     margin: 0 0 ${GRID(2)};
-    color: ${COLORS.NAVY_DARK};
+    color: ${COLORS_NEXT.BRAND.NAVY_900};
     font-size: ${GRID(2.75)};
     line-height: ${GRID(4.125)};
     font-weight: 600;
@@ -271,13 +269,13 @@ const Content = styled.div<{ maxWidth?: number }>`
   }
 
   > p {
-    color: ${COLORS.GRAY_4};
+    color: ${COLORS_NEXT.NEUTRAL_400};
     font-size: ${GRID(2)};
     line-height: ${GRID(3)};
     font-weight: 500;
 
     b {
-      color: ${COLORS.NAVY_DARK};
+      color: ${COLORS_NEXT.BRAND.NAVY_900};
       font-weight: 700;
     }
   }

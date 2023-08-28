@@ -1,7 +1,7 @@
 import Head from "next/head";
 import type { AppProps } from "next/app";
 import { createGlobalStyle } from "styled-components";
-import { COLORS, GRID, TYPOGRAPHY } from "@ditointernet/uai-foundation";
+import { COLORS_NEXT, GRID, TYPOGRAPHY } from "@ditointernet/uai-foundation";
 import Script from "next/script";
 
 import "react-responsive-carousel/lib/styles/carousel.min.css";
@@ -54,11 +54,11 @@ const GlobalStyle = createGlobalStyle`
     line-height: ${TYPOGRAPHY.LINE_HEIGHT.LARGE};
   }
 
-  .c-white { color: ${COLORS.WHITE} }
-  .c-navy-dark { color: ${COLORS.NAVY_DARK} }
-  .c-green-main { color: ${COLORS.GREEN_MAIN} }
-  .c-gray-1 { color: ${COLORS.GRAY_1} }
-  .c-gray-4 { color: ${COLORS.GRAY_4} }
+  .c-white { color: ${COLORS_NEXT.WHITE} }
+  .c-navy-dark { color: ${COLORS_NEXT.BRAND.NAVY_900} }
+  .c-green-main { color: ${COLORS_NEXT.BRAND.GREEN_600} }
+  .c-gray-1 { color: ${COLORS_NEXT.NEUTRAL_100} }
+  .c-gray-4 { color: ${COLORS_NEXT.NEUTRAL_400} }
 `;
 
 function MyApp({ Component, pageProps }: AppProps) {

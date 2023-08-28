@@ -1,4 +1,4 @@
-import { COLORS, GRID } from "@ditointernet/uai-foundation";
+import { COLORS_NEXT, GRID } from "@ditointernet/uai-foundation";
 import styled from "styled-components";
 import { Carousel } from "react-responsive-carousel";
 import { ChevronLeft, ChevronRight } from "@ditointernet/uai-icons";
@@ -41,7 +41,7 @@ const Team = () => (
           top={GRID(-9)}
           left="66%"
           size={GRID(5)}
-          color={COLORS.NAVY_MAIN}
+          color={COLORS_NEXT.BRAND.NAVY_600}
         />
         <Circle bottom={GRID(-7)} right="75%" />
         <Retangle />
@@ -161,7 +161,7 @@ const ArrowButton = styled.button<{ isNext?: boolean }>`
     height: ${GRID(8)};
 
     path {
-      fill: ${COLORS.WHITE};
+      fill: ${COLORS_NEXT.WHITE};
     }
   }
 `;
@@ -176,7 +176,7 @@ const Content = styled.div`
   }
 
   h2 {
-    color: ${COLORS.NAVY_DARK};
+    color: ${COLORS_NEXT.BRAND.NAVY_900};
     margin: 0 0 ${GRID(5)} 0;
     font-size: ${GRID(2.75)};
     font-weight: 700;
@@ -189,14 +189,14 @@ const Content = styled.div`
   }
 
   p {
-    color: ${COLORS.GRAY_4};
+    color: ${COLORS_NEXT.NEUTRAL_400};
     margin: 0 0 ${GRID(3)} 0;
     font-size: ${GRID(2)};
     font-weight: 500;
     line-height: ${GRID(3)};
     
     b {
-      color: ${COLORS.NAVY_DARK};
+      color: ${COLORS_NEXT.BRAND.NAVY_900};
       font-weight: 700;
     }
   }
@@ -218,7 +218,7 @@ const Circle = styled.div<CircleProps>`
   max-width: ${(props) => (props.size ? GRID(5) : GRID(18))};
   max-height: ${(props) => (props.size ? GRID(5) : GRID(18))};
   border: ${(props) => (props.size ? GRID(1) : GRID(1.25))} solid
-    ${(props) => props.color || COLORS.GREEN_MAIN};
+    ${(props) => props.color || COLORS_NEXT.BRAND.GREEN_600};
   border-radius: 50%;
   top: ${(props) => props.top || "initial"};
   left: ${(props) => props.left || "initial"};
@@ -237,7 +237,7 @@ const Circle = styled.div<CircleProps>`
 const Retangle = styled.div`
   width: ${GRID(28)};
   height: ${GRID(1.5)};
-  background: ${COLORS.NAVY_MAIN};
+  background: ${COLORS_NEXT.BRAND.NAVY_600};
   position: absolute;
   bottom: ${GRID(-4)};
   left: 20%;

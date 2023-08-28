@@ -1,6 +1,5 @@
-import React from "react";
-import styled from "styled-components"
-import { COLORS, GRID } from "@ditointernet/uai-foundation";
+import styled from "styled-components";
+import { COLORS_NEXT, GRID } from "@ditointernet/uai-foundation";
 import ButtonSecondary from "@/components/ButtonSecondary";
 
 const Areas = () => (
@@ -69,7 +68,7 @@ const SectionWrapper = styled.div`
 `
 
 const Title = styled.h2`
-    color: ${COLORS.NAVY_DARK};
+    color: ${COLORS_NEXT.BRAND.NAVY_900};
     margin: 0 0 ${GRID(2.5)};
     font-size: ${GRID(2.75)};
     line-height: ${GRID(4.125)};
@@ -83,14 +82,14 @@ const Title = styled.h2`
 `
 
 const Description = styled.p<{ marginBottomMobile: number, marginBottomDesktop: number }>`
-    color: ${COLORS.GRAY_4};
+    color: ${COLORS_NEXT.NEUTRAL_400};
     margin: 0 0 ${({ marginBottomMobile }) => GRID(marginBottomMobile / 8)};
     font-size: ${GRID(2)};
     font-weight: 500;
     line-height: ${GRID(3)};
     
     b {
-        color: ${COLORS.NAVY_DARK};
+        color: ${COLORS_NEXT.BRAND.NAVY_900};
         font-weight: 700;
     }
 
@@ -123,7 +122,7 @@ const Area = styled.div<{ maxWidth: number, margin: string }>`
     padding: ${GRID(3)} ${GRID(2.5)};
     box-shadow: 0 ${GRID(1)} ${GRID(4)} rgba(0, 0, 0, 0.16);
     border-radius: ${GRID(1)};
-    background-color: ${COLORS.WHITE};
+    background-color: ${COLORS_NEXT.WHITE};
     
     @media only screen and (min-width: 1024px) {
         gap: ${GRID(7.5)};
@@ -160,7 +159,7 @@ const AreaImg = styled.div<{ image: string }>`
 `
 
 const AreaTitle = styled.div`
-    color: ${COLORS.NAVY_DARK};
+    color: ${COLORS_NEXT.BRAND.NAVY_900};
     margin: 0 0 ${GRID(1)};
     font-size: ${GRID(2.75)};
     line-height: ${GRID(4.125)};

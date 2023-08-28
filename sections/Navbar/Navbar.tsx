@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import styled from "styled-components";
-import { COLORS, GRID } from "@ditointernet/uai-foundation";
+import { COLORS_NEXT, GRID } from "@ditointernet/uai-foundation";
 
 import Menu from "./Menu";
 import BurgerIcon from "./BurgerIcon";
@@ -100,7 +100,7 @@ const Navbar = () => {
 
 const Header = styled.header`
   box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.08);
-  background-color: ${COLORS.WHITE};
+  background-color: ${COLORS_NEXT.WHITE};
   height: ${GRID(8)};
   display: flex;
   align-items: center;
@@ -132,7 +132,7 @@ const Header = styled.header`
 
 const ButtonBackPage = styled.a`
   display: none;
-  color: ${COLORS.NAVY_DARK};
+  color: ${COLORS_NEXT.BRAND.NAVY_900};
   min-width: ${GRID(21.75)};
   margin: 0;
   font-weight: 600;
