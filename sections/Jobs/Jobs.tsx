@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { COLORS_NEXT, GRID } from "@ditointernet/uai-foundation";
+import { transparentize } from "utils/colors-utils";
 
 const Jobs = () => (
   <Section id="nossas-vagas">
@@ -202,7 +203,7 @@ const Box = styled.div`
 
     &:hover {
       border: 1px solid ${COLORS_NEXT.NEUTRAL_100};
-      box-shadow: 0 ${GRID(0.5)} ${GRID(1)} rgba(0, 0, 0, 0.08);
+      box-shadow: 0 ${GRID(0.5)} ${GRID(1)} ${transparentize(COLORS_NEXT.BLACK, "0.08")};
     }
   }
 `;

@@ -9,6 +9,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import "swiper/css/effect-cards";
+import { transparentize } from "utils/colors-utils";
 
 enum Area {
     TECNOLOGIA = "tecnologia",
@@ -212,7 +213,7 @@ const SwiperMobile = styled(Swiper)`
             justify-content: space-between;
             flex-direction: column;
             background-color: ${COLORS_NEXT.WHITE};
-            box-shadow: 0 0 ${GRID(10.625)} rgba(0, 0, 0, 0.1);
+            box-shadow: 0 0 ${GRID(10.625)} ${transparentize(COLORS_NEXT.BLACK, "0.1")};
             border-radius: ${GRID(2)};
         }
     }
@@ -238,7 +239,7 @@ const SwiperDesktop = styled(Swiper)`
             background-color: ${COLORS_NEXT.WHITE};
             
             &.swiper-slide-active {
-                box-shadow: 0px 0px ${GRID(6)} rgba(0, 0, 0, 0.1);
+                box-shadow: 0px 0px ${GRID(6)}  ${transparentize(COLORS_NEXT.BLACK, "0.01")};
             }
         }
     }

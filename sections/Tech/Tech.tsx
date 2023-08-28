@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { COLORS_NEXT, GRID } from "@ditointernet/uai-foundation";
+import { transparentize } from "utils/colors-utils";
 
 const Tech = () => (
     <Section id="nossas-tecnologias">
@@ -266,7 +267,7 @@ const Box = styled.div`
     padding: ${GRID(2.5)} ${GRID(2)} ${GRID(2.5)} ${GRID(3.25)};
     position: relative;
     box-sizing: border-box;
-    box-shadow: 0 ${GRID(0.875)} ${GRID(2.5)} -${GRID(0.25)} rgba(0, 0, 0, 0.8);
+    box-shadow: 0 ${GRID(0.875)} ${GRID(2.5)} -${GRID(0.25)} ${transparentize(COLORS_NEXT.BLACK, "0.8")};
     border-radius: ${GRID(2)};
     background-color: #0D1425;
 

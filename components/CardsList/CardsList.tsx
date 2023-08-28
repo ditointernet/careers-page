@@ -5,6 +5,7 @@ import SwiperCore, { Autoplay, Navigation } from "swiper";
 
 import "swiper/css";
 import "swiper/css/navigation";
+import { transparentize } from "utils/colors-utils";
 
 type Card = {
     img?: string,
@@ -131,7 +132,7 @@ const Card = styled.div<{ minheight: number }>`
         max-width: calc(33% - ${GRID(1.75)});
 
         &:hover {
-            box-shadow: 0 ${GRID(0.5)} ${GRID(1)} rgba(0, 0, 0, 0.08);
+            box-shadow: 0 ${GRID(0.5)} ${GRID(1)} ${transparentize(COLORS_NEXT.BLACK, "0.08")};
         }
     }
 `

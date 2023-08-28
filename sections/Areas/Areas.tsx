@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { COLORS_NEXT, GRID } from "@ditointernet/uai-foundation";
 import ButtonSecondary from "@/components/ButtonSecondary";
+import { transparentize } from "utils/colors-utils";
 
 const Areas = () => (
     <Section>
@@ -120,7 +121,7 @@ const Area = styled.div<{ maxWidth: number, margin: string }>`
     flex-direction: column;
 
     padding: ${GRID(3)} ${GRID(2.5)};
-    box-shadow: 0 ${GRID(1)} ${GRID(4)} rgba(0, 0, 0, 0.16);
+    box-shadow: 0 ${GRID(1)} ${GRID(4)} ${transparentize(COLORS_NEXT.BLACK, "0.16")};
     border-radius: ${GRID(1)};
     background-color: ${COLORS_NEXT.WHITE};
     
@@ -130,7 +131,7 @@ const Area = styled.div<{ maxWidth: number, margin: string }>`
         margin: ${({ margin }) => margin};
         padding: ${GRID(4)} ${GRID(6.75)};
         max-width: ${({ maxWidth }) => GRID(maxWidth / 8)};
-        box-shadow: 0 0 ${GRID(1.25)} ${GRID(0.125)} rgba(0, 0, 0, 0.05);
+        box-shadow: 0 0 ${GRID(1.25)} ${GRID(0.125)} ${transparentize(COLORS_NEXT.BLACK, "0.05")};
         align-items: center;
         flex-direction: row;
     }
