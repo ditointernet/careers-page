@@ -14,7 +14,7 @@ const Benefits = () => {
       img: "./icons/plano-de-saude.svg",
       title: "Plano de saúde",
       description:
-        "Plano de saúde e odontológico Bradesco de cobertura nacional e sem coparticipação para FERAs e dependentes.",
+        "Plano de saúde e odontológico Amil de cobertura nacional e sem coparticipação para FERAs e dependentes.",
     },
     {
       img: "./icons/cartao-caju.svg",
@@ -33,11 +33,6 @@ const Benefits = () => {
       title: "Gympass",
       description:
         "Gympass com planos variados, incluindo um gratuito, para manter a saúde física e mental em dia. O importante é cuidar do seu bem-estar.",
-    },
-    {
-      img: "./icons/ingles-in-company.svg",
-      title: "Inglês in company",
-      description: "Turmas reduzidas que vão do básico ao avançado.",
     },
     {
       img: "./icons/incentivos-ao-aprendizado.svg",
