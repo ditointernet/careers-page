@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import { COLORS_NEXT, GRID } from "@ditointernet/uai-foundation";
 
-import Location from "../../public/images/location.svg";
 import CardsList from "@/components/CardsList";
 
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -44,6 +43,10 @@ const Reasons = () => {
       img: "./images/performance.svg",
       description: "Realizamos avaliações de desempenho periódicas.",
     },
+    {
+      img: "./images/location.svg",
+      description: "Sede localizada no coração de Belo Horizonte.",
+    },
   ];
 
   const imageSlider: Slide[] = [
@@ -73,20 +76,7 @@ const Reasons = () => {
     <Section>
       <SectionWrapper>
         <Title>Mais razões para trabalhar aqui</Title>
-        <CardsList cards={reasonsBlocks} minMobileHeight={260} />
-        <Container>
-          <Box>
-            <Location viewBox="0 0 235 219" />
-            <Content maxWidth={555}>
-              <h3>Sede localizada no coração de Belo Horizonte</h3>
-              <p>
-                Caso prefira o trabalho presencial, você pode optar por
-                trabalhar na <b>nossa sede</b>, localizada em um dos melhores
-                pontos da cidade: <b>a Savassi.</b>
-              </p>
-            </Content>
-          </Box>
-        </Container>
+        <CardsList cards={reasonsBlocks} minMobileHeight={260} /> 
         <SwiperCustom
           loop={true}
           autoplay={{
