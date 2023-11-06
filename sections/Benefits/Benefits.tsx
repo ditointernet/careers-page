@@ -68,19 +68,12 @@ const Section = styled.section`
 
 const SectionWrapper = styled.div`
   margin: 0 auto;
-  padding: ${GRID(8)} ${GRID(2)} ${GRID(35)};
+  padding: ${GRID(8)} ${GRID(2)};
   max-width: ${GRID(180)};
-  background-size: auto;
-  background-image: url("./images/benefits.svg");
-  background-repeat: no-repeat;
-  background-position-x: 20%;
-  background-position-y: calc(100% - ${GRID(8)});
-
+  
   @media only screen and (min-width: 1024px) {
-    padding: ${GRID(10)} ${GRID(9)} ${GRID(30)};
-    background-size: ${GRID(53.75)};
-    background-position-x: calc(100% - ${GRID(9)});
-    background-position-y: calc(100% - ${GRID(10)});
+    padding: ${GRID(10)} ${GRID(9)};
+    
   }
 `;
 
