@@ -131,11 +131,12 @@ const Title = styled.h2`
 `;
 
 const SwiperCustom = styled(Swiper)`
-  width: 100%;
+  width: 80%;
   margin: 0;
+  margin-top: ${GRID(5)};
   padding: 0 5%;
-  max-width: ${GRID(88.375)};
-  align-self: flex-end;
+  max-width: ${GRID(120)};
+  align-self: center;
 
   @media only screen and (min-width: 768px) {
     padding: 0 ${GRID(9.375)};
@@ -143,7 +144,7 @@ const SwiperCustom = styled(Swiper)`
 
   .swiper-wrapper {
     width: 100%;
-    height: ${GRID(45.5)};
+    height: ${GRID(55.5)};
     z-index: 0;
 
     > .swiper-slide {
