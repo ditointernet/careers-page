@@ -18,12 +18,8 @@ jobs:
         run: yarn
 
       - uses: ditointernet/action-hosting-deploy@v0.1
-        id: firebase_deploy
-        env:
-          CHANNEL_ID: ${{ github.head_ref || github.ref_name }}
         with:
           repoToken: "${{ secrets.GITHUB_TOKEN }}"
           firebaseServiceAccount: "${{ secrets.FIREBASE_SERVICE_ACCOUNT }}"
-          channelId: "${{ env.CHANNEL_ID }}"
           expires: 7d
           projectId: dito-careers-page
