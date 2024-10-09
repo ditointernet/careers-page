@@ -2,7 +2,7 @@ name: CD (Preview)
 on: pull_request
 jobs:
   deploy_preview:
-    name: "Deploy to Preview"
+    name: 'Deploy to Preview'
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -11,13 +11,13 @@ jobs:
       - name: Setup node 16 environment
         uses: actions/setup-node@v2
         with:
-          cache: "yarn"
+          cache: 'yarn'
           node-version: 16
 
       - name: Install npm dependencies
         run: yarn
 
-      - uses: ditointernet/action-hosting-deploy@v0.1
+      - uses: ditointernet/action-hosting-deploy@v0
         with:
           repoToken: "${{ secrets.GITHUB_TOKEN }}"
           firebaseServiceAccount: "${{ secrets.FIREBASE_SERVICE_ACCOUNT }}"
