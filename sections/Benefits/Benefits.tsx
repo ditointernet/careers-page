@@ -20,7 +20,7 @@ const Benefits = () => {
       img: "./icons/cartao-caju.svg",
       title: "Cartão Caju",
       description:
-        "Crédito no valor de R$44,00/dia em cartão com bandeira Visa™ para você usar como e onde quiser, inclusive como refeição e alimentação.",
+        "Crédito no valor de R$33,00/dia em cartão com bandeira Visa™ para você usar como e onde quiser, inclusive como refeição e alimentação.",
     },
     {
       img: "./icons/licenca-maternidade.svg",
@@ -29,10 +29,10 @@ const Benefits = () => {
         "São 180 dias para mamães e 20 dias para papais, que valem também para casos de adoção e guarda judicial. Durante esse período, os créditos do Caju são mantidos.",
     },
     {
-      img: "./icons/wellhub.svg",
-      title: "Wellhub",
+      img: "./icons/gympass.svg",
+      title: "Gympass",
       description:
-        "Wellhub com planos variados, incluindo um gratuito, para manter a saúde física e mental em dia. O importante é cuidar do seu bem-estar.",
+        "Gympass com planos variados, incluindo um gratuito, para manter a saúde física e mental em dia. O importante é cuidar do seu bem-estar.",
     },
     {
       img: "./icons/incentivos-ao-aprendizado.svg",
@@ -70,10 +70,10 @@ const SectionWrapper = styled.div`
   margin: 0 auto;
   padding: ${GRID(8)} ${GRID(2)};
   max-width: ${GRID(180)};
-
+  
   @media only screen and (min-width: 1024px) {
     padding: ${GRID(10)} ${GRID(9)};
-
+    
   }
 `;
 
