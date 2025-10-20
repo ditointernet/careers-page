@@ -1,7 +1,7 @@
+import ButtonPrimary from "@/components/ButtonPrimary";
+import { COLORS_NEXT, GRID } from "@ditointernet/uai-foundation";
 import type { NextPage } from "next";
 import styled from "styled-components";
-import { COLORS_NEXT, GRID } from "@ditointernet/uai-foundation";
-import ButtonPrimary from "@/components/ButtonPrimary";
 
 const pageDown = () => {
   const pageTwo = document.getElementById("sobre-a-dito");
@@ -22,9 +22,9 @@ const Hero: NextPage = () => (
         <Subtitle>Vem com a gente!</Subtitle>
         <ButtonPrimary href="#nossas-vagas">Ver nossas vagas</ButtonPrimary>
       </Content>
-      <ImageWrapper src="./images/people.svg" />
+      <ImageWrapper src="./images/people.svg" alt="Grupo de pessoas reunidas em torno de uma mesa com um laptop ao centro." />
       <Footer>
-        <img src="/images/chevron-down.svg" alt="" onClick={pageDown} />
+        <img src="/images/chevron-down.svg" alt="seta para baixo" onClick={pageDown} />
         <p>Deslize a página para descobrir mais sobre nós</p>
       </Footer>
     </SectionWrapper>
@@ -55,7 +55,7 @@ const SectionWrapper = styled.div`
   max-width: ${GRID(180)};
   flex-direction: column;
   justify-content: flex-start;
-  
+
   @media (min-width: 768px) {
     padding: ${GRID(10)} ${GRID(10.5)};
   }
@@ -75,7 +75,7 @@ const ImageWrapper = styled.img`
   z-index: 0;
   position: absolute;
   max-width: ${GRID(117.5)};
-  
+
   @media (min-width: 768px) {
     width: 50%;
     right: ${GRID(10.5)};
@@ -91,7 +91,7 @@ const Logo = styled.img`
   width: ${GRID(15)};
   height: ${GRID(6.25)};
   margin: 0 0 ${GRID(5)} 0;
-  
+
   @media (min-width: 768px) {
     margin: 0 0 ${GRID(10.625)} 0;
   }
@@ -118,7 +118,7 @@ const Subtitle = styled.h2`
   font-size: ${GRID(2.75)};
   font-weight: 700;
   line-height: ${GRID(4.125)};
-  
+
   @media (min-width: 768px) {
     margin: 0 0 ${GRID(5)} 0;
     font-size: ${GRID(4.5)};
@@ -128,7 +128,7 @@ const Subtitle = styled.h2`
 
 const Footer = styled.footer`
   display: none;
-  
+
   @media (min-width: 768px) {
     left: calc(50% - 200px);
     bottom: ${GRID(1.75)};
@@ -137,7 +137,7 @@ const Footer = styled.footer`
     flex-flow: column wrap;
     align-items: center;
   }
-  
+
   img {
     cursor: pointer;
   }

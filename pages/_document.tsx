@@ -1,9 +1,9 @@
 import Document, {
-  Html,
+  DocumentContext,
   Head,
+  Html,
   Main,
   NextScript,
-  DocumentContext,
 } from "next/document";
 import { ServerStyleSheet } from "styled-components";
 
@@ -38,8 +38,7 @@ class CustomDocument extends Document {
   render() {
     const meta = {
       url: "https://carreiras.dito.com.br",
-      title:
-        "Carreiras Dito - Nossa paixão por tecnologia está revolucionando o varejo. Vem com a gente!",
+      title: "Carreiras Dito: Vem ser FERA!",
       description:
         "Por aqui, você vai encontrar vários desafios, além de muita parceria e espírito colaborativo. Porque entendemos que, crescendo juntos, podemos ir muito mais longe.",
       image: "https://carreiras.dito.com.br/images/dito-empresa-banner.jpg",
