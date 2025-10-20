@@ -1,6 +1,6 @@
 import { NextPage } from "next";
 import Head from "next/head";
-import Script from "next/script"
+import Script from "next/script";
 import * as Sections from "../sections";
 
 const Home: NextPage = () => (
@@ -15,10 +15,7 @@ const Home: NextPage = () => (
     </Script>
     {/* End Google Tag Manager */}
     <Head>
-      <title>
-        Carreiras Dito - Nossa paixão por tecnologia está revolucionando o
-        varejo. Vem com a gente!
-      </title>
+      <title>Carreiras Dito: Vem ser FERA!</title>
     </Head>
     <Sections.Navbar />
     <Sections.Hero />
