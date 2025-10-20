@@ -9,13 +9,21 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
 
       - name: Setup node 16 environment
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v4
         with:
-          cache: "yarn"
           node-version: 16
+      - uses: actions/cache@v3
+        id: cache
+        with:
+          path: |
+            node_modules
+            .yarn
+          key: yarn-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            yarn-
 
       - name: Install npm dependencies
         run: yarn
